@@ -14,7 +14,7 @@ interface IButton {
 const NavBar = () => {
     const Button: React.FunctionComponent<IButton> = ({ style, link, text }) => {
         return (
-            <button className={`btn btn-ghost sm:text-base md:text-md lg:text-lg font-bold mx-2 ${style}`}>
+            <button className={`btn btn-ghost text-sm sm:text-base md:text-lg lg:text-xl font-bold mx-2 ${style}`}>
                 <Link href={`${link}`}><a>{text}</a></Link>
             </button>
         )
@@ -28,13 +28,13 @@ const NavBar = () => {
                 </button>
             </div>
             <div className='flex-none hidden lg:block'>
-                <Button style="border-0 border-b-[3px] border-gradient" link="/" text="About" />
+                <Button style="border-0 border-b-[3px] border-gradient" link="/about" text="About" />
                 <Button style="" link="/forum" text="Forum"/>
                 <Button style="" link="/blogs" text="Blogs"/>
                 <Button style="" link="/program" text="Program"/>
                 <Button style="bg-gradient hover:bg-gradient-focus border-none text-base-100" link="/admissions" text="Admissions"/>
             </div>
-            
+
             <div className="flex-none lg:hidden">
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost">
