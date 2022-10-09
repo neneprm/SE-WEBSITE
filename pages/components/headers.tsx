@@ -3,12 +3,6 @@ interface IHeader {
     style?: string
 }
 
-interface ICard {
-    title: string,
-    body: string,
-    action: string
-}
-
 const H1: React.FunctionComponent<IHeader> = ({ style, text }) => {
     return (
         <h1 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl ${style}`}>{text}</h1>
@@ -29,18 +23,5 @@ const P: React.FunctionComponent<IHeader> = ({ style, text }) => {
         <p className={`text-sm sm:text-base md:text-lg lg:text-xl ${style}`}>{text}</p>
     )
 }
-const Card: React.FunctionComponent<ICard> = ({ title, body, action }) => {
-    return (
-        <div className="card w-96 bg-base-100 card-bordered shadow-lg">
-            <div className="card-body">
-                <h2 className="card-title">{title}</h2>
-                <p>{body}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn">{action}</button>
-                </div>
-            </div>
-        </div>
-    )
-}
 
-export { H1, H3, H4, P, Card }
+export { H1, H3, H4, P }
