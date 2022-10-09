@@ -6,7 +6,8 @@ import Link from 'next/link'
 import hero from './assets/hero.svg'
 
 import PrimaryButton from './components/primary_button'
-import {H1, H3, H4, P, Card} from './components/headers'
+import {H1, H3, H4, P} from './components/headers'
+import Card from './components/card'
 
 const Home: NextPage = () => {
   return (
@@ -35,40 +36,31 @@ const Home: NextPage = () => {
       </div> */}
 
       <H4 style="font-bold text-gradient" text="What is Software Engineering?" />
-      <section className="card w-full bg-base-100 card-bordered shadow-lg">
-        <div className="card-body font-normal">
-          <P style="" text="Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources." />
-          <div className="card-actions justify-end">
-            <button className="btn btn-accent text-base-100">
-              <Link href={"/about"}><a>Read more →</a></Link>
-            </button>
-          </div>
-        </div>
-      </section>
+      <Card cardStyle="w-full" body="Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources." link="/about"/>
 
       <H4 style="font-bold text-gradient" text="Forum" />
       <section className="carousel carousel-center p-4 space-x-4 w-full">
         <div id="slide1" className="carousel-item relative w-full justify-between">
           <a href="#slide3" className="btn btn-circle place container my-auto">❮</a>
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
           <a href="#slide2" className="btn btn-circle ontainer my-auto">❯</a>
         </div>
 
         <div id="slide2" className="carousel-item relative w-full justify-between">
           <a href="#slide1" className="btn btn-circle place container my-auto">❮</a>
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
           <a href="#slide3" className="btn btn-circle ontainer my-auto">❯</a>
         </div>
 
         <div id="slide3" className="carousel-item relative w-full justify-between">
           <a href="#slide2" className="btn btn-circle place container my-auto">❮</a>
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
-          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" action="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
+          <Card title="Card title!" body="If a dog chews shoes whose shoes does he choose?" link="Read more →" />
           <a href="#slide1" className="btn btn-circle ontainer my-auto">❯</a>
         </div>
       </section>
