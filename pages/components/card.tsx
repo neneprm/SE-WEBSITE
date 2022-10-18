@@ -6,17 +6,18 @@ interface ICard {
     cardStyle?: string,
     image?: JSX.Element
     icon?: JSX.Element,
+    titleStyle?: string,
     title?: string,
     body?: string,
     link: string
 }
 
-const Card: React.FunctionComponent<ICard> = ({ cardStyle, image, icon, title, body, link }) => {
+const Card: React.FunctionComponent<ICard> = ({ cardStyle, image, icon, titleStyle, title, body, link }) => {
     return (
-        <div className={`card w-96 bg-base-100 card-bordered shadow-lg ${cardStyle}`}>
+        <div className={`card bg-base-100 card-bordered shadow-lg ${cardStyle}`}>
             {image}
             <div className="card-body">
-                <h2 className="card-title">
+                <h2 className={`card-title ${titleStyle}`}>
                     <span>{icon}</span>{title}</h2>
                 <P text={`${body}`} />
                 <div className="card-actions justify-end">
