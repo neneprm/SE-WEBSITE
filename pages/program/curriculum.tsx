@@ -20,7 +20,7 @@ const Curriculum = () => {
             </section>
             <section>
                 <H4 style="text-primary font-bold" text="Related documents" />
-                <ul className="list-disc ml-5">
+                <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
                     <a className="link link-accent" href="https://www.ic.kmitl.ac.th/static/files/SE-TQF2-2017-Rev12.pdf"><li >Program Specification (TQF2) - B.Eng. in Software Engineering (2017 Revision)</li></a>
                     <a className="link link-accent" href="https://www.ic.kmitl.ac.th/static/files/SE-TQF2-2011-Rev25.pdf"><li>Program Specification (TQF2) - B.Eng. in Software Engineering (2011 Revision)</li></a>
                 </ul>
