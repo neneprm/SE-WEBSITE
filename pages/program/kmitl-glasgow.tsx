@@ -1,5 +1,4 @@
 import { H3, H4, P } from "../components/headers"
-import Card from '../components/card'
 
 const KmitlGlasgow = () => {
     return (
