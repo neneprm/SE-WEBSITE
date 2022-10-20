@@ -221,7 +221,7 @@ const ApplicationGuidance = () => {
             </section>
             <div className="card-actions justify-end">
                 <button className="btn btn-outline btn-primary">
-                    <a href="/program/kmitl-glasgow">Back</a>
+                    <a href="/program/exchange-study-abroad">Back</a>
                 </button>
             </div>
         </div>
