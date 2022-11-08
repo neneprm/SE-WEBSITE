@@ -14,11 +14,7 @@ interface ICard {
 
 const Card: React.FunctionComponent<ICard> = ({ cardStyle, image, icon, titleStyle, title, body, link }) => {
     return (
-<<<<<<< Updated upstream
         <div className={`card bg-base-100 card-bordered shadow-lg ${cardStyle}`}>
-=======
-        <div className={`card w-96 ${cardStyle} bg-base-100 card-bordered shadow-lg `}>
->>>>>>> Stashed changes
             {image}
             <div className="card-body">
                 <h2 className={`card-title ${titleStyle}`}>
