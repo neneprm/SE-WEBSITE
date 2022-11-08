@@ -6,7 +6,7 @@ import Footer from './components/footer'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="bg-base-100 font-Nunito">
-      <div className="mx-0 lg:mx-48">
+      <div className="mx-4 lg:mx-48">
         <NavBar />
         <Component {...pageProps} />
       </div>
