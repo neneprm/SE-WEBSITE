@@ -27,7 +27,7 @@ const NavBar = () => {
                     <Link href='/'><a>SOFTWARE</a></Link>
                 </button>
             </div>
-            <div className='flex-none hidden lg:block'>
+            <div className='flex-none hidden xl:block'>
                 <Button style="border-0 border-b-[3px] border-gradient" link="/about" text="About" />
                 <Button style="" link="/forum" text="Forum"/>
                 <Button style="" link="/blogs" text="Blogs"/>
@@ -35,7 +35,7 @@ const NavBar = () => {
                 <Button style="bg-gradient hover:bg-gradient-focus border-none text-base-100" link="/admissions" text="Admissions"/>
             </div>
 
-            <div className="flex-none lg:hidden">
+            <div className="flex-none xl:hidden">
                 <div className="dropdown dropdown-end">
                     <label tabIndex={0} className="btn btn-ghost">
                         <HiMenu className='sm:text-base md:text-md text-primary hover:text-primary-focus' />
