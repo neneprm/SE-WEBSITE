@@ -44,10 +44,10 @@ const KmitlGlasgow = () => {
                     </p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-outline btn-primary">
-                            <a href="/program/glasgow/guidance">Application Guidance</a>
+                            <a href="/program/kmitl-glasgow/guidance">Application Guidance</a>
                         </button>
                         <button className="btn btn-outline btn-primary">
-                            <a href="/program/glasgow/visa">UK Visa Guidance</a>
+                            <a href="/program/kmitl-glasgow/visa">UK Visa Guidance</a>
                         </button>
                     </div>
                 </div>
