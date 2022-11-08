@@ -9,8 +9,8 @@ const About = () => {
       
     return (
         <div>
+            <H3 style="text-gradient font-bold text-center" text="ABOUT"/>
             <div className="container mx-auto pb-8">
-                <H3 style="text-gradient font-bold text-center py-8" text="ABOUT"/>
                 <H4 style="font-bold text-primary pb-4" text="What is Software Engineering?"/>
                 <P style="text-neutral" text="Software engineering (SE) is an engineering discipline concerning 
                 all aspects of software production, including software analysis, design, development, 

@@ -1,13 +1,13 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 
-import hero from './assets/hero.svg'
+import hero from "./assets/hero.svg";
 
-import PrimaryButton from './components/primary_button'
-import {H1, H3, H4, P} from './components/headers'
-import Card from './components/card'
+import PrimaryButton from "./components/primary_button";
+import { H1, H3, H4, P } from "./components/headers";
+import Card from "./components/card";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           <div className="max-w-xs lg:max-w-lg">
             <Image src={hero} />
           </div>
-          <span className='text-center lg:text-right'>
+          <span className="text-center lg:text-right">
             <H1 style="font-bold text-gradient" text="SOFTWARE" />
             <H1 style="font-bold mb-6" text="ENGINEERING" />
             <H3 style="mb-3" text="Bachelor of Engineering" />
@@ -37,12 +37,20 @@ const Home: NextPage = () => {
         </span>
       </div> */}
 
-      <H4 style="font-bold text-gradient" text="What is Software Engineering?" />
-      <Card cardStyle="w-full" body="Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources." link="/about"/>
+      <H4
+        style="font-bold text-gradient"
+        text="What is Software Engineering?"
+      />
+      <Card
+        cardStyle="w-full"
+        body="Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources."
+        link="/about"
+      />
 
       <H4 style="font-bold text-gradient" text="Forum" />
       <H4 style="font-bold text-gradient" text="Blogs" />
       <H4 style="font-bold text-gradient" text="Program" />
+      
       <H4 style="font-bold text-gradient" text="Admissions" />
 
       {/* <p>

@@ -9,10 +9,10 @@ import { BsPeopleFill } from "react-icons/bs";
 const Program = () => {
   return (
     <div>
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-4">
         <H3 style="text-gradient font-bold text-center" text="PROGRAM" />
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-3 mb-8 md:grid-cols-2 xl:grid-cols-3 2xl:mx-96">
         <Card image={<figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>} title="Curriculum" icon={<FaScroll className="text-primary" />} link="/program/curriculum" />
         <Card image={<figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>} title="KMITL-Glasgow" icon={<FaGraduationCap className="text-primary" />} link="/program/kmitl-glasgow" />
         <Card image={<figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>} title="Study Plans" icon={<FaCalendar className="text-primary" />} link="/program/study-plans" />
