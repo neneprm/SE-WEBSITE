@@ -1,5 +1,4 @@
 import Link from "next/link"
-
 import {P} from "./headers"
 
 interface ICard {
@@ -21,7 +20,7 @@ const Card: React.FunctionComponent<ICard> = ({ cardStyle, image, icon, titleSty
                     <span>{icon}</span>{title}</h2>
                 <P text={`${body}`} />
                 <div className="card-actions justify-end">
-                    <button className="btn btn-accent text-base-100">
+                    <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                         <Link href={`${link}`}><a>Read more →</a></Link>
                     </button>
                 </div>
