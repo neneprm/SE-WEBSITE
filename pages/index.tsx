@@ -13,8 +13,10 @@ const Home: NextPage = () => {
   return (
     <>
       <section className="hero min-h-screen bg-base-100">
-        <div className="hero-content flex-col lg:flex-row lg:space-x-40">
-          <Image className="max-w-sm rounded-lg shadow-2xl" src={hero} />
+        <div className="hero-content flex-col lg:flex-row lg:space-x-10 xl:space-x-30">
+          <div className="max-w-xs lg:max-w-lg">
+            <Image src={hero} />
+          </div>
           <span className='text-center lg:text-right'>
             <H1 style="font-bold text-gradient" text="SOFTWARE" />
             <H1 style="font-bold mb-6" text="ENGINEERING" />
