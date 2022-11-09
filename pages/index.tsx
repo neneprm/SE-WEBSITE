@@ -38,7 +38,7 @@ const Home: NextPage = () => {
       </div> */}
 
       <H4
-        style="font-bold text-gradient"
+        style="font-bold text-gradient -mt-16 md:-mt-4 mb-4"
         text="What is Software Engineering?"
       />
       <Card
@@ -50,7 +50,6 @@ const Home: NextPage = () => {
       <H4 style="font-bold text-gradient" text="Forum" />
       <H4 style="font-bold text-gradient" text="Blogs" />
       <H4 style="font-bold text-gradient" text="Program" />
-      
       <H4 style="font-bold text-gradient" text="Admissions" />
 
       {/* <p>
