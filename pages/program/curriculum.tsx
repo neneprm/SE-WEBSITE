@@ -4,18 +4,20 @@ import CardContent from "../components/card_content"
 
 const Curriculum = () => {
   return (
-    <div>
-      <div className="container mx-auto">
+    <>
+      <section className="container mx-auto mb-4">
         <H3 style="text-gradient font-bold text-center" text="CURRICULUM" />
-      </div>
-      <section>
+      </section>
+
+      <section className="mb-8">
         <H4
-          style="text-primary font-bold"
+          style="text-primary font-bold mb-4"
           text="B.Eng. in Software Engineering Program"
         />
         <P text="The B.Eng. in Software Engineering Programis a 4-year undergraduate program aiming at producing graduates who are capable of working confidently in the international software industry as well as pursuing postgraduate study and research in leading universities worldwide. The curriculum of the program is designed in accordance with the recent ACM/IEEE guideline for undergraduate curriculum in software engineering." />
       </section>
-      <section>
+
+      <section className="mb-8">
         <div>
           <CardContent
             cardStyle="w-full"
@@ -37,8 +39,9 @@ const Curriculum = () => {
           />
         </div>
       </section>
-      <section>
-        <H4 style="text-primary font-bold" text="Related documents" />
+
+      <section className="mb-8">
+        <H4 style="text-primary font-bold mb-4" text="Related documents" />
         <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
           <a
             className="link link-accent"
@@ -60,7 +63,7 @@ const Curriculum = () => {
           </a>
         </ul>
       </section>
-    </div>
+    </>
   )
 }
 

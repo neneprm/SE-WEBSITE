@@ -14,11 +14,12 @@ import { BsPeopleFill } from "react-icons/bs"
 
 const Program = () => {
   return (
-    <div>
-      <div className="container mx-auto mb-4">
+    <>
+      <section className="container mx-auto mb-4">
         <H3 style="text-gradient font-bold text-center" text="PROGRAM" />
-      </div>
-      <div className="grid gap-3 mb-8 md:grid-cols-2 xl:grid-cols-3 2xl:mx-96">
+      </section>
+      
+      <section className="grid gap-3 mb-8 md:grid-cols-2 xl:grid-cols-3 2xl:mx-96">
         <Card
           image={
             <figure>
@@ -79,8 +80,8 @@ const Program = () => {
           icon={<BsPeopleFill className="text-primary" />}
           link="/program/lecturers"
         />
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
 

@@ -7,11 +7,14 @@ interface IHeader {
 
 const About = () => {
   return (
-    <div>
-      <H3 style="text-gradient font-bold text-center" text="ABOUT" />
-      <div className="container mx-auto pb-8">
+    <>
+      <section className="container mx-auto mb-4">
+        <H3 style="text-gradient font-bold text-center" text="ABOUT" />
+      </section>
+      
+      <section className="container mx-auto mb-8">
         <H4
-          style="font-bold text-primary pb-4"
+          style="font-bold text-primary mb-4"
           text="What is Software Engineering?"
         />
         <P
@@ -21,11 +24,11 @@ const About = () => {
                 testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, 
                 logic, and computer science in order to produce efficient and reliable software with the available resources."
         />
-      </div>
+      </section>
 
-      <div className="container mx-auto pb-8">
+      <section className="container mx-auto mb-8">
         <H4
-          style="font-bold text-primary pb-4"
+          style="font-bold text-primary mb-4"
           text="Why study Software Engineering?"
         />
         <P
@@ -40,11 +43,11 @@ const About = () => {
                 implementation level. Moreover, a software engineer must be able to use proper tools, techniques, and methodologies in order 
                 to produce the software in an efficient manner."
         />
-      </div>
+      </section>
 
-      <div className="container mx-auto pb-8">
+      <section className="container mx-auto mb-8">
         <H4
-          style="font-bold text-primary pb-4"
+          style="font-bold text-primary mb-4"
           text="Careers in Software Engineering"
         />
         <P
@@ -63,8 +66,8 @@ const About = () => {
                 and software engineering principles, graduates of the SE program may continue their studies at 
                 postgraduate level in various software engineering or computing related fields in universities worldwide."
         />
-      </div>
-    </div>
+      </section>
+    </>
   )
 }
 

@@ -2,17 +2,18 @@ import { H3, H4, P } from "../../components/headers"
 
 const ApplicationGuidance = () => {
   return (
-    <div>
-      <div className="container mx-auto">
+    <>
+      <section className="container mx-auto mb-4">
         <H3
           style="text-gradient font-bold text-center"
           text="Frankfurt University of Applied Sciences"
         />
-      </div>
+      </section>
+
       <section>
         <div>
           <H4
-            style="text-primary font-bold"
+            style="text-primary font-bold mb-4"
             text="About Frankfurt University of Applied Sciences"
           />
           <P text="Frankfurt University of Applied Sciences (abbreviated as FRA-UAS) is a large practice-oriented higher-education institute specializing in science and technology. The University is located near the center of Frankfurt am Main, a city which is considered a multicultural city and the largest financial center in Continental Europe. It has a highly international student body, with over 10,000 students from more than 100 countries. The University has more than 650 academic staff and 220 administrative staff. There are four faculties:" />
@@ -37,127 +38,127 @@ const ApplicationGuidance = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <H4 style="text-primary font-bold" text="Exchange Scheme" />
-          <P text="By joining this exchange program, you are to take the following four mandatory courses in the Bachelor Program in Computer Science at FRA-UAS. The results of the study will be transferred back as the results of the equivalent courses in the SE program (see the table below)." />
-          <br />
-          <div className="overflow-x-auto">
-            <table className="table w-auto m-auto px-10">
-              <thead>
-                <tr>
-                  <th className="bg-[#DF6F3A]">
-                    <P
-                      style="text-base-100 text-center"
-                      text="Courses at FRA-UAS"
-                    />
-                  </th>
-                  <th className="bg-[#DF6F3A]">
-                    <P style="text-base-100 text-center" text="ECTS" />
-                  </th>
-                  <th className="bg-[#DF6F3A]">
-                    <P
-                      style="text-base-100 text-center"
-                      text="Courses at KMITL"
-                    />
-                  </th>
-                  <th className="bg-[#DF6F3A]">
-                    <P style="text-base-100 text-center" text="Credit" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <P text="Software Engineering - Design" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="5" />
-                  </td>
-                  <td>
-                    <P text="Software Design and Architecture" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="3" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <P text="Realtime Systems" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="5" />
-                  </td>
-                  <td>
-                    <P text="Advanced Topics in Software Engineering (SE Track) Embedded System Software (Mobile SE Track)" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="3" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <P text="IT Security" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="5" />
-                  </td>
-                  <td>
-                    <P text="Computer Security" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="3" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <P text="Distributed Systems" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="5" />
-                  </td>
-                  <td>
-                    <P text="Distributed Computing" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="3" />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <P text="Programming Exercises" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="5" />
-                  </td>
-                  <td>
-                    <P text="Team Software Project" />
-                  </td>
-                  <td>
-                    <P style="text-center" text="3" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <br />
-          <P text="Additionally, in each year, there are 1 - 3 courses in the M.Sc. in High Integrity Systems program at FRA-UAS with transferable credits which you may take. The list of the courses is to be announced a few months before the exchange begins." />
-          <br />
-          <P text="The following courses are the courses in the SE program in Year 3 Semester 2 which have no equivalent counterpart at FRA-UAS. You are to take these courses in Year 4 Semester 2 instead:" />
-          <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
-            <li>Science & Technology for the Modern World</li>
-            <li>
-              Software Verification and Validation (unless the M.Sc. course
-              "Advanced Testing Techniques" is taken at FRA-UAS)
-            </li>
-            <li>Software Development Process</li>
-            <li>Compiler Construction (for students in the SE track only)</li>
-          </ul>
+
+      <section className="mb-8">
+        <H4 style="text-primary font-bold mb-4" text="Exchange Scheme" />
+        <P text="By joining this exchange program, you are to take the following four mandatory courses in the Bachelor Program in Computer Science at FRA-UAS. The results of the study will be transferred back as the results of the equivalent courses in the SE program (see the table below)." />
+        <br />
+        <div className="overflow-x-auto">
+          <table className="table w-auto m-auto px-10">
+            <thead>
+              <tr>
+                <th className="bg-[#DF6F3A]">
+                  <P
+                    style="text-base-100 text-center"
+                    text="Courses at FRA-UAS"
+                  />
+                </th>
+                <th className="bg-[#DF6F3A]">
+                  <P style="text-base-100 text-center" text="ECTS" />
+                </th>
+                <th className="bg-[#DF6F3A]">
+                  <P
+                    style="text-base-100 text-center"
+                    text="Courses at KMITL"
+                  />
+                </th>
+                <th className="bg-[#DF6F3A]">
+                  <P style="text-base-100 text-center" text="Credit" />
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <P text="Software Engineering - Design" />
+                </td>
+                <td>
+                  <P style="text-center" text="5" />
+                </td>
+                <td>
+                  <P text="Software Design and Architecture" />
+                </td>
+                <td>
+                  <P style="text-center" text="3" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <P text="Realtime Systems" />
+                </td>
+                <td>
+                  <P style="text-center" text="5" />
+                </td>
+                <td>
+                  <P text="Advanced Topics in Software Engineering (SE Track) Embedded System Software (Mobile SE Track)" />
+                </td>
+                <td>
+                  <P style="text-center" text="3" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <P text="IT Security" />
+                </td>
+                <td>
+                  <P style="text-center" text="5" />
+                </td>
+                <td>
+                  <P text="Computer Security" />
+                </td>
+                <td>
+                  <P style="text-center" text="3" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <P text="Distributed Systems" />
+                </td>
+                <td>
+                  <P style="text-center" text="5" />
+                </td>
+                <td>
+                  <P text="Distributed Computing" />
+                </td>
+                <td>
+                  <P style="text-center" text="3" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <P text="Programming Exercises" />
+                </td>
+                <td>
+                  <P style="text-center" text="5" />
+                </td>
+                <td>
+                  <P text="Team Software Project" />
+                </td>
+                <td>
+                  <P style="text-center" text="3" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <br />
+        <P text="Additionally, in each year, there are 1 - 3 courses in the M.Sc. in High Integrity Systems program at FRA-UAS with transferable credits which you may take. The list of the courses is to be announced a few months before the exchange begins." />
+        <br />
+        <P text="The following courses are the courses in the SE program in Year 3 Semester 2 which have no equivalent counterpart at FRA-UAS. You are to take these courses in Year 4 Semester 2 instead:" />
+        <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
+          <li>Science & Technology for the Modern World</li>
+          <li>
+            Software Verification and Validation (unless the M.Sc. course
+            "Advanced Testing Techniques" is taken at FRA-UAS)
+          </li>
+          <li>Software Development Process</li>
+          <li>Compiler Construction (for students in the SE track only)</li>
+        </ul>
       </section>
-      <section>
+
+      <section className="mb-8">
         <div>
-          <H4 style="text-primary font-bold" text="Cost" />
+          <H4 style="text-primary font-bold mb-4" text="Cost" />
           <P text="In accordance with the university's regulation, you are required to pay the normal tuition fee for Year 3 Semester 1 to KMITL as usual. FRA-UAS does not collect additional tuition fee for your study there. You are still required to prepare for other expenses during your period of study at Frankfurt. The following table provides a rough estimate of the essential expenses (not including leisure activities, souvenirs and other unnecessary items):" />
           <br />
           <div className="overflow-x-auto">
@@ -240,9 +241,10 @@ const ApplicationGuidance = () => {
           <br />
         </div>
       </section>
-      <section>
+
+      <section className="mb-8">
         <div>
-          <H4 style="text-primary font-bold" text="Requirement" />
+          <H4 style="text-primary font-bold mb-4" text="Requirement" />
           <P text="The following is the minimum requirement for joining the exchange program at FRA-UAS." />
           <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
             <li>Studying in Year 3 Semester 1 of the SE program.</li>
@@ -253,9 +255,10 @@ const ApplicationGuidance = () => {
           <P text="Those who do not satisfy these requirements may be accepted at the discretion of the International College and FRA-UAS." />
         </div>
       </section>
-      <section>
+
+      <section className="mb-8">
         <div>
-          <H4 style="text-primary font-bold" text="Application" />
+          <H4 style="text-primary font-bold mb-4" text="Application" />
           <P text="The application procedure is as follows:" />
           <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
             <li>
@@ -375,10 +378,11 @@ const ApplicationGuidance = () => {
           </div>
         </div>
       </section>
-      <section>
+
+      <section className="mb-8">
         <div>
           <br />
-          <H4 style="text-primary font-bold" text="Contact" />
+          <H4 style="text-primary font-bold mb-4" text="Contact" />
           <P text="For all enquiries regarding the exchange study at FRA-UAS, contact : Dr. Natthapong Jungteerapanich" />
           {/* <P text="Useful links:"/>
                     <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
@@ -388,12 +392,13 @@ const ApplicationGuidance = () => {
                     </ul> */}
         </div>
       </section>
+
       <div className="card-actions justify-end">
         <button className="btn btn-outline btn-primary">
           <a href="/program/exchange-study-abroad">Back</a>
         </button>
       </div>
-    </div>
+    </>
   )
 }
 
