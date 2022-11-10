@@ -1,13 +1,13 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import type { NextPage } from "next"
+import Head from "next/head"
+import Image from "next/image"
+import Link from "next/link"
 
-import hero from "./assets/hero.svg";
+import hero from "./assets/hero.svg"
 
-import PrimaryButton from "./components/primary_button";
-import { H1, H3, H4, P } from "./components/headers";
-import Card from "./components/card";
+import PrimaryButton from "./components/primary_button"
+import { H1, H3, H4, P } from "./components/headers"
+import Card from "./components/card"
 
 const Home: NextPage = () => {
   return (

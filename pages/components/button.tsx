@@ -1,9 +1,9 @@
-import { useState } from "react";
-import Link from "next/link";
+import { useState } from "react"
+import Link from "next/link"
 
 interface IButton {
-  style: string,
-  link: string,
+  style: string
+  link: string
   text: string
 }
 
