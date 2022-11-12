@@ -3,7 +3,7 @@ import { H3, H4, P } from "../components/headers"
 const ExchangeStudyAbroad = () => {
   return (
     <>
-      <section className="container mx-auto mb-4">
+      <section className="container mx-auto my-4">
         <H3
           style="text-gradient font-bold text-center"
           text="EXCHANGE STUDY ABROAD"

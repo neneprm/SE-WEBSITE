@@ -3,7 +3,7 @@ import { H3, H4 } from "../../components/headers"
 const ApplicationGuidance = () => {
   return (
     <>
-      <section className="container mx-auto mb-4">
+      <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="KMITL-Glasgow" />
       </section>
 
