@@ -47,10 +47,10 @@ const Home: NextPage = () => {
         link="/about"
       />
 
-      <H4 style="font-bold text-gradient" text="Forum" />
-      <H4 style="font-bold text-gradient" text="Blogs" />
-      <H4 style="font-bold text-gradient" text="Program" />
-      <H4 style="font-bold text-gradient" text="Admissions" />
+      <H4 style="font-bold text-gradient mt-4 mb-4" text="Forum" />
+      <H4 style="font-bold text-gradient mb-4" text="Blogs" />
+      <H4 style="font-bold text-gradient mb-4" text="Program" />
+      <H4 style="font-bold text-gradient mb-4" text="Admissions" />
 
       {/* <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat! Deserunt eum quae, earum eos distinctio minima a mollitia? Beatae voluptates aliquam commodi ratione quis molestiae magnam vero dolore officiis.
