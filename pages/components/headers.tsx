@@ -26,7 +26,7 @@ const H4: React.FunctionComponent<IHeader> = ({ style, text }) => {
 }
 const P: React.FunctionComponent<IHeader> = ({ style, text }) => {
   return (
-    <p className={`text-sm text-justify sm:text-base md:text-lg lg:text-xl ${style}`}>
+    <p className={`text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl ${style}`}>
       {text}
     </p>
   )
