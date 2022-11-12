@@ -14,11 +14,10 @@ const About = () => {
       
       <section className="container mx-auto mb-8">
         <H4
-          style="font-bold text-primary mb-4"
+          style="font-bold text-accent mb-4"
           text="What is Software Engineering?"
         />
         <P
-          style="text-neutral"
           text="Software engineering (SE) is an engineering discipline concerning 
                 all aspects of software production, including software analysis, design, development, 
                 testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, 
@@ -28,11 +27,10 @@ const About = () => {
 
       <section className="container mx-auto mb-8">
         <H4
-          style="font-bold text-primary mb-4"
+          style="font-bold text-accent mb-4"
           text="Why study Software Engineering?"
         />
         <P
-          style="text-neutral"
           text="It is hard to overstate the ubiquity of software nowadays. Every computer system is 
                 governed by software. Almost every human activity involves software in some form. Undoubtedly software industry 
                 is one of the largest and fastest growing industries in the world. Consequently, skilled software engineers are 
@@ -47,21 +45,18 @@ const About = () => {
 
       <section className="container mx-auto mb-8">
         <H4
-          style="font-bold text-primary mb-4"
+          style="font-bold text-accent mb-4"
           text="Careers in Software Engineering"
         />
         <P
-          style="text-neutral"
           text="There are abundant career opportunities for graduates from the software engineering program."
         />
         <P
-          style="text-neutral"
           text="For example, they are software engineers, software architects, software developers on various 
                 platforms, including enterprise software, web applications, mobile applications, games, embedded 
                 applications, analysts and designers of IT systems, IT consultants, software entrepreneurs, etc."
         />
         <P
-          style="text-neutral"
           text="Nevertheless, with strong foundation in computer science, mathematics, 
                 and software engineering principles, graduates of the SE program may continue their studies at 
                 postgraduate level in various software engineering or computing related fields in universities worldwide."
