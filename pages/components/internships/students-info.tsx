@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { H4, P } from "../headers"
 const TABLE_LIST = [
   {
@@ -181,16 +182,16 @@ const StudentInfo = () => {
             <li className="mt-8 mb-4 font-bold">Procedure</li>
             <div className="flex justify-center">
               <ul className="steps steps-vertical lg:steps-horizontal">
-                <li className="step step-secondary">Apply for internship</li>
-                <li className="step step-secondary">Registration (online)</li>
-                <li className="step step-secondary">Pre-internship meeting</li>
-                <li className="step step-secondary">Internship</li>
-                <li className="step step-secondary">
+                <li className="step step-primary">Apply for internship</li>
+                <li className="step step-primary">Registration (online)</li>
+                <li className="step step-primary">Pre-internship meeting</li>
+                <li className="step step-primary">Internship</li>
+                <li className="step step-primary">
                   Presentation & assessment{" "}
                 </li>
               </ul>
             </div>
-
+            {/* Description */}
             <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
               <li className="my-2">
                 Every student who is planning to undertake an internship in the
@@ -198,9 +199,10 @@ const StudentInfo = () => {
                 in a company.
               </li>
               <li>
-                Every student taking an internship must register for the course &nbsp;
-                <span className="font-bold text-primary">
-                 "13016004 Software Industrial Internship in Summer"
+                Every student taking an internship must register for the course
+                &nbsp;
+                <span className="font-bold">
+                  "13016004 Software Industrial Internship in Summer"
                 </span>
                 . Registration is done on the University's online registry
                 system. If this course is the only course you register in the
@@ -224,9 +226,20 @@ const StudentInfo = () => {
 
             {/* 4. Contact */}
             <li className="mt-8 mb-4 font-bold">Contact</li>
-
+            <P text="If you have any problem or question, please contact:" />
+            <div className="flex flex-col md:flex-row">
+              <P style="font-bold md:mr-2" text="Internship advisor" />
+              <a
+                className="link link-primary"
+                href="mailto:natthapong.ju@kmitl.ac.th"
+                target="_blank"
+                rel="alternate noopener noreferrer"
+              >
+                Dr. Natthapong Jungteerapanich
+              </a>
+            </div>
             {/* 5. Download */}
-            <li className="mt-8 mb-4 font-bold">Download</li>
+            {/* <li className="mt-8 mb-4 font-bold">Download</li> */}
           </ol>
         </div>
       </div>
