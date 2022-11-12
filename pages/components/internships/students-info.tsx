@@ -23,87 +23,168 @@ const StudentInfo = () => {
           <H4 style="text-accent font-bold" text="Information for Students" />
         </div>
         <div className="collapse-content">
-          <ol className="list-decimal list-inside">
-            <li className="mb-4 font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-              Requirements
-              <P style="my-2" text="Duration and Timing" />
-              <P
-                style="font-normal"
-                text="The internship takes place in the summer semester of Year 2 of the program (late May - late July). The internship must consist of at least 7 weeks of full-time work. It may be longer if you wish."
-              />
-              <P style="my-2" text="Type of Work" />
-              <P
-                style="font-normal"
-                text="An internship provides a excellent opportunity for you to apply your software engineering skills in the real world. The internship should be practical software engineering work, either as an individual project or as part of a larger project. You are expected to be involved in the coding of a software application or a dynamic website. Work consisting entirely of routine testing, internal support, development of a static website, or data entry would not be suitable."
-              />
-              <P
-                style="my-2 font-normal"
-                text="As a guideline, you are expected to carry out at least the following amount of coding:"
-              />
-              <table className="table-auto table-compact w-full text-center my-2">
-                <thead>
-                  <tr>
-                    <th className="bg-gradient-to-r from-primary to-secondary rounded-tl-xl">
-                      Type of Programming Languages
-                    </th>
-                    <th className="bg-gradient-to-l from-primary to-secondary  rounded-tr-xl">
-                      Amout of coding (not including comment)
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-secondary">
-                  {TABLE_LIST.map((row, index) => {
-                    return (
-                      <tr
-                        className="font-normal text-sm sm:text-base md:text-lg lg:text-xl"
-                        key={index}
-                      >
-                        <td>{row.lang}</td>
-                        <td>{row.loc}</td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
-              <P
-                style="my-2 font-normal"
-                text="At the beginning of the internship, you and your employer should agree on a clearly defined set of objectives of your work. It is acceptable for the internship to change direction as time goes on, provided that new objectives are identified and agreed."
-              />
-              <P
-                style="font-normal"
-                text="The following examples illustrate opposite ends of the spectrum of suitable work:"
-              />
-              <ul className="ml-4 list-disc list-inside font-normal text-justify text-sm sm:text-base md:text-lg lg:text-xl">
-                <li>
-                  At the one end of the spectrum, a student working for a large
-                  company undertakes small clearly-defined pieces of work within
-                  a large project. The student must first make a significant
-                  effort to understand the existing framework, before going on
-                  to implementation of software components that will fit into
-                  that framework.
-                </li>
-                <li>
-                  At the other end of the spectrum, a student working for a
-                  small company develops a complete software package. The
-                  student first identifies the requirements, including a user
-                  interface design, and continues development through to a
-                  prototype implementation.
-                </li>
-              </ul>
-            </li>
+          <ol className="list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl">
+            {/* 1. Requirement */}
+            <li className="mb-4 font-bold">Requirements</li>
+            {/* Duration and Timing */}
+            <P style="font-bold" text="Duration and Timing" />
+            <P text="The internship takes place in the summer semester of Year 2 of the program (late May - late July). The internship must consist of at least 7 weeks of full-time work. It may be longer if you wish." />
+            {/* Type of Work */}
+            <P style="my-2 font-bold" text="Type of Work" />
+            <P
+              style="mb-2"
+              text="An internship provides a excellent opportunity for you to apply your software engineering skills in the real world. The internship should be practical software engineering work, either as an individual project or as part of a larger project. You are expected to be involved in the coding of a software application or a dynamic website. Work consisting entirely of routine testing, internal support, development of a static website, or data entry would not be suitable."
+            />
+            <P text="As a guideline, you are expected to carry out at least the following amount of coding:" />
 
-            <li className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Assessments
-            </li>
-            <li className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Procedure and Timetable
-            </li>
-            <li className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Contact
-            </li>
-            <li className="text-sm sm:text-base md:text-lg lg:text-xl">
-              Download
-            </li>
+            <table className="table-auto table-compact w-full text-center my-4">
+              <thead>
+                <tr>
+                  <th className="bg-gradient-to-r from-primary to-secondary rounded-tl-xl">
+                    Type of Programming Languages
+                  </th>
+                  <th className="bg-gradient-to-l from-primary to-secondary  rounded-tr-xl">
+                    Amout of coding (not including comment)
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-secondary">
+                {TABLE_LIST.map((row, index) => {
+                  return (
+                    <tr
+                      className="font-normal text-sm sm:text-base md:text-lg lg:text-xl"
+                      key={index}
+                    >
+                      <td>{row.lang}</td>
+                      <td>{row.loc}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+            <P text="At the beginning of the internship, you and your employer should agree on a clearly defined set of objectives of your work. It is acceptable for the internship to change direction as time goes on, provided that new objectives are identified and agreed." />
+            <P
+              style="my-2"
+              text="The following examples illustrate opposite ends of the spectrum of suitable work:"
+            />
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+              <li className="my-2">
+                At the one end of the spectrum, a student working for a large
+                company undertakes small clearly-defined pieces of work within a
+                large project. The student must first make a significant effort
+                to understand the existing framework, before going on to
+                implementation of software components that will fit into that
+                framework.
+              </li>
+              <li>
+                At the other end of the spectrum, a student working for a small
+                company develops a complete software package. The student first
+                identifies the requirements, including a user interface design,
+                and continues development through to a prototype implementation.
+              </li>
+            </ul>
+            {/* Supervision */}
+            <P style="my-2 font-bold" text="Supervision" />
+            <P text="Normally, the host company of your internship will assign a member of the company to be your supervisor. The supervisor will oversee the progress of your work and give you advice. The International College will also nominate one or more lecturers to be your internship advisors who will be available for consultation to both you and the company." />
+
+            {/* 2. Assessments */}
+            <li className="mt-8 mb-4 font-bold">Assessments</li>
+            <P
+              style="mb-2"
+              text="The internship is an assessed component of your study. During the internship, the company will monitor your performance and then submit their assessment to the International College. The company's assessment will cover various aspects of your internship, including:"
+            />
+            <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+              <li>The quality and quantity of your work</li>
+              <li>Your attendance record</li>
+              <li>
+                Other attributes a good software engineer should possess, such
+                as punctuality, responsibility, human relations, creativity,
+                etc.
+              </li>
+            </ol>
+            <P
+              style="my-2"
+              text="After your internship, you are required to submit an internship report and give a presentation of your work and your internship experience to the internship assessment committee. The committee will then evaluate your internship and give you either grade S (Satisfactory) or U (Unsatisfactory)."
+            />
+            {/* Internship Report */}
+            <P
+              style="mb-2"
+              text="An internship report is a short report (1,500 words or more) detailing:"
+            />
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+              <li>
+                A brief outline of the company (size, main activities, the
+                division or project in which you were employed, etc.)
+              </li>
+              <li>
+                The original placement description and objectives (and any later
+                changes to these)
+              </li>
+              <li>What you actually did</li>
+              <li>
+                An honest evaluation of how successfully you achieved your
+                objectives
+              </li>
+              <li>
+                A summary of what you learned from working in an industrial
+                environment (tools, techniques, processes, group working,
+                deadlines)
+              </li>
+              <li>
+                A reflection on the value of the placement, and how it could
+                have been better
+              </li>
+            </ul>
+            <P
+              style="my-2"
+              text="The report should not just be a detailed technical description of what you did. The assessment committee is looking for a coherent, literate report in order to understand how your project fitted into the company you were working for, what you achieved, and your reflections on how the internship fitted into your educational experience."
+            />
+            <P text="Here are some hints on preparing a good report. Make sure that your report has a clear logical structure – it should not be just an unstructured flow of words telling a story. Avoid simply quoting PR material about the organisation you worked for – think about what the reader needs to know about the organisation in order to understand the context of your work. Do not focus on minute technical detail describing intricate pieces of code that you wrote." />
+            <P
+              style="my-2"
+              text="The biggest problem for most students seems to be reflecting on the internship experience. Here are some questions you might like to think about in developing this part of the report:"
+            />
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+              <li>What new skills did you learn?</li>
+              <li>
+                What existing skills did you exercise or improve during the
+                internship?
+              </li>
+              <li>
+                Did your internship experience reinforce your existing
+                knowledge? (Did you observe techniques taught at the
+                International College actually used in practice?)
+              </li>
+              <li>
+                Were there any techniques that you would like to have known
+                before undertaking the internship?
+              </li>
+              <li>How could the internship experience have been improved?</li>
+              <li>
+                What knowledge and experience will you take forward as the most
+                important lessons from your internship?
+              </li>
+            </ul>
+            <P
+              style="mt-2"
+              text="Both the content of the report and the quality of writing will be taken into account."
+            />
+            {/* Presentation */}
+            <P style="my-2 font-bold" text="Presentation" />
+            <P text="After your internship, you are required to present your work and your experience during the internship to the assessment committee and your colleagues. You should plan for a 20-minute presentation, which will be followed by a 10-minute QA session." />
+
+            {/* Absence during internship */}
+            <P style="my-2 font-bold" text="Absence during Internship" />
+            <P text="If, for any reason, you need to take a leave during the internship, you must ask for permission from the company. You must also submit a document supporting the request for your leave to your supervisor in the company (or a person who makes a record of your attendance). Absence without notice will result in failing the internship." />
+
+            {/* 3. Procedure and Timetable */}
+            <li className="mt-8 mb-4 font-bold">Procedure and Timetable</li>
+
+            {/* 4. Contact */}
+            <li className="mt-8 mb-4 font-bold">Contact</li>
+
+            {/* 5. Download */}
+            <li className="mt-8 mb-4 font-bold">Download</li>
           </ol>
         </div>
       </div>
