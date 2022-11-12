@@ -177,8 +177,50 @@ const StudentInfo = () => {
             <P style="my-2 font-bold" text="Absence during Internship" />
             <P text="If, for any reason, you need to take a leave during the internship, you must ask for permission from the company. You must also submit a document supporting the request for your leave to your supervisor in the company (or a person who makes a record of your attendance). Absence without notice will result in failing the internship." />
 
-            {/* 3. Procedure and Timetable */}
-            <li className="mt-8 mb-4 font-bold">Procedure and Timetable</li>
+            {/* 3. Procedure */}
+            <li className="mt-8 mb-4 font-bold">Procedure</li>
+            <div className="flex justify-center">
+              <ul className="steps steps-vertical lg:steps-horizontal">
+                <li className="step step-secondary">Apply for internship</li>
+                <li className="step step-secondary">Registration (online)</li>
+                <li className="step step-secondary">Pre-internship meeting</li>
+                <li className="step step-secondary">Internship</li>
+                <li className="step step-secondary">
+                  Presentation & assessment{" "}
+                </li>
+              </ul>
+            </div>
+
+            <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+              <li className="my-2">
+                Every student who is planning to undertake an internship in the
+                upcoming summer semester must apply for an internship position
+                in a company.
+              </li>
+              <li>
+                Every student taking an internship must register for the course &nbsp;
+                <span className="font-bold text-primary">
+                 "13016004 Software Industrial Internship in Summer"
+                </span>
+                . Registration is done on the University's online registry
+                system. If this course is the only course you register in the
+                summer semester, you will not be charged the tuition fee.
+              </li>
+              <li className="my-2">
+                A meeting of all the students taking internships and the
+                internship co-ordinator will be held near the end of semester 2.
+              </li>
+              <li>
+                During the internship, you are expected to work full time in the
+                host company, and follow the normal regulation of the company.
+                Your internship may begin before or finish after this period.
+              </li>
+              <li className="mt-2">
+                After completing the internship, you are required to submit an
+                internship report and give a presentation to the internship
+                assessment committee. Also, submit your internship report.
+              </li>
+            </ol>
 
             {/* 4. Contact */}
             <li className="mt-8 mb-4 font-bold">Contact</li>
