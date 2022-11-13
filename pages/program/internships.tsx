@@ -1,6 +1,7 @@
 import { H3, H4, P } from "../components/headers"
 import KmitlStudentInfo from "../components/internships/kmitl-students-info"
 import GlasgowStudentInfo from "../components/internships/glasgow-students-info"
+import CompaniesInfo from "../components/internships/companies-info"
 
 const Internships = () => {
   return (
@@ -19,6 +20,7 @@ const Internships = () => {
       <section className="mb-8 space-y-4">
         <KmitlStudentInfo />
         <GlasgowStudentInfo />
+        <CompaniesInfo />
       </section>
     </>
   )
