@@ -15,7 +15,7 @@ const TABLE_LIST = [
   },
 ]
 
-const StudentInfo = () => {
+const KmitlStudentInfo = () => {
   return (
     <>
       <div className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
@@ -187,12 +187,12 @@ const StudentInfo = () => {
                 <li className="step step-primary">Pre-internship meeting</li>
                 <li className="step step-primary">Internship</li>
                 <li className="step step-primary">
-                  Presentation & assessment{" "}
+                  Presentation & assessment
                 </li>
               </ul>
             </div>
             {/* Description */}
-            <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+            <ol className="ml-4 list-decimal list-inside md:text-justify text-sm sm:text-base md:text-lg lg:text-xl">
               <li className="my-2">
                 Every student who is planning to undertake an internship in the
                 upcoming summer semester must apply for an internship position
@@ -247,4 +247,4 @@ const StudentInfo = () => {
   )
 }
 
-export default StudentInfo
+export default KmitlStudentInfo
