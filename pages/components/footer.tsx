@@ -1,7 +1,7 @@
 import { H1, P } from "./headers"
 const Footer = () => {
   return (
-    <footer className="footer-center md:footer py-10 md:py-20 bg-neutral text-neutral-content">
+    <footer className="footer-center md:footer py-10 md:py-20 bg-neutral text-neutral-content mt-auto">
       <div className="mx-4 md:mx-12">
         <H1 style="text-primary font-bold" text="KMITL" />
         <P
