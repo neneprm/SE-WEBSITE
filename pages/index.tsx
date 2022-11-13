@@ -12,8 +12,8 @@ import Card from "./components/card"
 const Home: NextPage = () => {
   return (
     <>
-      <section className="hero min-h-screen bg-base-100">
-        <div className="hero-content flex-col lg:flex-row lg:space-x-10 xl:space-x-30">
+      <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:p-40">
+        <div className="hero-content flex-col lg:flex-row lg:space-x-10 xl:space-x-30 2xl:space-x-36">
           <div className="max-w-xs lg:max-w-lg">
             <Image src={hero} />
           </div>
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
       </div> */}
 
       <H4
-        style="font-bold text-gradient -mt-16 md:-mt-4 mb-4"
+        style="font-bold text-gradient -mt-16 md:-mt-4 mb-4 2xl:mt-0"
         text="What is Software Engineering?"
       />
       <Card
