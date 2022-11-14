@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { H3, H4, P } from "../components/headers"
 
 const ExchangeStudyAbroad = () => {
@@ -21,7 +22,7 @@ const ExchangeStudyAbroad = () => {
           <P text="This article provides an overview of the exchange program for the current SE students who wish to undertake an exchange study at FRA-UAS." />
           <div className="card-actions justify-end">
             <button className="btn btn-accent text-base-100">
-              <a href="/program/exchange-study-abroad/frankfurt">Read more →</a>
+              <Link href="/program/exchange-study-abroad/frankfurt">Read more →</Link>
             </button>
           </div>
         </div>

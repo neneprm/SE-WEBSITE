@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { H3, H4, P } from "../components/headers"
 
 const KmitlGlasgow = () => {
@@ -46,7 +47,7 @@ const KmitlGlasgow = () => {
           the University of Glasgow will be eligible to transfer to a one-year
           Master program in Software Engineering at the end of Year 4 and
           graduate with the Master of Science degree in Software Engineering
-          awarded by University of Glasgow at the end of Year 5."{" "}
+          awarded by University of Glasgow at the end of Year 5.{" "}
         </p>
       </section>
 
@@ -66,7 +67,7 @@ const KmitlGlasgow = () => {
           double-degree program is entitled to the{" "}
           <b>KMITL - Glasgow Undergraduate Scholarship</b> which provides 20%
           reduction from the full tuition-fee rate for international students at
-          Glasgow University."
+          Glasgow University.
         </p>
       </section>
 
@@ -87,10 +88,10 @@ const KmitlGlasgow = () => {
         </p>
         <div className="card-actions justify-end">
           <button className="btn btn-outline btn-primary">
-            <a href="/program/kmitl-glasgow/guidance">Application Guidance</a>
+            <Link href="/program/kmitl-glasgow/guidance">Application Guidance</Link>
           </button>
           <button className="btn btn-outline btn-primary">
-            <a href="/program/kmitl-glasgow/visa">UK Visa Guidance</a>
+            <Link href="/program/kmitl-glasgow/visa">UK Visa Guidance</Link>
           </button>
         </div>
       </section>

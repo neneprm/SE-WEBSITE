@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { H3, H4, P } from "../../components/headers"
 
 const UkVisaGuidance = () => {
@@ -10,11 +11,11 @@ const UkVisaGuidance = () => {
       <section className="mb-8">
         <H4 style="text-primary font-bold mb-4" text="UK Visa Guidance" />
         <p className="text-sm sm:text-base md:text-lg lg:text-xl">
-          The type of the visa that you should apply is called "General student
-          visa (Tier 4)". You can apply for the visa only after you have
+          The type of the visa that you should apply is called &quot;General student
+          visa (Tier 4)&quot;. You can apply for the visa only after you have
           received your final CAS statement from UoG. But there are some
           necessities that you should prepare even before starting your visa
-          application process."
+          application process.&quot;
           <br />
         </p>
         <ul className="list-decimal ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
@@ -23,7 +24,7 @@ const UkVisaGuidance = () => {
             <b>3 more years or longer</b>.
           </li>
           <li>
-            Prepare a <b>sufficient amount of money</b> in your parents' bank
+            Prepare a <b>sufficient amount of money</b> in your parents&apos; bank
             account. The money must be in the account for at least 28 days when
             you apply for a visa. Bank accounts belonging to someone else other
             than yourself or your parents are unacceptable. Only a bank account
@@ -31,8 +32,8 @@ const UkVisaGuidance = () => {
             support your application. The minimum amount of money required in
             the bank account is{" "}
             <b>
-              "Annual tuition fee listed on CAS statement in GBP" + ("Monthly
-              living cost of 1,015 GBP/month" x 9 months)
+            &quot;Annual tuition fee listed on CAS statement in GBP&quot; + (&quot;Monthly
+              living cost of 1,015 GBP/month&quot; x 9 months)
             </b>
             .
           </li>
@@ -58,7 +59,7 @@ const UkVisaGuidance = () => {
             {" "}
             https://www.gov.uk/tier-4-general-visa.
           </a>{" "}
-          Below is an overview of the UK visa application procedure."{" "}
+          Below is an overview of the UK visa application procedure.{" "}
         </p>
         <br />
         <ul className="list-decimal ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
@@ -92,7 +93,7 @@ const UkVisaGuidance = () => {
 
       <div className="card-actions justify-end">
         <button className="btn btn-outline btn-primary">
-          <a href="/program/kmitl-glasgow">Back</a>
+          <Link href="/program/kmitl-glasgow">Back</Link>
         </button>
       </div>
     </>

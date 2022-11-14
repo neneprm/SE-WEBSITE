@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { H3, H4 } from "../../components/headers"
 
 const ApplicationGuidance = () => {
@@ -13,20 +14,20 @@ const ApplicationGuidance = () => {
           <li>
             On the UCAS website above, choose Undergraduate 20xx entry, where
             20xx is the year you are planning to enter UoG, and then select
-            "Apply". This should lead you to the application system. You first
+            &quot;Apply&quot;. This should lead you to the application system. You first
             need to <b>register</b>. Make sure you provide an email address that
             you check regularly (could be @kmitl.ac.th address or your personal
             email address). Your given names and your last name that you enter
             when registering should be spelled exactly as written in your
             passport. If there is any field in the registration form that is
-            unclear, click on ? or "Help" to see an explanation. After you have
+            unclear, click on ? or &quot;Help&quot; to see an explanation. After you have
             registered, you will receive an email from UCAS asking you to verify
             your email address. You should follow the instruction in the email.
           </li>
           <li>
             After you have registered, you can then login to start filling in
             your application. When asked how you are applying, you should
-            specify that you apply as "<b>individual</b>" (thus a "buzzword" is
+            specify that you apply as &quot;<b>individual</b>&quot; (thus a &quot;buzzword&quot; is
             not required).
           </li>
           <li>
@@ -88,7 +89,7 @@ const ApplicationGuidance = () => {
           </li>
           <li>
             During the same time after you accepted the unconditional offer, you
-            will receive some information from UoG's student services regarding
+            will receive some information from UoG&apos;s student services regarding
             the registration, student accommodation, internet account, etc via
             email. You can just response to their request. When you are asked to
             register for courses in the upcoming semester, you can ignore that.
@@ -99,9 +100,9 @@ const ApplicationGuidance = () => {
           <li>
             Regarding the <b>accommodation</b>, UoG will send you an application
             form for applying for a{" "}
-            <a href="https://www.gla.ac.uk/undergraduate/accommodation/">
+            <Link href="https://www.gla.ac.uk/undergraduate/accommodation/">
               university accommodation.
-            </a>{" "}
+            </Link>{" "}
             There is a wide range of options. You can also apply for a private
             student accommodation. For the latter, you can do so by yourself on
             the web any time (even before you receive an offer). You can consult
@@ -129,7 +130,7 @@ const ApplicationGuidance = () => {
       </section>
       <div className="card-actions justify-end">
         <button className="btn btn-outline btn-primary">
-          <a href="/program/kmitl-glasgow">Back</a>
+          <Link href="/program/kmitl-glasgow">Back</Link>
         </button>
       </div>
     </>
