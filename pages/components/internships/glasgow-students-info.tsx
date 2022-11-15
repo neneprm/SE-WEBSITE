@@ -28,8 +28,8 @@ const GlasgowStudentInfo = () => {
         </div>
         <div className="collapse-content">
           <P text="Internship is an integral part of the KMITL - Glasgow 2+2 joint study program. Every student joining the 2+2 program is required to undertake an internship to order to simultaneously fulfill the requirements for the following courses:" />
-          <ul className="list-disc list-inside text-sm sm:text-base md:text-lg lg:text-xl">
-            <li className="my-2">
+          <ul className="list-disc list-inside text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
+            <li>
               <span className="font-bold">Industrial Placement</span>, a
               required component of every student aiming for a bachelor degree
               in software engineering from the School of Computing Science,
@@ -39,13 +39,13 @@ const GlasgowStudentInfo = () => {
               <span className="font-bold">
                 Software Industrial Training in Summer
               </span>
-              , a required course in KMITL's B.Eng. in Software Engineering
+              , a required course in KMITL&apos;s B.Eng. in Software Engineering
               program.
             </li>
           </ul>
-          <ol className="mt-4 list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl">
+          <ol className="mt-4 list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl space-y-4">
             {/* 1. Requirement */}
-            <li className="mb-4 font-bold">Requirements</li>
+            <li className="font-bold">Requirements</li>
             {/* Duration and Timing */}
             <P style="font-bold" text="Duration and Timing" />
             <P text="The internship takes place in the summer semester of Year 2 of the program (late May - early August). The internship must consist of a full-time work related to software development, lasting at least 10 weeks." />
@@ -87,8 +87,8 @@ const GlasgowStudentInfo = () => {
               style="my-2"
               text="The following examples illustrate opposite ends of the spectrum of suitable work:"
             />
-            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
-              <li className="my-2">
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
+              <li>
                 At the one end of the spectrum, a student working for a large
                 company undertakes small clearly-defined pieces of work within a
                 large project. The student must first make a significant effort
@@ -108,12 +108,12 @@ const GlasgowStudentInfo = () => {
             <P text="Normally, the host company of your internship will assign a member of the company to be your supervisor. The supervisor will oversee the progress of your work and give you advice. The International College will also nominate one or more lecturers to be your internship advisors who will be available for consultation to both you and the company." />
 
             {/* 2. Assessments */}
-            <li className="mt-8 mb-4 font-bold">Assessments</li>
+            <li className="font-bold">Assessments</li>
             <P
               style="mb-2"
               text="The internship is an assessed component of your study. During the internship, the company will monitor your performance and then submit their assessment to the International College. The company's assessment will cover various aspects of your internship, including:"
             />
-            <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+            <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
               <li>The quality and quantity of your work</li>
               <li>Your attendance record</li>
               <li>
@@ -131,7 +131,7 @@ const GlasgowStudentInfo = () => {
               style="mb-2"
               text="An internship report is a short report (2,500 - 4,000 words) detailing:"
             />
-            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
               <li>
                 A brief outline of the company (size, main activities, the
                 division or project in which you were employed, etc.)
@@ -164,7 +164,7 @@ const GlasgowStudentInfo = () => {
               style="my-2"
               text="The biggest problem for most students seems to be reflecting on the internship experience. Here are some questions you might like to think about in developing this part of the report:"
             />
-            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
               <li>What new skills did you learn?</li>
               <li>
                 What existing skills did you exercise or improve during the
@@ -185,24 +185,35 @@ const GlasgowStudentInfo = () => {
                 important lessons from your internship?
               </li>
             </ul>
-            <P
-              style="mt-2"
-              text="Both the content of the report and the quality of writing will be taken into account."
-            />
+            <P text="Both the content of the report and the quality of writing will be taken into account." />
             {/* Examination */}
-            <P style="my-2 font-bold" text="Examination" />
+            <P style="mb-2 font-bold" text="Examination" />
             <P text="After submitting your internship report, you will be examined first by the internship assessment committee at the International College and then by another committee at UoG:" />
-            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
-                <li className="my-2">At the International College, you will be asked to give a presentation of your work and your experience during the internship to the assessment committee. You should plan for a 20-minute presentation, followed by a 10-minute QA session. You will be given either grade S (Satisfactory) or U (Unsatisfactory). The International College will then forward their assessment report and your internship report to UoG.</li>
-                <li>At the beginning of Year 3 at UoG, there will be an interview examination by UoG's internship assessment committee to assess your internship. The committee will assess your performance and the outcome of your internship based on the interview and your report.</li>
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
+              <li>
+                At the International College, you will be asked to give a
+                presentation of your work and your experience during the
+                internship to the assessment committee. You should plan for a
+                20-minute presentation, followed by a 10-minute QA session. You
+                will be given either grade S (Satisfactory) or U
+                (Unsatisfactory). The International College will then forward
+                their assessment report and your internship report to UoG.
+              </li>
+              <li>
+                At the beginning of Year 3 at UoG, there will be an interview
+                examination by UoG&apos;s internship assessment committee to
+                assess your internship. The committee will assess your
+                performance and the outcome of your internship based on the
+                interview and your report.
+              </li>
             </ul>
 
             {/* Absence during internship */}
-            <P style="my-2 font-bold" text="Absence during Internship" />
+            <P style="font-bold" text="Absence during Internship" />
             <P text="If, for any reason, you need to take a leave during the internship, you must ask for permission from the company. You must also submit a document supporting the request for your leave to your supervisor in the company (or a person who makes a record of your attendance). Absence without notice will result in failing the internship." />
 
             {/* 3. Procedure */}
-            <li className="mt-8 mb-4 font-bold">Procedure</li>
+            <li className="font-bold">Procedure</li>
             <div className="flex justify-center">
               <ul className="steps steps-vertical lg:steps-horizontal">
                 <li className="step step-primary">Apply for internship</li>
@@ -210,29 +221,34 @@ const GlasgowStudentInfo = () => {
                 <li className="step step-primary">Pre-internship meeting</li>
                 <li className="step step-primary">Internship</li>
                 <li className="step step-primary">
-                Presentation at the International College
+                  Presentation at the International College
                 </li>
                 <li className="step step-primary">
-                Interview at the School of Computing Science, UoG
+                  Interview at the School of Computing Science, UoG
                 </li>
               </ul>
             </div>
             {/* Description */}
-            <ol className="ml-4 list-decimal list-inside md:text-justify text-sm sm:text-base md:text-lg lg:text-xl">
-              <li className="my-2">
-              Every student who is planning to undertake an internship in the upcoming summer semester must apply for an internship position in a company. The International College maintains a list of companies which accept students for internship every year. You can either choose a company in the provided list or find another company offering an internship by himself.
+            <ol className="ml-4 list-decimal list-inside md:text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
+              <li>
+                Every student who is planning to undertake an internship in the
+                upcoming summer semester must apply for an internship position
+                in a company. The International College maintains a list of
+                companies which accept students for internship every year. You
+                can either choose a company in the provided list or find another
+                company offering an internship by himself.
               </li>
               <li>
                 Every student taking an internship must register for the course
                 &nbsp;
                 <span className="font-bold">
-                  "13016004 Software Industrial Internship in Summer"
+                  &quot;13016004 Software Industrial Internship in Summer&quot;
                 </span>
-                . Registration is done on the University's online registry
+                . Registration is done on the University&apos;s online registry
                 system. If this course is the only course you register in the
                 summer semester, you will not be charged the tuition fee.
               </li>
-              <li className="my-2">
+              <li>
                 A meeting of all the students taking internships and the
                 internship co-ordinator will be held near the end of semester 2.
               </li>
@@ -241,16 +257,20 @@ const GlasgowStudentInfo = () => {
                 host company, and follow the normal regulation of the company.
                 Your internship may begin before or finish after this period.
               </li>
-              <li className="my-2">
-              Close to the end of your internship, you are required to submit an internship report and give a presentation to the International College's internship assessment committee.
+              <li>
+                Close to the end of your internship, you are required to submit
+                an internship report and give a presentation to the
+                International College&apos;s internship assessment committee.
               </li>
               <li>
-              You will be interviewed by the internship assessment committee at the School of Computing Science, UoG, in the beginning of Year 3.
+                You will be interviewed by the internship assessment committee
+                at the School of Computing Science, UoG, in the beginning of
+                Year 3.
               </li>
             </ol>
 
             {/* 4. Contact */}
-            <li className="mt-8 mb-4 font-bold">Contact</li>
+            <li className="font-bold">Contact</li>
             <P text="If you have any problem or question, please contact:" />
             <div className="flex flex-col md:flex-row">
               <P style="font-bold md:mr-2" text="Internship advisor" />

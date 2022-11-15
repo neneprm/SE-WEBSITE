@@ -24,9 +24,9 @@ const KmitlStudentInfo = () => {
           <H4 style="text-accent font-bold" text="Information for Students" />
         </div>
         <div className="collapse-content">
-          <ol className="list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl">
+          <ol className="list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl space-y-4">
             {/* 1. Requirement */}
-            <li className="mb-4 font-bold">Requirements</li>
+            <li className="font-bold">Requirements</li>
             {/* Duration and Timing */}
             <P style="font-bold" text="Duration and Timing" />
             <P text="The internship takes place in the summer semester of Year 2 of the program (late May - late July). The internship must consist of at least 7 weeks of full-time work. It may be longer if you wish." />
@@ -68,8 +68,8 @@ const KmitlStudentInfo = () => {
               style="my-2"
               text="The following examples illustrate opposite ends of the spectrum of suitable work:"
             />
-            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
-              <li className="my-2">
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
+              <li>
                 At the one end of the spectrum, a student working for a large
                 company undertakes small clearly-defined pieces of work within a
                 large project. The student must first make a significant effort
@@ -89,12 +89,12 @@ const KmitlStudentInfo = () => {
             <P text="Normally, the host company of your internship will assign a member of the company to be your supervisor. The supervisor will oversee the progress of your work and give you advice. The International College will also nominate one or more lecturers to be your internship advisors who will be available for consultation to both you and the company." />
 
             {/* 2. Assessments */}
-            <li className="mt-8 mb-4 font-bold">Assessments</li>
+            <li className="font-bold">Assessments</li>
             <P
               style="mb-2"
               text="The internship is an assessed component of your study. During the internship, the company will monitor your performance and then submit their assessment to the International College. The company's assessment will cover various aspects of your internship, including:"
             />
-            <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+            <ol className="ml-4 list-decimal list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
               <li>The quality and quantity of your work</li>
               <li>Your attendance record</li>
               <li>
@@ -112,7 +112,7 @@ const KmitlStudentInfo = () => {
               style="mb-2"
               text="An internship report is a short report (1,500 words or more) detailing:"
             />
-            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
               <li>
                 A brief outline of the company (size, main activities, the
                 division or project in which you were employed, etc.)
@@ -145,7 +145,7 @@ const KmitlStudentInfo = () => {
               style="my-2"
               text="The biggest problem for most students seems to be reflecting on the internship experience. Here are some questions you might like to think about in developing this part of the report:"
             />
-            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl">
+            <ul className="ml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
               <li>What new skills did you learn?</li>
               <li>
                 What existing skills did you exercise or improve during the
@@ -167,11 +167,10 @@ const KmitlStudentInfo = () => {
               </li>
             </ul>
             <P
-              style="mt-2"
               text="Both the content of the report and the quality of writing will be taken into account."
             />
             {/* Presentation */}
-            <P style="my-2 font-bold" text="Presentation" />
+            <P style="font-bold" text="Presentation" />
             <P text="After your internship, you are required to present your work and your experience during the internship to the assessment committee and your colleagues. You should plan for a 20-minute presentation, which will be followed by a 10-minute QA session." />
 
             {/* Absence during internship */}
@@ -192,8 +191,8 @@ const KmitlStudentInfo = () => {
               </ul>
             </div>
             {/* Description */}
-            <ol className="ml-4 list-decimal list-inside md:text-justify text-sm sm:text-base md:text-lg lg:text-xl">
-              <li className="my-2">
+            <ol className="ml-4 list-decimal list-inside md:text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
+              <li>
                 Every student who is planning to undertake an internship in the
                 upcoming summer semester must apply for an internship position
                 in a company.
@@ -202,13 +201,13 @@ const KmitlStudentInfo = () => {
                 Every student taking an internship must register for the course
                 &nbsp;
                 <span className="font-bold">
-                  "13016004 Software Industrial Internship in Summer"
+                &quot;13016004 Software Industrial Internship in Summer&quot;
                 </span>
-                . Registration is done on the University's online registry
+                . Registration is done on the University&apos;s online registry
                 system. If this course is the only course you register in the
                 summer semester, you will not be charged the tuition fee.
               </li>
-              <li className="my-2">
+              <li>
                 A meeting of all the students taking internships and the
                 internship co-ordinator will be held near the end of semester 2.
               </li>
@@ -217,7 +216,7 @@ const KmitlStudentInfo = () => {
                 host company, and follow the normal regulation of the company.
                 Your internship may begin before or finish after this period.
               </li>
-              <li className="mt-2">
+              <li>
                 After completing the internship, you are required to submit an
                 internship report and give a presentation to the internship
                 assessment committee. Also, submit your internship report.
@@ -225,7 +224,7 @@ const KmitlStudentInfo = () => {
             </ol>
 
             {/* 4. Contact */}
-            <li className="mt-8 mb-4 font-bold">Contact</li>
+            <li className="font-bold">Contact</li>
             <P text="If you have any problem or question, please contact:" />
             <div className="flex flex-col md:flex-row">
               <P style="font-bold md:mr-2" text="Internship advisor" />
