@@ -13,7 +13,7 @@ const Button: React.FunctionComponent<IButton> = ({ style, link, text }) => {
       <button
         className={`btn btn-ghost text-sm sm:text-base md:text-lg lg:text-xl font-bold mx-2 ${style}`}
       >
-        <a>{text}</a>
+        {text}
       </button>
     </Link>
   )
