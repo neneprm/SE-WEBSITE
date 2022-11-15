@@ -2,7 +2,7 @@ import { useState } from "react"
 import Link from "next/link"
 
 interface IButton {
-  style: string
+  style?: string
   link: string
   text: string
 }

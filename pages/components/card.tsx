@@ -25,12 +25,12 @@ const Card: React.FunctionComponent<ICard> = ({
       {image}
       <div className="card-body">
         <h3
-          className={`card-title text-base sm:text-lg lg:text-2xl ${titleStyle}`}
+          className={`card-title text-base sm:text-lg lg:text-2xl 2xl:text-3xl ${titleStyle}`}
         >
           <span>{icon}</span>
           {title}
         </h3>
-        <P text={`${body}`} />
+        <P text={`${body}`} style="p-2"/>
         <div className="card-actions justify-center md:justify-end">
           <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
             <Link href={`${link}`}>
