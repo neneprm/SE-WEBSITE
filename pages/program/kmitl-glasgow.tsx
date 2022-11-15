@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { H3, H4, P } from "../components/headers"
+import Card from "../components/card"
+import SecondaryButton from "../components/secondary-button"
 
 const KmitlGlasgow = () => {
   return (
@@ -7,22 +9,16 @@ const KmitlGlasgow = () => {
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="KMITL-Glasgow" />
       </section>
-      
-      <section className="mb-8">
-        <H4
-          style="text-primary font-bold mb-4"
-          text="About University of Glasgow"
-        />
-        <P text="Founded in 1451, the University of Glasgow(Glasgow, United Kingdom) is one of the oldest universities in the world, and has been ranked asone of the world's top 100 universities. With its long history in advanced research, the University of Glasgow has been home tosix Nobel-prize winners. The University'sSchool of Computing Sciencehas consistently been ranked in theUK's top 10 in computing. Glasgow'sSoftware Engineering programis one of the first programs in the world that specialize in software engineering and is highly respected by software industry." />
-        <div className="card-actions justify-end">
-          <button className="btn btn-link">
-            <a href="https://www.gla.ac.uk/">Read more →</a>
-          </button>
-        </div>
-      </section>
 
-      <section className="mb-8">
-        <H4 style="text-primary font-bold mb-4" text="Admission" />
+      <Card
+        titleStyle="text-primary"
+        title="About University of Glasgow"
+        link="https://www.gla.ac.uk/"
+        body="Founded in 1451, the University of Glasgow(Glasgow, United Kingdom) is one of the oldest universities in the world, and has been ranked asone of the world's top 100 universities. With its long history in advanced research, the University of Glasgow has been home tosix Nobel-prize winners. The University'sSchool of Computing Sciencehas consistently been ranked in theUK's top 10 in computing. Glasgow's Software Engineering programis one of the first programs in the world that specialize in software engineering and is highly respected by software industry."
+      />
+
+      <section className="my-8">
+        <H4 style="text-accent font-bold mb-4" text="Admission" />
         <P text="Requirements for the students who wish to join this double-degree program:" />
         <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
           <li>
@@ -34,8 +30,8 @@ const KmitlGlasgow = () => {
       </section>
 
       <section className="mb-8">
-        <H4 style="text-primary font-bold mb-4" text="Degrees" />
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+        <H4 style="text-accent font-bold mb-4" text="Degrees" />
+        <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
           Students who have completed Year 4 of this double-degree program will
           be awarded a{" "}
           <b>
@@ -52,7 +48,7 @@ const KmitlGlasgow = () => {
       </section>
 
       <section className="mb-8">
-        <H4 style="text-primary font-bold mb-4" text="Tuition Fees" />
+        <H4 style="text-accent font-bold mb-4" text="Tuition Fees" />
         <P text="The tuition fee rates are as follows*:" />
         <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
           <li>2 years at KMITL, Tuition fee : THB 180,000 per year</li>
@@ -62,7 +58,7 @@ const KmitlGlasgow = () => {
           </li>
         </ul>
         <br />
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+        <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
           * Rates as of Academic Year 2022. Every student joining the
           double-degree program is entitled to the{" "}
           <b>KMITL - Glasgow Undergraduate Scholarship</b> which provides 20%
@@ -72,8 +68,8 @@ const KmitlGlasgow = () => {
       </section>
 
       <section className="mb-8">
-        <H4 style="text-primary font-bold mb-4" text="Application Procedure" />
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl">
+        <H4 style="text-accent font-bold mb-4" text="Application Procedure" />
+        <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
           Applications for KMITL-Glasgow Double-Degree Program in Software
           Engineering are made when students finish the second semester of Year
           2 of their study in the SE program. Second-year SE students who meet
@@ -86,14 +82,11 @@ const KmitlGlasgow = () => {
             https://www.ucas.com/students.
           </a>
         </p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-outline btn-primary">
-            <Link href="/program/kmitl-glasgow/guidance">Application Guidance</Link>
-          </button>
-          <button className="btn btn-outline btn-primary">
-            <Link href="/program/kmitl-glasgow/visa">UK Visa Guidance</Link>
-          </button>
-        </div>
+      </section>
+
+      <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-8">
+      <SecondaryButton text="Application Guidance" link="/program/kmitl-glasgow/application-guidance" style="wide md:w-44"/>
+      <SecondaryButton text="UK Visa Guidance" link="/program/kmitl-glasgow/visa-guidance" style="wide md:w-44"/>
       </section>
     </>
   )
