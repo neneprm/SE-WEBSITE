@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { H3, H4, P } from "../../components/headers"
+import SecondaryButton from "../../components/secondary-button"
 
 const UkVisaGuidance = () => {
   return (
@@ -9,60 +10,67 @@ const UkVisaGuidance = () => {
       </section>
 
       <section className="mb-8">
-        <H4 style="text-primary font-bold mb-4" text="UK Visa Guidance" />
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl">
-          The type of the visa that you should apply is called &quot;General student
-          visa (Tier 4)&quot;. You can apply for the visa only after you have
+        <H4 style="text-accent font-bold mb-4" text="UK Visa Guidance" />
+        <P
+          text='The type of the visa that you should apply is called "General student
+          visa (Tier 4)". You can apply for the visa only after you have
           received your final CAS statement from UoG. But there are some
           necessities that you should prepare even before starting your visa
-          application process.&quot;
-          <br />
-        </p>
-        <ul className="list-decimal ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
+          application process."'
+          style="mb-4"
+        />
+
+        <ul className="list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl md:text-justify space-y-2">
           <li>
             Make sure you have your passport that is valid for{" "}
             <b>3 more years or longer</b>.
           </li>
           <li>
-            Prepare a <b>sufficient amount of money</b> in your parents&apos; bank
-            account. The money must be in the account for at least 28 days when
-            you apply for a visa. Bank accounts belonging to someone else other
-            than yourself or your parents are unacceptable. Only a bank account
-            where the money can be readily withdrawn at any time can be used to
-            support your application. The minimum amount of money required in
-            the bank account is{" "}
+            Prepare a <b>sufficient amount of money</b> in your parents&apos;
+            bank account. The money must be in the account for at least 28 days
+            when you apply for a visa. Bank accounts belonging to someone else
+            other than yourself or your parents are unacceptable. Only a bank
+            account where the money can be readily withdrawn at any time can be
+            used to support your application. The minimum amount of money
+            required in the bank account is{" "}
             <b>
-            &quot;Annual tuition fee listed on CAS statement in GBP&quot; + (&quot;Monthly
-              living cost of 1,015 GBP/month&quot; x 9 months)
+              &quot;Annual tuition fee listed on CAS statement in GBP&quot; +
+              (&quot;Monthly living cost of 1,015 GBP/month&quot; x 9 months)
             </b>
             .
           </li>
           <li>
             Have a <b>Tuberculosis test</b> at an approved testing center to
-            obtain a medical certificate. See{" "}
-            <a href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-thailand/tuberculosis-testing-in-thailand">
-              <b>
-                https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-thailand/tuberculosis-testing-in-thailand.
-              </b>
-            </a>
+            obtain a medical certificate. See &nbsp;
+            <span className="link link-primary max-w-screen-sm">
+              <Link href="https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-thailand/tuberculosis-testing-in-thailand">
+                tuberculosis-testing-in-thailand.
+              </Link>
+            </span>
           </li>
           <li>
             Obtain the address of <b>your accommodation</b> in the UK.
           </li>
         </ul>
-        <br />
-        <P text="Note that you need not purchase your flight ticket before applying for your visa, but you should have a travel plan, i.e. which day your plan to arrive in the UK." />
-        <br />
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl">
-          Guidance on how to apply for this type of visa can be found at{" "}
-          <a href="https://www.gov.uk/tier-4-general-visa">
-            {" "}
-            https://www.gov.uk/tier-4-general-visa.
-          </a>{" "}
-          Below is an overview of the UK visa application procedure.{" "}
+        <P
+          style="my-4"
+          text="Note that you need not purchase your flight ticket before applying for your visa, but you should have a travel plan, i.e. which day your plan to arrive in the UK."
+        />
+
+        <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
+          Guidance on how to apply for this type of visa can be found at &nbsp;
+          <span className="link link-primary">
+            <Link href="https://www.gov.uk/tier-4-general-visa">
+              tier-4-general-visa.
+            </Link>
+          </span>
         </p>
-        <br />
-        <ul className="list-decimal ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
+        <P
+          style="mt-2"
+          text="Below is an overview of the UK visa application procedure:"
+        />
+
+        <ul className="list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl md:text-justify space-y-2 mt-4">
           <li>Fill in and submit the online application form.</li>
           <li>
             Upload all the required supporting documents. Upload the original
@@ -87,15 +95,19 @@ const UkVisaGuidance = () => {
             date.
           </li>
         </ul>
-        <br />
-        <P text="If there is no problem with your application, the processing time for General student visa (Tier 4) is normally 2-3 weeks after your visit to the UK visa application center." />
+        <P
+          style="mt-4"
+          text="If there is no problem with your application, the processing time for General student visa (Tier 4) is normally 2-3 weeks after your visit to the UK visa application center."
+        />
       </section>
 
-      <div className="card-actions justify-end">
-        <button className="btn btn-outline btn-primary">
-          <Link href="/program/kmitl-glasgow">Back</Link>
-        </button>
-      </div>
+      <section className="flex justify-center mb-8">
+        <SecondaryButton
+          text="← Back to Page"
+          link="/program/kmitl-glasgow"
+          style=""
+        />
+      </section>
     </>
   )
 }
