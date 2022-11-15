@@ -19,7 +19,7 @@ const Program = () => {
         <H3 style="text-gradient font-bold text-center" text="PROGRAM" />
       </section>
       
-      <section className="grid gap-3 mb-8 md:grid-cols-2 xl:grid-cols-3 2xl:mx-96">
+      <section className="grid gap-3 mb-8 place-items-center md:grid-cols-2 xl:grid-cols-3 xl:mx-92 2xl:mx-96">
         <Card
           image={
             <figure>
@@ -56,9 +56,9 @@ const Program = () => {
               <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
             </figure>
           }
-          title="Exchange Study Abroad"
+          title="Exchange Study"
           icon={<FaPlane className="text-primary" />}
-          link="/program/exchange-study-abroad"
+          link="/program/exchange-study"
         />
         <Card
           image={
