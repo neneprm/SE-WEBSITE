@@ -227,16 +227,16 @@ const ApplicationGuidance = () => {
 
       <section className="mb-8">
         <H4 style="text-primary font-bold mb-4" text="Activity" />
-        <ul className="list-disc ml-5 text-sm sm:text-base md:text-lg lg:text-xl">
-          <li><P style="font-bold" text="Submit an intent to apply" /></li>
-          <li><P style="font-bold" text="Application deadline on FRA-UAS webseite (strict)" /></li>
-          <li>Arrival at Frankfurt</li>
-          <li>Orientation activities</li>
-          <li>German language course</li>
-          <li>Teaching begins</li>
-          <li>Teaching ends</li>
-          <li>End of exam period</li>
-          <li>Start of Academic Year 2019 at KMITL</li>
+        <ul className="steps steps-vertical">
+          <li className="step font-bold">Submit an intent to apply</li>
+          <li className="step font-bold">Application deadline on FRA-UAS webseite (strict)"</li>
+          <li className="step">Arrival at Frankfurt</li>
+          <li className="step">Orientation activities</li>
+          <li className="step">German language course</li>
+          <li className="step">Teaching begins</li>
+          <li className="step">Teaching ends</li>
+          <li className="step">End of exam period</li>
+          <li className="step">Start of Academic Year 2019 at KMITL</li>
         </ul>
 
       </section>
