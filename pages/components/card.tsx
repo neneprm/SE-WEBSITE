@@ -21,7 +21,7 @@ const Card: React.FunctionComponent<ICard> = ({
   link,
 }) => {
   return (
-    <div className={`card bg-base-100 card-bordered shadow-lg ${cardStyle}`}>
+    <div className={`card bg-base-100 card-bordered shadow-lg max-w-fit ${cardStyle}`}>
       {image}
       <div className="card-body">
         <h3
