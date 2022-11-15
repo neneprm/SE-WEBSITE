@@ -77,7 +77,7 @@ const KmitlGlasgow = () => {
           director before the end of Year 2 Semester 2 and submit their
           applications on the UCAS system <b>no later than 30 June</b> (of the
           year they are planning to enter UoG) at
-          <a href="https://www.ucas.com/students">
+          <a className="link link-primary" href="https://www.ucas.com/students">
             {" "}
             https://www.ucas.com/students.
           </a>
