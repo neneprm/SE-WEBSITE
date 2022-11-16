@@ -7,7 +7,7 @@ interface ICard {
   icon?: JSX.Element
   titleStyle?: string
   title?: string
-  body?: string
+  body: string
   link: string
 }
 
