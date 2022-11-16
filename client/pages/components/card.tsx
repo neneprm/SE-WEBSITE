@@ -34,7 +34,7 @@ const Card: React.FunctionComponent<ICard> = ({
         <div className="card-actions justify-center md:justify-end">
           <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
             <Link href={`${link}`}>
-              <a>Read more →</a>
+              Read more →
             </Link>
           </button>
         </div>
