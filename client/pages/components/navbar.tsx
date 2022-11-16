@@ -29,12 +29,15 @@ const NavBar = () => {
       <nav className="navbar">
         {/* Desktop NavBar */}
         <button
-          className="font-bold text-gradient sm:text-base md:text-md lg:text-lg"
+          className="btn btn-ghost"
           onClick={() => setActiveId(-1)}
         >
-          <Link href="/">
-            <a>SOFTWARE</a>
-          </Link>
+          <div className='hover:cursor-pointer w-48'>
+            <Link href="/">
+            <Image src={logo} />
+            </Link>
+          </div>
+          
         </button>
         <div className={`flex-1`}></div>
         <div className={`${navActive} hidden xl:flex`}>
@@ -64,7 +67,7 @@ const NavBar = () => {
             </div>
           ))}
         </div>
-        {/* <a className='hover:cursor-pointer'><Image src={logo} /></a> */}
+        
 
         {/* Mobile NavBar */}
         <div className="flex-none xl:hidden">
