@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { H3, H4 } from "../../components/headers"
-import SecondaryButton from "../../components/secondary-button"
+import BorderButton from "../../components/border-button"
 
 const ApplicationGuidance = () => {
   return (
@@ -154,7 +154,7 @@ const ApplicationGuidance = () => {
       </section>
 
       <section className="flex justify-center mb-8">
-        <SecondaryButton
+        <BorderButton
           text="← Back to Page"
           link="/program/kmitl-glasgow"
           style=""

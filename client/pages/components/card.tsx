@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { H3, P } from "./headers"
+import { P } from "./headers"
 
 interface ICard {
   cardStyle?: string
@@ -21,7 +21,9 @@ const Card: React.FunctionComponent<ICard> = ({
   link,
 }) => {
   return (
-    <div className={`card bg-base-100 card-bordered shadow-lg max-w-fit ${cardStyle}`}>
+    <div
+      className={`card bg-base-100 card-bordered shadow-lg max-w-fit ${cardStyle}`}
+    >
       {image}
       <div className="card-body">
         <h3
@@ -30,13 +32,13 @@ const Card: React.FunctionComponent<ICard> = ({
           <span>{icon}</span>
           {title}
         </h3>
-        <P text={`${body}`} style="p-2"/>
+        <P text={`${body}`} style="p-2" />
         <div className="card-actions justify-center md:justify-end">
-          <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
-            <Link href={`${link}`}>
+          <Link href={`${link}`}>
+            <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
               Read more →
-            </Link>
-          </button>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

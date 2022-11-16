@@ -1,17 +1,14 @@
 import { H3 } from "./components/headers"
-import Button from "./components/button"
+import GhostButton from "./components/ghost-button"
 const Admissions = () => {
   return (
     <>
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="ADMISSIONS" />
       </section>
-      
-      <section>
-        {/* Content */}
-        
-      </section>
-      
+
+      <section>{/* Content */}</section>
+
       {/* <section className="h-56 grid grid-cols-2 gap-40 content-center ...">
         <Button
           style="btn-outline border-2 btn-accent"
@@ -24,8 +21,6 @@ const Admissions = () => {
           text="ANNOUNCEMENT"
         ></Button>
       </section> */}
-
-
     </>
   )
 }

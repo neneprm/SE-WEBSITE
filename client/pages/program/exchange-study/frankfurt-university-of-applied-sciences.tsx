@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { H3, H4, P } from "../../components/headers"
-import SecondaryButton from "../../components/secondary-button"
+import BorderButton from "../../components/border-button"
 
 const TABLE_COST_LIST = [
   {
@@ -94,11 +94,11 @@ const ApplicationGuidance = () => {
             </ul>
             <P text="FRA-UAS has been offering many postgraduate programs in English and, recently, has started to teach a number of undergraduate courses in English, including the courses in the second year in its Bachelor Program in Computer Science." />
             <div className="card-actions justify-center md:justify-end">
-              <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
-                <Link href="https://www.frankfurt-university.de/en/">
+              <Link href="https://www.frankfurt-university.de/en/">
+                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                   Read more →
-                </Link>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -277,7 +277,7 @@ const ApplicationGuidance = () => {
       </section>
 
       <section className="flex justify-center mb-8">
-        <SecondaryButton
+        <BorderButton
           text="← Back to Page"
           link="/program/exchange-study"
           style=""

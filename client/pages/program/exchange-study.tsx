@@ -18,11 +18,11 @@ const ExchangeStudyAbroad = () => {
           <br />
           <P text="This article provides an overview of the exchange program for the current SE students who wish to undertake an exchange study at FRA-UAS." />
           <div className="card-actions justify-end">
-            <button className="btn btn-accent text-base-100">
-              <Link href="/program/exchange-study/frankfurt-university-of-applied-sciences">
+            <Link href="/program/exchange-study/frankfurt-university-of-applied-sciences">
+              <button className="btn btn-accent text-base-100">
                 Read more →
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
       </section>

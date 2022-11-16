@@ -5,7 +5,7 @@ import Link from "next/link"
 
 import hero from "./assets/hero.svg"
 
-import PrimaryButton from "./components/primary_button"
+import GradientButton from "./components/gradient-button"
 import { H1, H3, H4, P } from "./components/headers"
 import Card from "./components/card"
 
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:p-40">
         <div className="hero-content flex-col lg:flex-row lg:space-x-10 xl:space-x-30 2xl:space-x-36">
           <div className="max-w-xs lg:max-w-lg">
-            <Image src={hero} alt="Hero Art"/>
+            <Image src={hero} alt="Hero Art" />
           </div>
           <span className="text-center lg:text-right">
             <H1 style="font-bold text-gradient" text="SOFTWARE" />
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat! Deserunt eum quae, earum eos distinctio minima a mollitia? Beatae voluptates aliquam commodi ratione quis molestiae magnam vero dolore officiis.
       </p>
       <button className='btn bg-gradient'>Hello daisyUI</button>
-      <PrimaryButton name='Read more →' /> */}
+      <GradientButton name='Read more →' /> */}
     </>
   )
 }
