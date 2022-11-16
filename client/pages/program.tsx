@@ -26,6 +26,7 @@ const Program = () => {
           }
           title="Curriculum"
           icon={<FaScroll className="text-primary" />}
+          body=""
           link="/program/curriculum"
         />
         <Card
@@ -36,6 +37,7 @@ const Program = () => {
           }
           title="KMITL-Glasgow"
           icon={<FaGraduationCap className="text-primary" />}
+          body=""
           link="/program/kmitl-glasgow"
         />
         <Card
@@ -46,6 +48,7 @@ const Program = () => {
           }
           title="Study Plans"
           icon={<FaCalendar className="text-primary" />}
+          body=""
           link="/program/study-plans"
         />
         <Card
@@ -56,6 +59,7 @@ const Program = () => {
           }
           title="Exchange Study"
           icon={<FaPlane className="text-primary" />}
+          body=""
           link="/program/exchange-study"
         />
         <Card
@@ -66,6 +70,7 @@ const Program = () => {
           }
           title="Internships"
           icon={<FaSuitcase className="text-primary" />}
+          body=""
           link="/program/internships"
         />
         <Card
@@ -76,6 +81,7 @@ const Program = () => {
           }
           title="Lecturers"
           icon={<BsPeopleFill className="text-primary" />}
+          body=""
           link="/program/lecturers"
         />
       </section>
