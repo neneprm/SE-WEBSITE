@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Link from "next/link"
 import { H3, H4, P } from "../../components/headers"
 import BorderButton from "../../components/border-button"
@@ -5,6 +6,10 @@ import BorderButton from "../../components/border-button"
 const UkVisaGuidance = () => {
   return (
     <>
+      <Head>
+        <title>SE Double-Degree | KMITL</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="KMITL-Glasgow" />
       </section>

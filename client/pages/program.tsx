@@ -15,10 +15,16 @@ import {
   FaSuitcase,
 } from "react-icons/fa"
 import { BsPeopleFill } from "react-icons/bs"
+import Head from "next/head"
 
 const Program = () => {
   return (
     <>
+      <Head>
+        <title>SE Program | KMITL</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="PROGRAM" />
       </section>

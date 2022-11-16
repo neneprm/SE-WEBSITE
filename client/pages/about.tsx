@@ -1,8 +1,14 @@
+import Head from "next/head"
 import { H3, H4, P } from "./components/headers"
 
 const About = () => {
   return (
     <>
+      <Head>
+        <title>About SE | KMITL</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="ABOUT" />
       </section>

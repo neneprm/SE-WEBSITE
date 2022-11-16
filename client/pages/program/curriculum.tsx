@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { H3, H4, P } from "../components/headers"
 import Link from "next/link"
 import Image from "next/image"
@@ -6,6 +7,10 @@ import CurriculumTable from "../assets/curriculum-table.png"
 const Curriculum = () => {
   return (
     <>
+      <Head>
+        <title>SE Curriculum | KMITL</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="CURRICULUM" />
       </section>
@@ -19,7 +24,7 @@ const Curriculum = () => {
       </section>
 
       <section className="mb-8 w-full">
-        <Image src={CurriculumTable} alt="curriculum-table"/>
+        <Image src={CurriculumTable} alt="curriculum-table" />
       </section>
 
       <section className="mb-8">

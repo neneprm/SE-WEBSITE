@@ -12,6 +12,11 @@ import Card from "./components/card"
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Software Engineering | KMITL</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:p-40">
         <div className="hero-content flex-col lg:flex-row lg:space-x-10 xl:space-x-30 2xl:space-x-36">
           <div className="max-w-xs lg:max-w-lg">

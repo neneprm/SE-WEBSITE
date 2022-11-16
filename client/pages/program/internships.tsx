@@ -1,3 +1,4 @@
+import Head from "next/head"
 import { H3, H4, P } from "../components/headers"
 import KmitlStudentInfo from "../components/internships/kmitl-students-info"
 import GlasgowStudentInfo from "../components/internships/glasgow-students-info"
@@ -6,6 +7,10 @@ import CompaniesInfo from "../components/internships/companies-info"
 const Internships = () => {
   return (
     <>
+      <Head>
+        <title>SE Internships | KMITL</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="INTERNSHIPS" />
       </section>
