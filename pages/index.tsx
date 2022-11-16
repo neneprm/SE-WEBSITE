@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:p-40">
         <div className="hero-content flex-col lg:flex-row lg:space-x-10 xl:space-x-30 2xl:space-x-36">
           <div className="max-w-xs lg:max-w-lg">
-            <Image src={hero} />
+            <Image src={hero} alt="Hero Art"/>
           </div>
           <span className="text-center lg:text-right">
             <H1 style="font-bold text-gradient" text="SOFTWARE" />
