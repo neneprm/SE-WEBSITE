@@ -4,13 +4,15 @@ const Admissions = () => {
   return (
     <>
       <section className="container mx-auto my-4">
-        <H3
-          style="text-gradient font-bold text-center py-8"
-          text="ADMISSIONS"
-        />
+        <H3 style="text-gradient font-bold text-center" text="ADMISSIONS" />
       </section>
       
-      <section className="h-56 grid grid-cols-2 gap-40 content-center ...">
+      <section>
+        {/* Content */}
+        
+      </section>
+      
+      {/* <section className="h-56 grid grid-cols-2 gap-40 content-center ...">
         <Button
           style="btn-outline border-2 btn-accent"
           link="/admissions/curriculum"
@@ -21,7 +23,9 @@ const Admissions = () => {
           link="/admissions/announcement"
           text="ANNOUNCEMENT"
         ></Button>
-      </section>
+      </section> */}
+
+
     </>
   )
 }
