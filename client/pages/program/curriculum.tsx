@@ -1,6 +1,7 @@
 import { H3, H4, P } from "../components/headers"
 import Link from "next/link"
-import Card from "../components/card"
+import Image from "next/image"
+import CurriculumTable from "../assets/curriculum-table.png"
 
 const Curriculum = () => {
   return (
@@ -15,6 +16,10 @@ const Curriculum = () => {
           text="B.Eng. in Software Engineering Program"
         />
         <P text="The B.Eng. in Software Engineering Programis a 4-year undergraduate program aiming at producing graduates who are capable of working confidently in the international software industry as well as pursuing postgraduate study and research in leading universities worldwide. The curriculum of the program is designed in accordance with the recent ACM/IEEE guideline for undergraduate curriculum in software engineering." />
+      </section>
+
+      <section className="mb-8 w-full">
+        <Image src={CurriculumTable}/>
       </section>
 
       <section className="mb-8">
