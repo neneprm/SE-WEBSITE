@@ -29,15 +29,14 @@ const NavBar = () => {
       <nav className="navbar">
         {/* Desktop NavBar */}
         <button
-          className="btn btn-ghost"
+          className="btn btn-ghost btn-sm md:btn-md"
           onClick={() => setActiveId(-1)}
         >
-          <div className='hover:cursor-pointer w-48'>
+          <div className="hover:cursor-pointer w-24 md:w-32 lg:w-48">
             <Link href="/">
-            <Image src={logo} />
+              <Image src={logo} alt="Home" />
             </Link>
           </div>
-          
         </button>
         <div className={`flex-1`}></div>
         <div className={`${navActive} hidden xl:flex`}>
@@ -67,7 +66,6 @@ const NavBar = () => {
             </div>
           ))}
         </div>
-        
 
         {/* Mobile NavBar */}
         <div className="flex-none xl:hidden">
