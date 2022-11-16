@@ -1,6 +1,8 @@
 import { H3, H4, P } from "../components/headers"
 import BorderButton from "../components/border-button"
 import Link from "next/link"
+import Image from "next/image"
+import UoGLogo from "../assets/UoG-logo.png"
 
 const KmitlGlasgow = () => {
   return (
@@ -8,9 +10,11 @@ const KmitlGlasgow = () => {
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="KMITL-Glasgow" />
       </section>
-
       <div className="card bg-base-100 card-bordered shadow-lg max-w-fit">
         <div className="card-body">
+          <div className="max-w-xs mx-auto">
+            <Image src={UoGLogo} />
+          </div>
           <h3 className="card-title text-accent sm:text-lg lg:text-2xl 2xl:text-3xl">
             About University of Glasgow
           </h3>
