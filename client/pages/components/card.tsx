@@ -1,9 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
 import { P } from "./headers"
 
 interface ICard {
   cardStyle?: string
-  image?: JSX.Element
+  image?: string | any
+  imageAlt?: string
   icon?: JSX.Element
   titleStyle?: string
   title?: string
@@ -14,6 +16,7 @@ interface ICard {
 const Card: React.FunctionComponent<ICard> = ({
   cardStyle,
   image,
+  imageAlt,
   icon,
   titleStyle,
   title,
@@ -24,7 +27,10 @@ const Card: React.FunctionComponent<ICard> = ({
     <div
       className={`card bg-base-100 card-bordered shadow-lg max-w-fit ${cardStyle}`}
     >
-      {image}
+      <div className="w-fit">
+        <Image src={image} alt={imageAlt} />
+      </div>
+
       <div className="card-body">
         <h3
           className={`card-title text-base sm:text-lg lg:text-2xl 2xl:text-3xl ${titleStyle}`}
