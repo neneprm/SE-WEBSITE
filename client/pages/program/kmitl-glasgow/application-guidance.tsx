@@ -112,11 +112,13 @@ const ApplicationGuidance = () => {
           <div className="divider"></div>
           <li>
             Regarding the <b>accommodation</b>, UoG will send you an application
-            form for applying for a{" "}
-            <Link href="https://www.gla.ac.uk/undergraduate/accommodation/">
-              university accommodation.
-            </Link>{" "}
-            There is a wide range of options. You can also apply for a private
+            form for applying for a &nbsp;
+            <span className="link link-primary">
+              <Link href="https://www.gla.ac.uk/undergraduate/accommodation/">
+                university accommodation
+              </Link>
+            </span>
+            . There is a wide range of options. You can also apply for a private
             student accommodation. For the latter, you can do so by yourself on
             the web any time (even before you receive an offer). You can consult
             the SE students currently studying at Glasgow for advice
