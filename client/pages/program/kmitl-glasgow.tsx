@@ -1,6 +1,6 @@
 import { H3, H4, P } from "../components/headers"
-import Card from "../components/card"
-import SecondaryButton from "../components/secondary-button"
+import BorderButton from "../components/border-button"
+import Link from "next/link"
 
 const KmitlGlasgow = () => {
   return (
@@ -9,12 +9,53 @@ const KmitlGlasgow = () => {
         <H3 style="text-gradient font-bold text-center" text="KMITL-Glasgow" />
       </section>
 
-      <Card
-        titleStyle="text-primary"
-        title="About University of Glasgow"
-        link="https://www.gla.ac.uk/"
-        body="Founded in 1451, the University of Glasgow(Glasgow, United Kingdom) is one of the oldest universities in the world, and has been ranked asone of the world's top 100 universities. With its long history in advanced research, the University of Glasgow has been home tosix Nobel-prize winners. The University'sSchool of Computing Sciencehas consistently been ranked in theUK's top 10 in computing. Glasgow's Software Engineering programis one of the first programs in the world that specialize in software engineering and is highly respected by software industry."
-      />
+      <div className="card bg-base-100 card-bordered shadow-lg max-w-fit">
+        <div className="card-body">
+          <h3 className="card-title text-accent sm:text-lg lg:text-2xl 2xl:text-3xl">
+            About University of Glasgow
+          </h3>
+          <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
+            Founded in 1451, the &nbsp;
+            <span className="link link-primary">
+              <Link href="https://www.gla.ac.uk/">University of Glasgow</Link>
+            </span>
+            (Glasgow, United Kingdom) is one of the oldest universities in the
+            world, and has been ranked as &nbsp;
+            <span className="link link-primary">
+              <Link href="https://www.topuniversities.com/universities/university-glasgow">
+                one of the world's top 100 universities
+              </Link>
+            </span>
+            . With its long history in advanced research, the University of
+            Glasgow has been home to &nbsp;
+            <span className="link link-primary">
+              <Link href="https://www.gla.ac.uk/explore/history/fame/">
+                six Nobel-prize winners
+              </Link>
+            </span>
+            . The University's &nbsp;
+            <span className="link link-primary">
+              <Link href="https://www.gla.ac.uk/schools/computing/">
+                School of Computing Science
+              </Link>
+            </span>
+            &nbsp; has consistently been ranked in the &nbsp;
+            <span className="link link-primary">
+              <Link href="https://www.topuniversities.com/university-rankings/university-subject-rankings/2022/computer-science-information-systems">
+                UK's top school in computing
+              </Link>
+            </span>
+            . Glasgow's &nbsp;
+            <span className="link link-primary">
+              <Link href="https://www.gla.ac.uk/undergraduate/degrees/softwareengineering/">
+                Software Engineering program
+              </Link>
+            </span>
+            &nbsp; is one of the first programs in the world that specialize in
+            software engineering and is highly respected by software industry.
+          </p>
+        </div>
+      </div>
 
       <section className="my-8">
         <H4 style="text-accent font-bold mb-4" text="Admission" />
@@ -84,12 +125,12 @@ const KmitlGlasgow = () => {
       </section>
 
       <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-8">
-        <SecondaryButton
+        <BorderButton
           text="Application Guidance"
           link="/program/kmitl-glasgow/application-guidance"
           style="wide md:w-44"
         />
-        <SecondaryButton
+        <BorderButton
           text="UK Visa Guidance"
           link="/program/kmitl-glasgow/visa-guidance"
           style="wide md:w-44"
