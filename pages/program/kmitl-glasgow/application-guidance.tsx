@@ -141,7 +141,7 @@ const ApplicationGuidance = () => {
             Double-Degree Program in Software Engineering, please contact the{" "}
             <b>SE program director</b>, &nbsp;
             <a
-              className="link link-primary"
+              className="link link-primary text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
               href="mailto:visit.hi@kmitl.ac.th"
               target="_blank"
               rel="alternate noopener noreferrer"

@@ -229,7 +229,7 @@ const KmitlStudentInfo = () => {
             <div className="flex flex-col md:flex-row">
               <P style="font-bold md:mr-2" text="Internship advisor" />
               <a
-                className="link link-primary"
+                className="link link-primary text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
                 href="mailto:natthapong.ju@kmitl.ac.th"
                 target="_blank"
                 rel="alternate noopener noreferrer"
