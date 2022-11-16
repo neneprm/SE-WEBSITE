@@ -1,17 +1,12 @@
 import { H3, H4, P } from "./components/headers"
 
-interface IHeader {
-  text: string
-  style: string
-}
-
 const About = () => {
   return (
     <>
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="ABOUT" />
       </section>
-      
+
       <section className="container mx-auto mb-8">
         <H4
           style="font-bold text-accent mb-4"
@@ -48,9 +43,7 @@ const About = () => {
           style="font-bold text-accent mb-4"
           text="Careers in Software Engineering"
         />
-        <P
-          text="There are abundant career opportunities for graduates from the software engineering program."
-        />
+        <P text="There are abundant career opportunities for graduates from the software engineering program." />
         <P
           text="For example, they are software engineers, software architects, software developers on various 
                 platforms, including enterprise software, web applications, mobile applications, games, embedded 

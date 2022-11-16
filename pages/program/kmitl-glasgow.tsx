@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { H3, H4, P } from "../components/headers"
 import Card from "../components/card"
 import SecondaryButton from "../components/secondary-button"
@@ -85,8 +84,16 @@ const KmitlGlasgow = () => {
       </section>
 
       <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-8">
-      <SecondaryButton text="Application Guidance" link="/program/kmitl-glasgow/application-guidance" style="wide md:w-44"/>
-      <SecondaryButton text="UK Visa Guidance" link="/program/kmitl-glasgow/visa-guidance" style="wide md:w-44"/>
+        <SecondaryButton
+          text="Application Guidance"
+          link="/program/kmitl-glasgow/application-guidance"
+          style="wide md:w-44"
+        />
+        <SecondaryButton
+          text="UK Visa Guidance"
+          link="/program/kmitl-glasgow/visa-guidance"
+          style="wide md:w-44"
+        />
       </section>
     </>
   )

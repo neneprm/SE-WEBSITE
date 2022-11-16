@@ -5,12 +5,9 @@ const ExchangeStudyAbroad = () => {
   return (
     <>
       <section className="container mx-auto my-4">
-        <H3
-          style="text-gradient font-bold text-center"
-          text="EXCHANGE STUDY"
-        />
+        <H3 style="text-gradient font-bold text-center" text="EXCHANGE STUDY" />
       </section>
-      
+
       <section className="card bg-base-100 card-bordered shadow-lg">
         <div className="card-body">
           <H4
@@ -22,7 +19,9 @@ const ExchangeStudyAbroad = () => {
           <P text="This article provides an overview of the exchange program for the current SE students who wish to undertake an exchange study at FRA-UAS." />
           <div className="card-actions justify-end">
             <button className="btn btn-accent text-base-100">
-              <Link href="/program/exchange-study/frankfurt-university-of-applied-sciences">Read more →</Link>
+              <Link href="/program/exchange-study/frankfurt-university-of-applied-sciences">
+                Read more →
+              </Link>
             </button>
           </div>
         </div>

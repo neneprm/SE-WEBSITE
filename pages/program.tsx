@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 import { H3 } from "./components/headers"
 import Card from "./components/card"
 
