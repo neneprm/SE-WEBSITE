@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="mx-4 md:mx-12">
         <H1 style="text-primary font-bold" text="KMITL" />
         <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
-          &copy; {currentYear} International College, King Mongkut's Institute
+          &copy; {currentYear} International College, King Mongkut&apos;s Institute
           of Technology Ladkrabang
         </p>
       </div>

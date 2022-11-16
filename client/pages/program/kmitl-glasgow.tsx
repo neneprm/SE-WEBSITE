@@ -13,7 +13,7 @@ const KmitlGlasgow = () => {
       <div className="card bg-base-100 card-bordered shadow-lg max-w-fit">
         <div className="card-body">
           <div className="max-w-xs mx-auto">
-            <Image src={UoGLogo} />
+            <Image src={UoGLogo} alt="UoG-logo" />
           </div>
           <h3 className="card-title text-accent sm:text-lg lg:text-2xl 2xl:text-3xl">
             About University of Glasgow
@@ -27,7 +27,7 @@ const KmitlGlasgow = () => {
             world, and has been ranked as &nbsp;
             <span className="link link-primary">
               <Link href="https://www.topuniversities.com/universities/university-glasgow">
-                one of the world's top 100 universities
+                one of the world&apos;s top 100 universities
               </Link>
             </span>
             . With its long history in advanced research, the University of
@@ -37,7 +37,7 @@ const KmitlGlasgow = () => {
                 six Nobel-prize winners
               </Link>
             </span>
-            . The University's &nbsp;
+            . The University&apos;s &nbsp;
             <span className="link link-primary">
               <Link href="https://www.gla.ac.uk/schools/computing/">
                 School of Computing Science
@@ -46,10 +46,10 @@ const KmitlGlasgow = () => {
             &nbsp; has consistently been ranked in the &nbsp;
             <span className="link link-primary">
               <Link href="https://www.topuniversities.com/university-rankings/university-subject-rankings/2022/computer-science-information-systems">
-                UK's top school in computing
+                UK&apos;s top school in computing
               </Link>
             </span>
-            . Glasgow's &nbsp;
+            . Glasgow&apos;s &nbsp;
             <span className="link link-primary">
               <Link href="https://www.gla.ac.uk/undergraduate/degrees/softwareengineering/">
                 Software Engineering program

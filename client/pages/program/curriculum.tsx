@@ -19,7 +19,7 @@ const Curriculum = () => {
       </section>
 
       <section className="mb-8 w-full">
-        <Image src={CurriculumTable}/>
+        <Image src={CurriculumTable} alt="curriculum-table"/>
       </section>
 
       <section className="mb-8">
