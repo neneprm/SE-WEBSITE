@@ -23,7 +23,7 @@ const Curriculum = () => {
         <P text="The B.Eng. in Software Engineering Programis a 4-year undergraduate program aiming at producing graduates who are capable of working confidently in the international software industry as well as pursuing postgraduate study and research in leading universities worldwide. The curriculum of the program is designed in accordance with the recent ACM/IEEE guideline for undergraduate curriculum in software engineering." />
       </section>
 
-      <section className="mb-8 w-full">
+      <section className="mb-8 mx-auto max-w-6xl">
         <Image src={CurriculumTable} alt="curriculum-table" />
       </section>
 
