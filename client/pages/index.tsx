@@ -3,9 +3,17 @@ import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 
+import {
+  FaScroll,
+  FaGraduationCap,
+  FaPlane,
+  FaLaptopCode,
+} from "react-icons/fa"
 import HeroArt from "./assets/hero.svg"
+import CurriculumCover from "../pages/assets/curriculum-cover.jpg"
+import GlasgowCover from "../pages/assets/glasgow-cover.jpg"
+import ExchangeStudyCover from "../pages/assets/exchange-study-cover.jpg"
 
-import GradientButton from "./components/gradient-button"
 import { H1, H3, H4, P } from "./components/headers"
 import Card from "./components/card"
 
@@ -41,20 +49,65 @@ const Home: NextPage = () => {
           <h4 className='sm:text-base md:text-lg lg:text-2xl'>Become professional software developers<br />Change the world with lines of code</h4>
         </span>
       </div> */}
+      <section className="mb-8">
+        <H4
+          style="font-bold text-gradient -mt-16 md:-mt-4 mb-4 2xl:mt-0"
+          text="What is Software Engineering?"
+        />
 
-      <H4
-        style="font-bold text-gradient -mt-16 md:-mt-4 mb-4 2xl:mt-0"
-        text="What is Software Engineering?"
-      />
-      <Card
-        cardStyle="w-full"
-        body="Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources."
-        link="/about"
-      />
+        <div className={`card bg-base-100 card-bordered shadow-lg max-w-fit`}>
+          <div className="card-body items-center text-center">
+            <FaLaptopCode className="text-secondary text-4xl " />
+            <P
+              text="Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources."
+              style="p-2"
+            />
+            <div className="card-actions justify-center md:justify-end">
+              <Link href="/about">
+                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
+                  Read more →
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <H4 style="font-bold text-gradient mt-4 mb-4" text="Forum" />
-      <H4 style="font-bold text-gradient mb-4" text="Blogs" />
-      <H4 style="font-bold text-gradient mb-4" text="Program" />
+      {/* <H4 style="font-bold text-gradient mt-4 mb-4" text="Forum" /> */}
+      {/* <H4 style="font-bold text-gradient mb-4" text="Blogs" /> */}
+
+      {/* <section className="mb-8">
+        <H4 style="font-bold text-gradient mb-4" text="Program" />
+        <div className="card bg-base-100 card-bordered card-body shadow-lg w-full p-12">
+          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+            <Card
+              image={CurriculumCover}
+              imageAlt="curriculum-cover"
+              title="Curriculum"
+              icon={<FaScroll className="text-primary" />}
+              body=""
+              link="/program/curriculum"
+            />
+            <Card
+              image={GlasgowCover}
+              imageAlt="glasgow-cover"
+              title="KMITL-Glasgow"
+              icon={<FaGraduationCap className="text-primary" />}
+              body=""
+              link="/program/kmitl-glasgow"
+            />
+            <Card
+              image={ExchangeStudyCover}
+              imageAlt="exchange-study-cover"
+              title="Exchange Study"
+              icon={<FaPlane className="text-primary" />}
+              body=""
+              link="/program/exchange-study"
+            />
+          </div>
+        </div>
+      </section> */}
+
       <H4 style="font-bold text-gradient mb-4" text="Admissions" />
 
       {/* <p>
