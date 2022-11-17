@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { H3 } from "./components/headers"
-import AdmissionCard from "./components/admission-card"
+import { FaBullhorn } from "react-icons/fa"
+import OneLineCard from "./components/oneline-card"
 import BorderButton from "./components/border-button"
 
 const Admissions = () => {
@@ -27,15 +28,18 @@ const Admissions = () => {
       </section>
 
       <section className="mb-8">
-        <AdmissionCard
+        <OneLineCard
+          icon={<FaBullhorn className="text-primary" />}
           title="Announcement Direct Admissions 1-1 (Early Round)"
           link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
         />
-        <AdmissionCard
+        <OneLineCard
+          icon={<FaBullhorn className="text-primary" />}
           title="Announcement Direct Admissions 1-1 (Early Round)"
           link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
         />
-        <AdmissionCard
+        <OneLineCard
+          icon={<FaBullhorn className="text-primary" />}
           title="Announcement Direct Admissions 1-1 (Early Round)"
           link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
         />
