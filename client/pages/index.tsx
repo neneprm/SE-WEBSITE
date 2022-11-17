@@ -8,6 +8,7 @@ import {
   FaGraduationCap,
   FaPlane,
   FaLaptopCode,
+  FaBullhorn,
 } from "react-icons/fa"
 import HeroArt from "./assets/hero.svg"
 import SeLogo from "./assets/se-logo.png"
@@ -19,6 +20,7 @@ import { H1, H3, H4, P } from "./components/headers"
 import Card from "./components/cards/card"
 import SolidButton from "./components/buttons/solid-button"
 import BorderButton from "./components/buttons/border-button"
+import OneLineCard from "./components/cards/oneline-card"
 
 const Home: NextPage = () => {
   return (
@@ -148,7 +150,29 @@ const Home: NextPage = () => {
       </section>
 
       {/* Admissions */}
-      <H4 style="font-bold text-gradient mb-4" text="Admissions" />
+      <section className="mb-8 flex flex-col">
+        <H4 style="font-bold text-gradient mb-4" text="Admissions" />
+        <OneLineCard
+          icon={<FaBullhorn className="text-primary" />}
+          title="Announcement Direct Admissions 1-1 (Early Round)"
+          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
+        />
+        <OneLineCard
+          icon={<FaBullhorn className="text-primary" />}
+          title="Announcement Direct Admissions 1-1 (Early Round)"
+          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
+        />
+        <OneLineCard
+          icon={<FaBullhorn className="text-primary" />}
+          title="Announcement Direct Admissions 1-1 (Early Round)"
+          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
+        />
+        <BorderButton
+          text="More announcement →"
+          link="/admissions"
+          style="mt-4 mx-auto w-full md:btn-wide"
+        />
+      </section>
     </>
   )
 }
