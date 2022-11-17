@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer-center md:footer py-10 md:py-20 bg-neutral text-neutral-content mt-auto">
       <div className="mx-4 md:mx-16 xl:mx-48 grid-flow-col">
         <div className="w-20 md:w-24 lg:w-20 2xl:w-24 mx-auto md:mr-4 ">
-          <Image src={KmitlLogo} />
+          <Image src={KmitlLogo} alt="KMITL Logo" />
         </div>
         <div className="grid-flow-col">
           <H1
