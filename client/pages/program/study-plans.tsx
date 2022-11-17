@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Head from "next/head"
 import { H3, H4, P } from "../components/headers"
-import CardContent from "../components/card-content"
+import CardContent from "../components/subject-card"
 
 const StudyPlans = () => {
   return (
