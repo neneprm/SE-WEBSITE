@@ -32,7 +32,10 @@ const NavBar = () => {
           className="btn btn-ghost btn-sm md:btn-md"
           onClick={() => setActiveId(-1)}
         >
-          <div className="hover:cursor-pointer w-24 md:w-32 lg:w-48">
+          <div
+            className="hover:cursor-pointer w-24 md:w-32 lg:w-48 tooltip tooltip-bottom"
+            data-tip="← Back to Home"
+          >
             <Link href="/">
               <Image src={logo} alt="Home" />
             </Link>
@@ -79,40 +82,30 @@ const NavBar = () => {
             >
               <li>
                 <Link href="/about">
-                  <a>
-                    <HiInformationCircle className="text-accent" /> About
-                  </a>
+                  <HiInformationCircle className="text-accent" /> About
                 </Link>
               </li>
               <li>
                 <Link href="/forum">
-                  <a>
-                    <HiChatAlt2 className="text-accent" /> Forum
-                  </a>
+                  <HiChatAlt2 className="text-accent" /> Forum
                 </Link>
               </li>
               <li>
                 <Link href="/blogs">
-                  <a>
-                    <HiNewspaper className="text-accent" />
-                    Blogs
-                  </a>
+                  <HiNewspaper className="text-accent" />
+                  Blogs
                 </Link>
               </li>
               <li>
                 <Link href="/program">
-                  <a>
-                    <HiCollection className="text-accent" />
-                    Program
-                  </a>
+                  <HiCollection className="text-accent" />
+                  Program
                 </Link>
               </li>
               <li className="font-bold">
                 <Link href="/admissions">
-                  <a>
-                    <HiPencilAlt className="text-secondary" />
-                    Admissions
-                  </a>
+                  <HiPencilAlt className="text-secondary" />
+                  Admissions
                 </Link>
               </li>
             </ul>
