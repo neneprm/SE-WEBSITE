@@ -10,6 +10,7 @@ import {
   FaLaptopCode,
 } from "react-icons/fa"
 import HeroArt from "./assets/hero.svg"
+import SeLogo from "./assets/se-logo.png"
 import CurriculumCover from "../pages/assets/curriculum-cover.jpg"
 import GlasgowCover from "../pages/assets/glasgow-cover.jpg"
 import ExchangeStudyCover from "../pages/assets/exchange-study-cover.jpg"
@@ -30,9 +31,12 @@ const Home: NextPage = () => {
           <div className="max-w-xs lg:max-w-lg">
             <Image src={HeroArt} alt="Hero Art" />
           </div>
-          <span className="text-center lg:text-right">
+          <span className="mt-8 md:mt-4 text-center lg:text-right">
+          <div className="w-20 md:w-32 mx-auto lg:mx-0 lg:ml-auto mb-2 md:mb-4">
+            <Image src={SeLogo} alt="SE Logo" />
+          </div>
             <H1 style="font-bold text-gradient" text="SOFTWARE" />
-            <H1 style="font-bold mb-6" text="ENGINEERING" />
+            <H1 style="font-bold mb-2 md:mb-6" text="ENGINEERING" />
             <H3 style="mb-3" text="Bachelor of Engineering" />
             <H4 text="Become professional software developers" />
             <H4 text="Change the world with lines of code" />
@@ -49,7 +53,7 @@ const Home: NextPage = () => {
           <h4 className='sm:text-base md:text-lg lg:text-2xl'>Become professional software developers<br />Change the world with lines of code</h4>
         </span>
       </div> */}
-      <section className="mb-8">
+      <section className="my-8 lg:-mt-8">
         <H4
           style="font-bold text-gradient -mt-16 md:-mt-4 mb-4 2xl:mt-0"
           text="What is Software Engineering?"
