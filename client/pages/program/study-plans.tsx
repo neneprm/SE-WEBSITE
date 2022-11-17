@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Head from "next/head"
 import { H3, H4, P } from "../components/headers"
+import CardContent from "../components/card-content"
 
 const StudyPlans = () => {
   return (
@@ -179,7 +180,17 @@ const StudyPlans = () => {
             </div>
           </div>
         </div>
+        <br/><hr/><br/>
+        <CardContent
+          id="01006710"
+          subject="Introduction to Calculus"
+          prerequisite="None"
+          program="Software Engineering 2022"
+          credit="3 (3-0-6)"
+          description="Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions"
+        />
       </section>
+
     </>
   )
 }
