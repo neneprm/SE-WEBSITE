@@ -1,5 +1,5 @@
 import { H3 } from "./components/headers"
-import Card from "./components/card"
+import Card from "./components/cards/card"
 import CurriculumCover from "../pages/assets/curriculum-cover.jpg"
 import GlasgowCover from "../pages/assets/glasgow-cover.jpg"
 import StudyPlansCover from "../pages/assets/study-plans-cover.jpg"

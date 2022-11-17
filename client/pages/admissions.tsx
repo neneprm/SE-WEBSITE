@@ -1,8 +1,8 @@
 import Head from "next/head"
 import { H3 } from "./components/headers"
 import { FaBullhorn } from "react-icons/fa"
-import OneLineCard from "./components/oneline-card"
-import BorderButton from "./components/border-button"
+import OneLineCard from "./components/cards/oneline-card"
+import BorderButton from "./components/buttons/border-button"
 
 const Admissions = () => {
   return (
