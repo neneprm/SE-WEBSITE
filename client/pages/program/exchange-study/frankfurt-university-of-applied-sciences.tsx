@@ -100,9 +100,9 @@ const ApplicationGuidance = () => {
             <P text="FRA-UAS has been offering many postgraduate programs in English and, recently, has started to teach a number of undergraduate courses in English, including the courses in the second year in its Bachelor Program in Computer Science." />
             <div className="card-actions justify-center md:justify-end">
               <Link href="https://www.frankfurt-university.de/en/">
-                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
+                <a className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                   Read more →
-                </button>
+                </a>
               </Link>
             </div>
           </div>
@@ -220,7 +220,7 @@ const ApplicationGuidance = () => {
         <ul className="lml-4 list-disc list-inside text-justify text-sm sm:text-base md:text-lg lg:text-xl space-y-2">
           <li>
             The candidate fills in the International College study abroad
-            application form:
+            application form: &nbsp;
             <span className="link link-primary">
               <Link href="https://goo.gl/HPqTbB">https://goo.gl/HPqTbB</Link>
             </span>

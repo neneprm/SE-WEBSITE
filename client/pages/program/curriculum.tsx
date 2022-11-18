@@ -39,9 +39,9 @@ const Curriculum = () => {
             />
             <div className="card-actions justify-center md:justify-end">
               <Link href="/program/study-plans">
-                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
+                <a className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                   Courses details →
-                </button>
+                </a>
               </Link>
             </div>
           </div>
@@ -75,9 +75,9 @@ const Curriculum = () => {
             </ul>
             <div className="card-actions justify-center md:justify-end">
               <Link href="/program/study-plans">
-                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
+                <a className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                   Courses details →
-                </button>
+                </a>
               </Link>
             </div>
           </div>
@@ -93,14 +93,14 @@ const Curriculum = () => {
             <P text="he KMITL-Glasgow Double-Degree Program in Software Engineering is a collaboration between KMITL and the University of Glasgow, UK. The program enables qualified students who have completed Year 2 in the SE program at the International College to enter Years 3 and 4 of the Software Engineering program at the University of Glasgow's School of Computing Science. At Glasgow, the student will have an opportunity to study with world-renowned academics, as well as working on team projects with multi-national talents. This is an excellent opportunity for the students who wish to gain studying and living experience in the UK." />
             <div className="card-actions justify-center md:justify-end">
               <Link href="/program/kmitl-glasgow">
-                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
+                <a className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline w-36">
                   Read more →
-                </button>
+                </a>
               </Link>
               <Link href="/program/study-plans">
-                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
+                <a className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                   Courses details →
-                </button>
+                </a>
               </Link>
             </div>
           </div>

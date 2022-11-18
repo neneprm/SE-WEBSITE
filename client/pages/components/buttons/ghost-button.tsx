@@ -13,11 +13,11 @@ const GhostButton: React.FunctionComponent<IGhostButton> = ({
 }) => {
   return (
     <Link href={`${link}`}>
-      <button
+      <a
         className={`btn btn-ghost text-sm sm:text-base md:text-lg lg:text-xl font-bold mx-2 ${style}`}
       >
         {text}
-      </button>
+      </a>
     </Link>
   )
 }

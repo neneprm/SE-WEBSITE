@@ -32,11 +32,11 @@ const NavBar = () => {
           className="btn btn-ghost btn-sm md:btn-md"
           onClick={() => setActiveId(-1)}
         >
-          <div className="hover:cursor-pointer w-24 md:w-32 lg:w-48">
-            <Link href="/">
+          <Link href="/">
+            <a className="hover:cursor-pointer w-24 md:w-32 lg:w-48">
               <Image src={logo} alt="Home" />
-            </Link>
-          </div>
+            </a>
+          </Link>
         </button>
         <div className={`flex-1`}></div>
         <div className={`${navActive} hidden xl:flex`}>

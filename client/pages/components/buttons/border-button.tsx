@@ -12,7 +12,7 @@ const BorderButton: React.FunctionComponent<IBorderButton> = ({
 }) => {
   return (
     <Link href={`${link}`}>
-      <button className={`btn btn-outline btn-primary ${style}`}>{text}</button>
+      <a className={`btn btn-outline btn-primary ${style}`}>{text}</a>
     </Link>
   )
 }

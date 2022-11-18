@@ -64,9 +64,9 @@ const Home: NextPage = () => {
             />
             <div className="card-actions justify-center md:justify-end">
               <Link href="/about">
-                <button className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
+                <a className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                   Read more →
-                </button>
+                </a>
               </Link>
             </div>
           </div>

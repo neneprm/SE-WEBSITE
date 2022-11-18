@@ -14,12 +14,10 @@ const SolidButton: React.FunctionComponent<ISolidButton> = ({
 }) => {
   return (
     <Link href={`${link}`}>
-      <button
-        className={`btn ${style}`}
-      >
+      <a className={`btn ${style}`}>
         <span className="mr-4">{icon}</span>
         {text}
-      </button>
+      </a>
     </Link>
   )
 }

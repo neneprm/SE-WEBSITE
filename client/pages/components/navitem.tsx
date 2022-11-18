@@ -18,11 +18,11 @@ const NavItem: React.FunctionComponent<IButton> = ({
   return (
     <>
       <Link href={link}>
-        <button
+        <a
           className={`btn btn-ghost text-sm sm:text-base md:text-lg lg:text-xl font-bold mx-2 ${focus} ${last}`}
         >
-          <a>{text}</a>
-        </button>
+          {text}
+        </a>
       </Link>
     </>
   )

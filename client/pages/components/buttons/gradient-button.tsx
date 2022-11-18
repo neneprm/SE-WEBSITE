@@ -11,9 +11,9 @@ const GradientButton: NextPage<IGradientButton> = (props) => {
 
   return (
     <Link href={link}>
-      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md bg-accent hover:bg-accent-focus border-none text-base-100">
+      <a className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md bg-accent hover:bg-accent-focus border-none text-base-100">
         {name}
-      </button>
+      </a>
     </Link>
   )
 }
