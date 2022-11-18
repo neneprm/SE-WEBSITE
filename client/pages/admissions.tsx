@@ -4,6 +4,23 @@ import { FaBullhorn } from "react-icons/fa"
 import OneLineCard from "./components/cards/oneline-card"
 import BorderButton from "./components/buttons/border-button"
 
+interface IAdmission {
+  title: string
+  link: string
+}
+
+const ADMISSION_LIST = [
+  {
+    title: "Announcement Direct Admissions 1-1 (Early Round) AY 2023",
+    link: "https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf",
+  },
+  {
+    title:
+      "Announcement Direct Admissions 1-1 (Early Round) for International Students (non-holders of Thai passport) AY 2023",
+    link: "https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2398_2022_10_30-20-17-02_9bb7a.pdf",
+  },
+]
+
 const Admissions = () => {
   return (
     <>
@@ -28,21 +45,16 @@ const Admissions = () => {
       </section>
 
       <section className="mb-8">
-        <OneLineCard
-          icon={<FaBullhorn className="text-primary" />}
-          title="Announcement Direct Admissions 1-1 (Early Round)"
-          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
-        />
-        <OneLineCard
-          icon={<FaBullhorn className="text-primary" />}
-          title="Announcement Direct Admissions 1-1 (Early Round)"
-          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
-        />
-        <OneLineCard
-          icon={<FaBullhorn className="text-primary" />}
-          title="Announcement Direct Admissions 1-1 (Early Round)"
-          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
-        />
+        {ADMISSION_LIST.map((list) => (
+          <div key={list.link}>
+            <OneLineCard
+              icon={<FaBullhorn className="text-primary" />}
+              title={list.title}
+              link={list.link}
+              
+            />
+          </div>
+        ))}
       </section>
     </>
   )
