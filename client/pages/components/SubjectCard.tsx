@@ -10,7 +10,7 @@ interface ICardContent {
   description: string
 }
 
-const CardContent: React.FunctionComponent<ICardContent> = ({
+const SubjectCard: React.FunctionComponent<ICardContent> = ({
   cardStyle,
   id,
   subject,
@@ -34,4 +34,4 @@ const CardContent: React.FunctionComponent<ICardContent> = ({
   )
 }
 
-export default CardContent
+export default SubjectCard
