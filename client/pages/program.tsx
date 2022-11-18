@@ -1,11 +1,11 @@
 import { H3 } from "./components/headers"
 import Card from "./components/cards/card"
-import CurriculumCover from "../pages/assets/curriculum-cover.jpg"
-import GlasgowCover from "../pages/assets/glasgow-cover.jpg"
-import StudyPlansCover from "../pages/assets/study-plans-cover.jpg"
-import ExchangeStudyCover from "../pages/assets/exchange-study-cover.jpg"
-import InternshipsCover from "../pages/assets/internships-cover.jpg"
-import LecturersCover from "../pages/assets/lecturers-cover.jpg"
+import CurriculumCover from "../pages/assets/program/curriculum-cover.jpg"
+import GlasgowCover from "../pages/assets/program/glasgow-cover.jpg"
+import StudyPlansCover from "../pages/assets/program/study-plans-cover.jpg"
+import ExchangeStudyCover from "../pages/assets/program/exchange-study-cover.jpg"
+import InternshipsCover from "../pages/assets/program/internships-cover.jpg"
+import LecturersCover from "../pages/assets/program/lecturers-cover.jpg"
 
 import {
   FaScroll,

@@ -12,9 +12,9 @@ import {
 } from "react-icons/fa"
 import HeroArt from "./assets/hero.svg"
 import SeLogo from "./assets/se-logo.png"
-import CurriculumCover from "../pages/assets/curriculum-cover.jpg"
-import GlasgowCover from "../pages/assets/glasgow-cover.jpg"
-import ExchangeStudyCover from "../pages/assets/exchange-study-cover.jpg"
+import CurriculumCover from "../pages/assets/program/curriculum-cover.jpg"
+import GlasgowCover from "../pages/assets/program/glasgow-cover.jpg"
+import ExchangeStudyCover from "../pages/assets/program/exchange-study-cover.jpg"
 
 import { H1, H3, H4, P } from "./components/headers"
 import Card from "./components/cards/card"
