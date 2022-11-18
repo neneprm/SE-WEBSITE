@@ -290,7 +290,7 @@ const ApplicationGuidance = () => {
         <BorderButton
           text="← Back to Page"
           link="/program/exchange-study"
-          style=""
+          style="btn-secondary"
         />
       </section>
     </>

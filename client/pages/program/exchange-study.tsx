@@ -3,6 +3,7 @@ import Link from "next/link"
 
 import { H3, H4, P } from "../components/headers"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
+import BorderButton from "../components/Buttons/BorderButton"
 
 const ExchangeStudyAbroad = () => {
   return (
@@ -35,6 +36,14 @@ const ExchangeStudyAbroad = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="flex justify-center mb-8">
+        <BorderButton
+          text="← Back to Program"
+          link="/program"
+          style="btn-secondary"
+        />
       </section>
     </>
   )

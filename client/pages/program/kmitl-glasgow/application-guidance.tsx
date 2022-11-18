@@ -169,7 +169,7 @@ const ApplicationGuidance = () => {
         <BorderButton
           text="← Back to Page"
           link="/program/kmitl-glasgow"
-          style=""
+          style="btn-secondary"
         />
       </section>
     </>

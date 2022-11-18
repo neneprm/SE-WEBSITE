@@ -2,6 +2,7 @@ import Head from "next/head"
 
 import { H3, P } from "../components/headers"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
+import BorderButton from "../components/Buttons/BorderButton"
 
 const LECTURERS_LIST = [
   {
@@ -201,7 +202,14 @@ const Lecturers = () => {
           </div>
         ))}
       </section>
-      <div className="mb-8"></div>
+
+      <section className="flex justify-center my-8">
+        <BorderButton
+          text="← Back to Program"
+          link="/program"
+          style="btn-secondary"
+        />
+      </section>
     </>
   )
 }

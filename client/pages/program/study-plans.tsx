@@ -3,6 +3,7 @@ import Link from "next/link"
 
 import { H3, H4, P } from "../components/headers"
 import SubjectCard from "../components/SubjectCard"
+import BorderButton from "../components/Buttons/BorderButton"
 
 const StudyPlans = () => {
   return (
@@ -191,6 +192,14 @@ const StudyPlans = () => {
           program="Software Engineering 2022"
           credit="3 (3-0-6)"
           description="Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions"
+        />
+      </section>
+
+      <section className="flex justify-center mb-8">
+        <BorderButton
+          text="← Back to Program"
+          link="/program"
+          style="btn-secondary"
         />
       </section>
     </>
