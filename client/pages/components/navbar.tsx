@@ -57,7 +57,7 @@ const NavBar = () => {
                 }
                 last={
                   id === NAV_LIST.length - 1
-                    ? "bg-gradient hover:bg-gradient-focus border-none text-base-10"
+                    ? "bg-gradient hover:bg-gradient-focus border-none"
                     : ""
                 }
                 active={activeId === id}
