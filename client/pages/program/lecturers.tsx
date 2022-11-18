@@ -170,7 +170,7 @@ const Lecturers = () => {
 
         {LECTURERS_LIST.map((person) => (
           <div
-            className="card card-bordered bg-base-100 shadow-lg w-full mb-8"
+            className="card card-bordered bg-base-100 shadow-lg w-full mb-4"
             key={person.name}
           >
             <div className="card-body">
@@ -216,6 +216,7 @@ const Lecturers = () => {
           </div>
         ))}
       </section>
+      <div className="mb-8"></div>
     </>
   )
 }
