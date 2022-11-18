@@ -2,6 +2,7 @@ import Head from "next/head"
 
 import { H3, H4, P } from "./components/headers"
 import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
+import BorderButton from "./components/Buttons/BorderButton"
 
 const About = () => {
   return (
@@ -63,6 +64,14 @@ const About = () => {
           text="Nevertheless, with strong foundation in computer science, mathematics, 
                 and software engineering principles, graduates of the SE program may continue their studies at 
                 postgraduate level in various software engineering or computing related fields in universities worldwide."
+        />
+      </section>
+
+      <section className="flex justify-center mb-8">
+        <BorderButton
+          text="← Back to Home"
+          link="/"
+          style="btn-secondary"
         />
       </section>
     </>

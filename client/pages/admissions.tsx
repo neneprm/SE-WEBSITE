@@ -4,6 +4,7 @@ import { FaBullhorn } from "react-icons/fa"
 
 import { H3 } from "./components/headers"
 import OneLineCard from "./components/Cards/OneLineCard"
+import BorderButton from "./components/Buttons/BorderButton"
 import SolidButton from "./components/Buttons/SolidButton"
 
 interface IAdmission {
@@ -58,6 +59,14 @@ const Admissions = () => {
             />
           </div>
         ))}
+      </section>
+
+      <section className="flex justify-center mb-8">
+        <BorderButton
+          text="← Back to Home"
+          link="/"
+          style="btn-secondary"
+        />
       </section>
     </>
   )

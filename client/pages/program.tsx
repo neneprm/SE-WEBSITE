@@ -17,6 +17,7 @@ import LecturersCover from "../pages/assets/program/lecturers-cover.jpg"
 import { H3 } from "./components/headers"
 import ReadMoreCard from "./components/Cards/ReadMoreCard"
 import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
+import BorderButton from "./components/Buttons/BorderButton"
 
 const Program = () => {
   return (
@@ -80,6 +81,14 @@ const Program = () => {
           icon={<BsPeopleFill className="text-primary" />}
           body=""
           link="/program/lecturers"
+        />
+      </section>
+
+      <section className="flex justify-center mb-8">
+        <BorderButton
+          text="← Back to Home"
+          link="/"
+          style="btn-secondary"
         />
       </section>
     </>
