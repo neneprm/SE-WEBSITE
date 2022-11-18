@@ -30,7 +30,7 @@ const FloatingScrollButton: React.FunctionComponent = () => {
 
   return (
     <button
-      className={`btn btn-circle z-50 mx-auto btn-secondary text-base-100 font-medium text-xs shadow-md hover:shadow-lg transition bottom-5 right-5 md:bottom-10 md:right-10 fixed ${
+      className={`btn btn-circle z-50 mx-auto btn-secondary text-base-100 font-medium text-lg shadow-md hover:shadow-lg transition bottom-5 right-5 md:bottom-10 md:right-10 fixed ${
         isVisible ? "block" : "hidden"
       }`}
       onClick={scrollToTop}
