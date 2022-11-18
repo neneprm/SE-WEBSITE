@@ -4,6 +4,7 @@ import Image from "next/image"
 
 import { H3, H4, P } from "../components/headers"
 import BorderButton from "../components/Buttons/BorderButton"
+import SolidButton from "../components/Buttons/SolidButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 
 import UoGLogo from "../assets/UoG-logo.png"
@@ -132,7 +133,7 @@ const KmitlGlasgow = () => {
           the requirements above and wish to apply need to inform the SE program
           director before the end of Year 2 Semester 2 and submit their
           applications on the UCAS system <b>no later than 30 June</b> (of the
-          year they are planning to enter UoG) at
+          year they are planning to enter UoG) at &nbsp;
           <a className="link link-primary" href="https://www.ucas.com/students">
             https://www.ucas.com/students.
           </a>
@@ -140,15 +141,23 @@ const KmitlGlasgow = () => {
       </section>
 
       <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-8">
-        <BorderButton
+        <SolidButton
           text="Application Guidance"
           link="/program/kmitl-glasgow/application-guidance"
-          style="wide md:w-44"
+          style="md:w-1/2 btn-primary text-base-100 text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-base-100"
         />
-        <BorderButton
+        <SolidButton
           text="UK Visa Guidance"
           link="/program/kmitl-glasgow/visa-guidance"
-          style="wide md:w-44"
+          style="md:w-1/2 btn-primary text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-base-100"
+        />
+      </section>
+
+      <section className="flex justify-center mb-8">
+        <BorderButton
+          text="← Back to Program"
+          link="/program"
+          style="btn-secondary"
         />
       </section>
     </>

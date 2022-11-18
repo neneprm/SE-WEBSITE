@@ -4,7 +4,7 @@ import { FaBullhorn } from "react-icons/fa"
 
 import { H3 } from "./components/headers"
 import OneLineCard from "./components/Cards/OneLineCard"
-import BorderButton from "./components/Buttons/BorderButton"
+import SolidButton from "./components/Buttons/SolidButton"
 
 interface IAdmission {
   title: string
@@ -35,14 +35,16 @@ const Admissions = () => {
         <H3 style="text-gradient font-bold text-center" text="ADMISSIONS" />
       </section>
 
-      <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-4">
-        <BorderButton
-          text="Apply admission online"
+      <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-8">
+        <SolidButton
+          text="Apply Admission Online"
           link="https://new.reg.kmitl.ac.th/admission"
+          style="md:w-1/2 btn-primary text-base-100 text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-base-100"
         />
-        <BorderButton
-          text="Admission announcement"
+        <SolidButton
+          text="Admission Announcement"
           link="https://new.reg.kmitl.ac.th/admission/#/undergraduate/announcement_inter"
+          style="md:w-1/2 btn-primary text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-base-100"
         />
       </section>
 
