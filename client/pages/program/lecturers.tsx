@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
 import { H3, P } from "../components/headers"
-import PictureCard from "../components/cards/picture-card"
+import PictureCard from "../components/Cards/PictureCard"
 
 const LECTURERS_LIST = [
   {

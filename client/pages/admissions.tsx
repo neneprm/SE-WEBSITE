@@ -1,8 +1,8 @@
 import Head from "next/head"
 import { H3 } from "./components/headers"
 import { FaBullhorn } from "react-icons/fa"
-import OneLineCard from "./components/cards/oneline-card"
-import BorderButton from "./components/buttons/border-button"
+import OneLineCard from "./components/Cards/OneLineCard"
+import BorderButton from "./components/Buttons/BorderButton"
 
 interface IAdmission {
   title: string
@@ -51,7 +51,6 @@ const Admissions = () => {
               icon={<FaBullhorn className="text-primary" />}
               title={list.title}
               link={list.link}
-              
             />
           </div>
         ))}

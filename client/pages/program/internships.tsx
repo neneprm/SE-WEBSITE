@@ -1,8 +1,8 @@
 import Head from "next/head"
 import { H3, H4, P } from "../components/headers"
-import KmitlStudentInfo from "../components/internships/kmitl-students-info"
-import GlasgowStudentInfo from "../components/internships/glasgow-students-info"
-import CompaniesInfo from "../components/internships/companies-info"
+import KmitlStudentInfo from "../components/Internships/KmitlStudentsInfo"
+import GlasgowStudentInfo from "../components/Internships/GlasgowStudentsInfo"
+import CompaniesInfo from "../components/Internships/CompaniesInfo"
 
 const Internships = () => {
   return (

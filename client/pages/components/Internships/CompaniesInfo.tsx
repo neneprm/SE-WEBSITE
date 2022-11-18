@@ -21,10 +21,7 @@ const CompaniesInfo = () => {
       <div className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
         <input type="checkbox" className="peer" />
         <div className="collapse-title">
-          <H4
-            style="text-accent font-bold"
-            text="Information for Companies"
-          />
+          <H4 style="text-accent font-bold" text="Information for Companies" />
         </div>
         <div className="collapse-content">
           <P text="Internship is an integral part of the KMITL - Glasgow 2+2 joint study program. Every student joining the 2+2 program is required to undertake an internship to order to simultaneously fulfill the requirements for the following courses:" />
@@ -94,9 +91,7 @@ const CompaniesInfo = () => {
 
             {/* 2. Assessments */}
             <li className="font-bold">Assessments</li>
-            <P
-              text="To assess the student's internship, we kindly ask the company to monitor the student's performance during their internship and complete the internship assessment form. The internship assessment form is a confidential document and should be returned directly to the International College after the student has completed their internship. The assessment by the company is a crucial component which will be used to assess the student."
-            />
+            <P text="To assess the student's internship, we kindly ask the company to monitor the student's performance during their internship and complete the internship assessment form. The internship assessment form is a confidential document and should be returned directly to the International College after the student has completed their internship. The assessment by the company is a crucial component which will be used to assess the student." />
 
             {/* 3. Contact */}
             <li className="font-bold">Contact</li>

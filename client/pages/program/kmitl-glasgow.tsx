@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { H3, H4, P } from "../components/headers"
-import BorderButton from "../components/buttons/border-button"
+import BorderButton from "../components/Buttons/BorderButton"
 import Link from "next/link"
 import Image from "next/image"
 import UoGLogo from "../assets/UoG-logo.png"

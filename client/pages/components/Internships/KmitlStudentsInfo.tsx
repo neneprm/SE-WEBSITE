@@ -166,9 +166,7 @@ const KmitlStudentInfo = () => {
                 important lessons from your internship?
               </li>
             </ul>
-            <P
-              text="Both the content of the report and the quality of writing will be taken into account."
-            />
+            <P text="Both the content of the report and the quality of writing will be taken into account." />
             {/* Presentation */}
             <P style="font-bold" text="Presentation" />
             <P text="After your internship, you are required to present your work and your experience during the internship to the assessment committee and your colleagues. You should plan for a 20-minute presentation, which will be followed by a 10-minute QA session." />
@@ -185,9 +183,7 @@ const KmitlStudentInfo = () => {
                 <li className="step step-primary">Registration (online)</li>
                 <li className="step step-primary">Pre-internship meeting</li>
                 <li className="step step-primary">Internship</li>
-                <li className="step step-primary">
-                  Presentation & assessment
-                </li>
+                <li className="step step-primary">Presentation & assessment</li>
               </ul>
             </div>
             {/* Description */}
@@ -201,7 +197,7 @@ const KmitlStudentInfo = () => {
                 Every student taking an internship must register for the course
                 &nbsp;
                 <span className="font-bold">
-                &quot;13016004 Software Industrial Internship in Summer&quot;
+                  &quot;13016004 Software Industrial Internship in Summer&quot;
                 </span>
                 . Registration is done on the University&apos;s online registry
                 system. If this course is the only course you register in the

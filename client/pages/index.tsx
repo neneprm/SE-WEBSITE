@@ -17,10 +17,10 @@ import GlasgowCover from "../pages/assets/program/glasgow-cover.jpg"
 import ExchangeStudyCover from "../pages/assets/program/exchange-study-cover.jpg"
 
 import { H1, H3, H4, P } from "./components/headers"
-import Card from "./components/cards/card"
-import SolidButton from "./components/buttons/solid-button"
-import BorderButton from "./components/buttons/border-button"
-import OneLineCard from "./components/cards/oneline-card"
+import Card from "./components/Cards/ReadMoreCard"
+import SolidButton from "./components/Buttons/SolidButton"
+import BorderButton from "./components/Buttons/BorderButton"
+import OneLineCard from "./components/Cards/OneLineCard"
 
 const Home: NextPage = () => {
   return (

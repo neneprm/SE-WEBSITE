@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import { H3, H4 } from "../../components/headers"
-import BorderButton from "../../components/buttons/border-button"
+import BorderButton from "../../components/Buttons/BorderButton"
 
 const ApplicationGuidance = () => {
   return (

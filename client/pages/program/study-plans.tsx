@@ -180,7 +180,9 @@ const StudyPlans = () => {
             </div>
           </div>
         </div>
-        <br/><hr/><br/>
+        <br />
+        <hr />
+        <br />
         <CardContent
           id="01006710"
           subject="Introduction to Calculus"
@@ -190,7 +192,6 @@ const StudyPlans = () => {
           description="Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions"
         />
       </section>
-
     </>
   )
 }

@@ -10,7 +10,7 @@ import {
 } from "react-icons/hi"
 import { useState } from "react"
 import Link from "next/link"
-import NavItem from "../components/navitem"
+import NavItem from "./NavItems"
 
 const NAV_LIST = [
   { text: "About", href: "/about" },

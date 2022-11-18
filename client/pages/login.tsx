@@ -6,7 +6,7 @@ import HeroArt from "./assets/hero.svg"
 import logo from "./assets/logo.svg"
 
 import { H1, P } from "./components/headers"
-import SolidButton from "./components/buttons/solid-button"
+import SolidButton from "./components/Buttons/SolidButton"
 
 const Login = () => {
   return (

@@ -1,4 +1,4 @@
-import { H1, P } from "./headers"
+import { H1 } from "./headers"
 import Image from "next/image"
 import KmitlLogo from "../assets/kmitl-logo.png"
 
