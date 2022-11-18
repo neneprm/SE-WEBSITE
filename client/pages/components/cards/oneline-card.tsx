@@ -13,7 +13,7 @@ const OneLineCard: React.FunctionComponent<ICard> = ({ icon, title, link }) => {
         <div className="card-body items-center text-center md:text-left lg:flex lg:flex-row md:justify-between">
           <div className="text-center lg:hidden">{icon}</div>
           <h3
-            className={`card-title text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl`}
+            className={`card-title text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl lg:w-9/12 xl:w-10/12`}
           >
             <span className="text-center hidden lg:block lg:mr-4">{icon}</span>
             {title}
