@@ -5,6 +5,7 @@ import { FaBullhorn } from "react-icons/fa"
 import { H3 } from "./components/headers"
 import OneLineCard from "./components/Cards/OneLineCard"
 import BorderButton from "./components/Buttons/BorderButton"
+import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
 import SolidButton from "./components/Buttons/SolidButton"
 
 interface IAdmission {
@@ -31,6 +32,8 @@ const Admissions = () => {
         <title>SE Admissions | KMITL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FloatingScrollButton />
 
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="ADMISSIONS" />
@@ -62,11 +65,7 @@ const Admissions = () => {
       </section>
 
       <section className="flex justify-center mb-8">
-        <BorderButton
-          text="← Back to Home"
-          link="/"
-          style="btn-secondary"
-        />
+        <BorderButton text="← Back to Home" link="/" style="btn-secondary" />
       </section>
     </>
   )
