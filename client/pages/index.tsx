@@ -1,7 +1,7 @@
 import type { NextPage } from "next"
 import Head from "next/head"
-import Image from "next/image"
 import Link from "next/link"
+import Image from "next/image"
 
 import {
   FaScroll,
@@ -17,10 +17,11 @@ import GlasgowCover from "../pages/assets/program/glasgow-cover.jpg"
 import ExchangeStudyCover from "../pages/assets/program/exchange-study-cover.jpg"
 
 import { H1, H3, H4, P } from "./components/headers"
-import Card from "./components/Cards/ReadMoreCard"
+import ReadMoreCard from "./components/Cards/ReadMoreCard"
+import OneLineCard from "./components/Cards/OneLineCard"
 import SolidButton from "./components/Buttons/SolidButton"
 import BorderButton from "./components/Buttons/BorderButton"
-import OneLineCard from "./components/Cards/OneLineCard"
+import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +30,8 @@ const Home: NextPage = () => {
         <title>Software Engineering | KMITL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FloatingScrollButton />
 
       {/* Hero */}
       <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:p-40">
@@ -82,7 +85,7 @@ const Home: NextPage = () => {
         <H4 style="font-bold text-gradient mb-4" text="Program" />
         <div className="card bg-base-100 card-bordered card-body shadow-lg w-full lg:p-12">
           <div className="flex flex-row justify-center space-x-4">
-            <Card
+            <ReadMoreCard
               image={CurriculumCover}
               imageAlt="curriculum-cover"
               title="Curriculum"
@@ -90,7 +93,7 @@ const Home: NextPage = () => {
               body=""
               link="/program/curriculum"
             />
-            <Card
+            <ReadMoreCard
               image={GlasgowCover}
               imageAlt="glasgow-cover"
               title="KMITL-Glasgow"
@@ -98,7 +101,7 @@ const Home: NextPage = () => {
               body=""
               link="/program/kmitl-glasgow"
             />
-            <Card
+            <ReadMoreCard
               image={ExchangeStudyCover}
               imageAlt="exchange-study-cover"
               title="Exchange Study"

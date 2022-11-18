@@ -1,5 +1,7 @@
 import Head from "next/head"
+
 import { H3, H4, P } from "./components/headers"
+import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
 
 const About = () => {
   return (
@@ -8,6 +10,8 @@ const About = () => {
         <title>About SE | KMITL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FloatingScrollButton />
 
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="ABOUT" />

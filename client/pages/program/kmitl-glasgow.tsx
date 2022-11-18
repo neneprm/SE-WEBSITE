@@ -1,8 +1,11 @@
 import Head from "next/head"
-import { H3, H4, P } from "../components/headers"
-import BorderButton from "../components/Buttons/BorderButton"
 import Link from "next/link"
 import Image from "next/image"
+
+import { H3, H4, P } from "../components/headers"
+import BorderButton from "../components/Buttons/BorderButton"
+import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
+
 import UoGLogo from "../assets/UoG-logo.png"
 
 const KmitlGlasgow = () => {
@@ -12,10 +15,14 @@ const KmitlGlasgow = () => {
         <title>SE Double-Degree | KMITL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FloatingScrollButton />
+
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="KMITL-Glasgow" />
       </section>
-      <div className="card bg-base-100 card-bordered shadow-lg max-w-fit">
+
+      <section className="card bg-base-100 card-bordered shadow-lg max-w-fit">
         <div className="card-body">
           <div className="max-w-xs mx-auto">
             <Image src={UoGLogo} alt="UoG-logo" />
@@ -64,7 +71,7 @@ const KmitlGlasgow = () => {
             software engineering and is highly respected by software industry.
           </p>
         </div>
-      </div>
+      </section>
 
       <section className="my-8">
         <H4 style="text-accent font-bold mb-4" text="Admission" />
@@ -82,17 +89,17 @@ const KmitlGlasgow = () => {
         <H4 style="text-accent font-bold mb-4" text="Degrees" />
         <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
           Students who have completed Year 4 of this double-degree program will
-          be awarded a{" "}
+          be awarded a
           <b>
             BSc Honours degree in Software Engineering from the University of
             Glasgow
-          </b>{" "}
+          </b>
           and a <b>B.Eng. degree in Software Engineering from KMITL</b>.
           Students who maintain good academic records during their studies at
           the University of Glasgow will be eligible to transfer to a one-year
           Master program in Software Engineering at the end of Year 4 and
           graduate with the Master of Science degree in Software Engineering
-          awarded by University of Glasgow at the end of Year 5.{" "}
+          awarded by University of Glasgow at the end of Year 5.
         </p>
       </section>
 
@@ -109,7 +116,7 @@ const KmitlGlasgow = () => {
         <br />
         <p className="text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl">
           * Rates as of Academic Year 2022. Every student joining the
-          double-degree program is entitled to the{" "}
+          double-degree program is entitled to the
           <b>KMITL - Glasgow Undergraduate Scholarship</b> which provides 20%
           reduction from the full tuition-fee rate for international students at
           Glasgow University.
@@ -127,7 +134,6 @@ const KmitlGlasgow = () => {
           applications on the UCAS system <b>no later than 30 June</b> (of the
           year they are planning to enter UoG) at
           <a className="link link-primary" href="https://www.ucas.com/students">
-            {" "}
             https://www.ucas.com/students.
           </a>
         </p>

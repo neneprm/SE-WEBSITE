@@ -1,5 +1,7 @@
 import Head from "next/head"
+
 import { H3, H4, P } from "../components/headers"
+import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 import KmitlStudentInfo from "../components/Internships/KmitlStudentsInfo"
 import GlasgowStudentInfo from "../components/Internships/GlasgowStudentsInfo"
 import CompaniesInfo from "../components/Internships/CompaniesInfo"
@@ -11,9 +13,13 @@ const Internships = () => {
         <title>SE Internships | KMITL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FloatingScrollButton />
+
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="INTERNSHIPS" />
       </section>
+
       <section className="mb-8">
         <H4
           style="font-bold mb-4 text-primary"

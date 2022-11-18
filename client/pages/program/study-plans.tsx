@@ -1,7 +1,8 @@
-import Link from "next/link"
 import Head from "next/head"
+import Link from "next/link"
+
 import { H3, H4, P } from "../components/headers"
-import CardContent from "../components/subject-card"
+import SubjectCard from "../components/SubjectCard"
 
 const StudyPlans = () => {
   return (
@@ -183,7 +184,7 @@ const StudyPlans = () => {
         <br />
         <hr />
         <br />
-        <CardContent
+        <SubjectCard
           id="01006710"
           subject="Introduction to Calculus"
           prerequisite="None"

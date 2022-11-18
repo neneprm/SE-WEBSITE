@@ -1,7 +1,7 @@
 import Head from "next/head"
-import Image from "next/image"
+
 import { H3, P } from "../components/headers"
-import PictureCard from "../components/Cards/PictureCard"
+import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 
 const LECTURERS_LIST = [
   {
@@ -145,29 +145,14 @@ const Lecturers = () => {
         <title>SE Lecturers | KMITL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FloatingScrollButton />
+
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="LECTURERS" />
       </section>
 
       <section>
-        {/* <PictureCard
-          title="Asst.Prof.Dr. Visit Hirankitti"
-          body="ssssss"
-          image={VisitH}
-          imageAlt="Asst.Prof.Dr. Visit Hirankitti"
-        /> */}
-
-        {/* {LECTURERS_LIST.map((person, id) => (
-          <PictureCard
-            title="Asst.Prof.Dr. Visit Hirankitti"
-            body={person.map((education) => (
-              education
-            ))}
-            image={VisitH}
-            imageAlt="Asst.Prof.Dr. Visit Hirankitti"
-          />
-        ))} */}
-
         {LECTURERS_LIST.map((person) => (
           <div
             className="card card-bordered bg-base-100 shadow-lg w-full mb-4"

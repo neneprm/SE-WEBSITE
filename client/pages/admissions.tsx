@@ -1,6 +1,8 @@
 import Head from "next/head"
-import { H3 } from "./components/headers"
+
 import { FaBullhorn } from "react-icons/fa"
+
+import { H3 } from "./components/headers"
 import OneLineCard from "./components/Cards/OneLineCard"
 import BorderButton from "./components/Buttons/BorderButton"
 
