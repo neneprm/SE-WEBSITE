@@ -39,7 +39,7 @@ const StudyPlans2 = () => {
             <input
               type="search"
               placeholder="Search..."
-              className="input input-bordered input-accent input-sm lg:w-72 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
+              className="input input-bordered input-accent input-sm lg:input-md lg:w-72 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
             />
           </div>
           {/* Filter */}
