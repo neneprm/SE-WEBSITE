@@ -6,7 +6,7 @@ import Login from "./login"
 import { useRouter } from "next/router"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const getContent = () => {
+  const GetContent = () => {
     const router = useRouter()
     if (router.pathname === "/login")
       return (
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
   }
 
-  return <>{getContent()}</>
+  return <>{GetContent()}</>
 }
 
 //   return (
