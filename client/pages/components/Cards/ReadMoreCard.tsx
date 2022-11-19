@@ -32,12 +32,12 @@ const Card: React.FunctionComponent<ICard> = ({
       </div>
 
       <div className="card-body">
-        <h3
+        <h4
           className={`card-title text-base sm:text-lg lg:text-2xl 2xl:text-3xl ${titleStyle}`}
         >
           <span>{icon}</span>
           {title}
-        </h3>
+        </h4>
         <P text={`${body}`} style="p-2" />
         <div className="card-actions justify-center md:justify-end">
           <Link href={`${link}`}>
