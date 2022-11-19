@@ -32,32 +32,28 @@ const StudyPlans2 = () => {
         <H3 style="text-gradient font-bold text-center" text="STUDY PLANS" />
       </section>
 
-      {/* <section className="mb-8 flex justify-end">
-        <div className="form-control">
-          <div className="input">
-            <input
-              type="text"
-              placeholder="Search…"
-              className="input input-bordered"
-            />
-            <button className="btn btn-ghost btn-circle">
-              <BiSearch className="" />
-            </button>
-          </div>
-        </div>
-      </section> */}
-
       <section className="">
-        <div className="flex justify-end mb-2">
-          <label className="btn btn-circle btn-accent swap swap-rotate">
+        <div className="flex justify-between md:justify-end space-x-4 mb-4 items-center">
+          {/* Search bar */}
+          <div className="input p-0 ml-2 flex items-center">
+            <input
+              type="search"
+              placeholder="Search..."
+              className="input input-bordered input-accent input-sm lg:w-72 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            />
+          </div>
+          {/* Filter */}
+          <label className="btn btn-circle btn-accent btn-sm swap swap-rotate">
             <input type="checkbox" onChange={handleChange} />
-            <IoFilter className="swap-off text-base-100 text-2xl" />
-            <IoMdClose className="swap-on text-base-100 text-2xl" />
+            <IoFilter className="swap-off text-base-100  text-lg" />
+            <IoMdClose className="swap-on text-base-100 text-lg" />
           </label>
         </div>
+
+        {/* Filter Card */}
         {isChecked && (
-          <div className="card bg-base-100 card-bordered shadow-lg card-body">
-            <div className="flex flex-col xl:flex-row xl:justify-evenly">
+          <div className="card bg-base-100 card-bordered shadow-lg card-body mb-8">
+            <div className="flex flex-col xl:flex-row xl:justify-between 2xl:justify-evenly">
               {/* Program */}
               <div className="form-control">
                 <H4 text="Program" style="ml-1 mb-2 font-bold text-accent" />
@@ -168,7 +164,24 @@ const StudyPlans2 = () => {
         )}
       </section>
 
-      
+      <section className="mb-8">
+        <SubjectCard
+          id="01006710"
+          subject="Introduction to Calculus"
+          prerequisite="None"
+          program="Software Engineering 2022"
+          credit="3 (3-0-6)"
+          description="Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions"
+        />
+      </section>
+
+      <section className="flex justify-center mb-8">
+        <BorderButton
+          text="← Back to Program"
+          link="/program"
+          style="btn-secondary"
+        />
+      </section>
     </>
   )
 }
