@@ -1,6 +1,6 @@
 import { H4, P } from "./headers"
 
-interface ICardContent {
+interface ISubjectCard {
   cardStyle?: string
   id: string
   subject: string
@@ -10,7 +10,7 @@ interface ICardContent {
   description: string
 }
 
-const SubjectCard: React.FunctionComponent<ICardContent> = ({
+const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
   cardStyle,
   id,
   subject,
