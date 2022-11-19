@@ -6,9 +6,10 @@ interface IGradientButton {
   link: string
 }
 
-const GradientButton: NextPage<IGradientButton> = (props) => {
-  const { name, link } = props
-
+const GradientButton: React.FunctionComponent<IGradientButton> = ({
+  name,
+  link,
+}) => {
   return (
     <Link href={link}>
       <a className="btn btn-xs sm:btn-sm md:btn-md lg:btn-md bg-accent hover:bg-accent-focus border-none text-base-100">
