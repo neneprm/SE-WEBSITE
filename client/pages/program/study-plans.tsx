@@ -2,7 +2,7 @@ import Head from "next/head"
 import Link from "next/link"
 
 import { H3, H4, P } from "../components/headers"
-import SubjectCard from "../components/SubjectCard"
+import SubjectCard from "../components/Cards/SubjectCard"
 import BorderButton from "../components/Buttons/BorderButton"
 
 const StudyPlans = () => {

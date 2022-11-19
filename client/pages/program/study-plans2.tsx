@@ -8,7 +8,7 @@ import { IoMdClose } from "react-icons/io"
 import { IoFilter } from "react-icons/io5"
 
 import { H3, H4, P } from "../components/headers"
-import SubjectCard from "../components/SubjectCard"
+import SubjectCard from "../components/Cards/SubjectCard"
 import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 import RadioLabel from "../components/RadioLabel"

@@ -1,4 +1,4 @@
-import { H4, P } from "./headers"
+import { H4, P } from "../headers"
 
 interface ISubjectCard {
   cardStyle?: string
@@ -24,11 +24,11 @@ const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
       className={`card bg-base-100 card-bordered shadow-lg max-w-fit ${cardStyle}`}
     >
       <div className="card-body">
-        <H4 text={`${id} : ${subject}`} />
-        <p className="text-sm">Prerequisite : {prerequisite}</p>
-        <p className="text-sm">Program : {program}</p>
-        <p className="text-sm">Credit : {credit}</p>
-        <p className="text-sm">Description : {description}</p>
+        <H4 style="card-title" text={`${id} : ${subject}`} />
+        <P text={`Prerequisite : ${prerequisite}`} />
+        <P text={`Program : ${program}`} />
+        <P text={`Credit : ${credit}`} />
+        <P text={`Description: ${description}`} />
       </div>
     </div>
   )
