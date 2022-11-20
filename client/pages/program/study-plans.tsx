@@ -1,190 +1,170 @@
 import Head from "next/head"
 import Link from "next/link"
+import { useState } from "react"
+
+import { BsFillFilterCircleFill } from "react-icons/bs"
+import { BiSearch } from "react-icons/bi"
+import { IoMdClose } from "react-icons/io"
+import { IoFilter } from "react-icons/io5"
 
 import { H3, H4, P } from "../components/headers"
 import SubjectCard from "../components/Cards/SubjectCard"
 import BorderButton from "../components/Buttons/BorderButton"
+import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
+import RadioLabel from "../components/RadioLabel"
 
-const StudyPlans = () => {
+const StudyPlans2 = () => {
+  const [isChecked, setIsChecked] = useState(false)
+  const handleChange = () => {
+    setIsChecked(!isChecked)
+  }
+
   return (
     <>
       <Head>
         <title>SE Study Plans | KMITL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <FloatingScrollButton />
+
       <section className="container mx-auto my-4">
         <H3 style="text-gradient font-bold text-center" text="STUDY PLANS" />
       </section>
 
-      <section className="mb-8">
-        <H4
-          style="text-primary font-bold"
-          text="Bachelor of Engineering in Software Engineering "
-        />
-        <br />
-        <div className="flex">
-          <div className="flex-auto">
-            <H4 style="text-base" text="University" />
-            <div className="flex">
-              <label className="label cursor-pointer ">
-                <input
-                  type="radio"
-                  name="university"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">KMITL</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer">
-                <input
-                  type="radio"
-                  name="university"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Glasgow</span>
-              </label>
-            </div>
-          </div>
-          <div className="flex-auto">
-            <H4 style="text-base" text="Specializations" />
-            <div className="flex">
-              <label className="label cursor-pointer ">
-                <input
-                  type="radio"
-                  name="specializations"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Enterprise SE</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer">
-                <input
-                  type="radio"
-                  name="specializations"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Internet of Things</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer">
-                <input
-                  type="radio"
-                  name="specializations"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Intelligent Systems</span>
-              </label>
-            </div>
-          </div>
-          <div className="flex-auto">
-            <H4 style="text-base" text="Year" />
-            <div className="flex">
-              <label className="label cursor-pointer ">
-                <input
-                  type="radio"
-                  name="year"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Year 1</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer">
-                <input
-                  type="radio"
-                  name="year"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Year 2</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer ">
-                <input
-                  type="radio"
-                  name="year"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Year 3</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer">
-                <input
-                  type="radio"
-                  name="year"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Year 4</span>
-              </label>
-            </div>
-          </div>
-          <div className="flex-auto">
-            <H4 style="text-base" text="Semester" />
-            <div className="flex">
-              <label className="label cursor-pointer ">
-                <input
-                  type="radio"
-                  name="radio-10"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Semester 1</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer">
-                <input
-                  type="radio"
-                  name="radio-10"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Semester 2</span>
-              </label>
-            </div>
-          </div>
-          <div className="flex-auto">
-            <H4 style="text-base" text="Elective" />
-            <div className="flex">
-              <label className="label cursor-pointer ">
-                <input
-                  type="radio"
-                  name="elective"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Major Elective</span>
-              </label>
-            </div>
-            <div className="flex">
-              <label className="label cursor-pointer">
-                <input
-                  type="radio"
-                  name="elective"
-                  className="radio checked:bg-primary mr-2"
-                />
-                <span className="label-text">Free Elective</span>
-              </label>
-            </div>
-          </div>
-          <div className="flex-auto">
-            <H4 style="text-base" text="Search" />
+      <section className="">
+        <div className="flex justify-between md:justify-end space-x-4 mb-4 items-center">
+          {/* Search bar */}
+          <div className="input p-0 ml-2 flex items-center">
             <input
-              type="text"
-              placeholder="Type here"
-              className="input input-bordered input-primary rounded-full w-full max-w-xs mt-2 mb-5"
+              type="search"
+              placeholder="Search..."
+              className="input input-bordered input-accent input-sm lg:input-md lg:w-72 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
             />
-            <div className="card-actions justify-end">
-              <button className="btn btn-sm btn-outline btn-primary">
-                <Link href="/program/exchange-study-abroad">Submit</Link>
-              </button>
+          </div>
+          {/* Filter */}
+          <label className="btn btn-circle btn-accent btn-sm swap swap-rotate">
+            <input type="checkbox" onChange={handleChange} />
+            <IoFilter className="swap-off text-base-100  text-lg" />
+            <IoMdClose className="swap-on text-base-100 text-lg" />
+          </label>
+        </div>
+
+        {/* Filter Card */}
+        {isChecked && (
+          <div className="card bg-base-100 card-bordered shadow-lg card-body mb-8">
+            <div className="flex flex-col xl:flex-row xl:justify-between 2xl:justify-evenly">
+              {/* Program */}
+              <div className="form-control">
+                <H4 text="Program" style="ml-1 mb-2 font-bold text-accent" />
+                <RadioLabel
+                  idfor="kmitl-program"
+                  group="program"
+                  text="KMITL"
+                  check={true}
+                />
+                <RadioLabel
+                  idfor="glasgow-program"
+                  group="program"
+                  text="KMITL-Glasgow"
+                  check={false}
+                />
+              </div>
+
+              {/* Specializations */}
+              <div className="form-control">
+                <H4
+                  text="Specializations"
+                  style="ml-1 mb-2 font-bold text-accent"
+                />
+                <RadioLabel
+                  idfor="metaverse-se"
+                  group="specializations"
+                  text="Metaverse SE"
+                  check={true}
+                />
+                <RadioLabel
+                  idfor="industrial-iot"
+                  group="specializations"
+                  text="Industrial IoT"
+                  check={false}
+                />
+                <RadioLabel
+                  idfor="ai"
+                  group="specializations"
+                  text="AI"
+                  check={false}
+                />
+              </div>
+
+              {/* Year */}
+              <div className="form-control">
+                <H4 text="Year" style="ml-1 mb-2 font-bold text-accent" />
+                <RadioLabel
+                  idfor="year1"
+                  group="year"
+                  text="Year 1"
+                  check={true}
+                />
+                <RadioLabel
+                  idfor="year2"
+                  group="year"
+                  text="Year 2"
+                  check={false}
+                />
+                <RadioLabel
+                  idfor="year3"
+                  group="year"
+                  text="Year 3"
+                  check={false}
+                />
+                <RadioLabel
+                  idfor="year4"
+                  group="year"
+                  text="Year 4"
+                  check={false}
+                />
+              </div>
+
+              {/* Semester */}
+              <div className="form-control">
+                <H4 text="Semester" style="ml-1 mb-2 font-bold text-accent" />
+                <RadioLabel
+                  idfor="semester1"
+                  group="semester"
+                  text="Semester 1"
+                  check={true}
+                />
+                <RadioLabel
+                  idfor="semester2"
+                  group="semester"
+                  text="Semester 2"
+                  check={false}
+                />
+              </div>
+
+              {/* Elective */}
+              <div className="form-control">
+                <H4 text="Elective" style="ml-1 mb-2 font-bold text-accent" />
+                <RadioLabel
+                  idfor="major-elective"
+                  group="elective"
+                  text="Major Elective"
+                  check={true}
+                />
+                <RadioLabel
+                  idfor="free-elective"
+                  group="elective"
+                  text="Free Elective"
+                  check={false}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <br />
-        <hr />
-        <br />
+        )}
+      </section>
+
+      <section className="mb-8">
         <SubjectCard
           id="01006710"
           subject="Introduction to Calculus"
@@ -206,4 +186,4 @@ const StudyPlans = () => {
   )
 }
 
-export default StudyPlans
+export default StudyPlans2
