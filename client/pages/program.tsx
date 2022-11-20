@@ -33,7 +33,7 @@ const Program = () => {
         <H3 style="text-gradient font-bold text-center" text="PROGRAM" />
       </section>
 
-      <section className="grid gap-3 mb-8 place-items-center md:grid-cols-2 xl:grid-cols-3 xl:mx-92 2xl:mx-96">
+      <section className="grid grid-flow-row gap-3 mb-8 place-items-center md:grid-cols-2 xl:grid-cols-3">
         <ReadMoreCard
           image={CurriculumCover}
           imageAlt="curriculum-cover"
