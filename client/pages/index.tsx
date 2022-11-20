@@ -34,9 +34,9 @@ const Home: NextPage = () => {
       <FloatingScrollButton />
 
       {/* Hero */}
-      <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:p-40">
-        <div className="hero-content flex-col lg:flex-row lg:space-x-10 xl:space-x-30 2xl:space-x-36">
-          <div className="max-w-xs lg:max-w-lg">
+      <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:py-40">
+        <div className="hero-content flex-col lg:flex-row justify-evenly min-w-full">
+          <div className="max-w-xs lg:max-w-lg xl:max-w-2xl">
             <Image src={HeroArt} alt="Hero Art" />
           </div>
           <span className="mt-8 md:mt-4 text-center lg:text-right">
