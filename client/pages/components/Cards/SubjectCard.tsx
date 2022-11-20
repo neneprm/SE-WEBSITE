@@ -1,7 +1,6 @@
 import { H4, P } from "../headers"
 
 interface ISubjectCard {
-  cardStyle?: string
   id: string
   subject: string
   prerequisite: string
@@ -11,7 +10,6 @@ interface ISubjectCard {
 }
 
 const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
-  cardStyle,
   id,
   subject,
   prerequisite,
@@ -20,17 +18,20 @@ const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
   description,
 }) => {
   return (
-    <div
-      className={`card bg-base-100 card-bordered shadow-lg max-w-fit ${cardStyle}`}
-    >
-      <div className="card-body">
-        <H4 style="card-title text-primary" text={`${id} : ${subject}`} />
-        <P text={`Prerequisite : ${prerequisite}`} />
-        <P text={`Program : ${program}`} />
-        <P text={`Credit : ${credit}`} />
-        <P text={`Description: ${description}`} />
+    <>
+      <div className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <input type="checkbox" className="peer" />
+        <div className="collapse-title">
+          <H4 style="text-primary font-bold" text={`${id} : ${subject}`} />
+        </div>
+        <div className="collapse-content space-y-2">
+          <P text={`Prerequisite : ${prerequisite}`} />
+          <P text={`Program : ${program}`} />
+          <P text={`Credit : ${credit}`} />
+          <P text={`Description: ${description}`} style="mb-4" />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
