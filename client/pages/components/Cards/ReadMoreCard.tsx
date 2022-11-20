@@ -33,7 +33,7 @@ const Card: React.FunctionComponent<ICard> = ({
 
       <div className="card-body">
         <h4
-          className={`card-title text-base sm:text-lg lg:text-2xl 2xl:text-3xl ${titleStyle}`}
+          className={`card-title text-base sm:text-lg lg:text-2xl ${titleStyle}`}
         >
           <span>{icon}</span>
           {title}
