@@ -13,7 +13,37 @@ import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 import RadioLabel from "../components/RadioLabel"
 
-const StudyPlans2 = () => {
+interface IStudyPlans {
+  id: string
+  subject: string
+  prerequisite: string
+  program: string
+  credit: string
+  description: string
+}
+
+const COURSE_LIST = [
+  {
+    id: "01006710",
+    subject: "Introduction to Calculus",
+    prerequisite: "None",
+    program: "Software-Engineering-2022",
+    credit: "3 (3-0-6)",
+    description:
+      "Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions.",
+  },
+  {
+    id: "01286111",
+    subject: "Circuits and Electronics",
+    prerequisite: "None",
+    program: "Software-Engineering-2022",
+    credit: "4 (3-3-8)",
+    description:
+      "Fundamentals electric circuit. Ohm's law, Kirchhoff's law, Thevenin's and Norton's theorems, superposition, capacitor, Inductor. Semiconductor devices, device current-voltage and frequency characteristics, P-N junction, diode circuits, analysis, and design of BJT and MOS transistor circuits, operational amplifier, and its applications.",
+  },
+]
+
+const StudyPlans = () => {
   const [isChecked, setIsChecked] = useState(false)
   const handleChange = () => {
     setIsChecked(!isChecked)
@@ -164,15 +194,17 @@ const StudyPlans2 = () => {
         )}
       </section>
 
-      <section className="mb-8">
-        <SubjectCard
-          id="01006710"
-          subject="Introduction to Calculus"
-          prerequisite="None"
-          program="Software Engineering 2022"
-          credit="3 (3-0-6)"
-          description="Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions"
-        />
+      <section className="mb-8 space-y-4">
+        {COURSE_LIST.map((course) => (
+          <SubjectCard
+            id={course.id}
+            subject={course.subject}
+            prerequisite={course.prerequisite}
+            program={course.program}
+            credit={course.credit}
+            description={course.description}
+          />
+        ))}
       </section>
 
       <section className="flex justify-center mb-8">
@@ -186,4 +218,4 @@ const StudyPlans2 = () => {
   )
 }
 
-export default StudyPlans2
+export default StudyPlans
