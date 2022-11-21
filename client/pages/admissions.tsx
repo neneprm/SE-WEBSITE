@@ -7,10 +7,13 @@ import OneLineCard from "../components/Cards/OneLineCard"
 import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 import SolidButton from "../components/Buttons/SolidButton"
+import axios from "axios"
+import React from "react"
 
 interface IAdmission {
+  admissions:{
   title: string
-  link: string
+  link: string}
 }
 
 const ADMISSION_LIST = [
@@ -25,7 +28,7 @@ const ADMISSION_LIST = [
   },
 ]
 
-const Admissions = () => {
+const Admissions=({ admissions }:any) => {
   return (
     <>
       <Head>
@@ -40,6 +43,13 @@ const Admissions = () => {
       </section>
 
       <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-8">
+          {/* { admissions.map((admission: { title: any; link: any }) =>(
+            <SolidButton
+            text={`${admission.title}`}
+            link={`${admission.link}`}
+            style="md:w-1/2 btn-primary text-base-100 text-sm text-left md:text-justify sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-base-100"
+          />
+          ))} */}
         <SolidButton
           text="Apply Admission Online"
           link="https://new.reg.kmitl.ac.th/admission"
@@ -53,12 +63,12 @@ const Admissions = () => {
       </section>
 
       <section className="mb-8">
-        {ADMISSION_LIST.map((list) => (
-          <div key={list.link}>
+        {admissions.map((admission: { title: string; link: any }) => (
+          <div key={admission.link}>
             <OneLineCard
               icon={<FaBullhorn className="text-primary" />}
-              title={list.title}
-              link={list.link}
+              title={admission.title}
+              link={admission.link}
             />
           </div>
         ))}
@@ -71,4 +81,16 @@ const Admissions = () => {
   )
 }
 
+export async function getServerSideProps() {
+  const { data } = await axios.get('http://127.0.0.1:8000/admissions')
+
+  return {
+    props: {
+      admissions: data.results
+    }
+  }
+
+}
+
 export default Admissions
+
