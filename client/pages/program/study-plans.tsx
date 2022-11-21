@@ -7,18 +7,18 @@ import { BiSearch } from "react-icons/bi"
 import { IoMdClose } from "react-icons/io"
 import { IoFilter } from "react-icons/io5"
 
-<<<<<<< HEAD
+
 import H3 from "../../components/headers/H3"
 import H4 from "../../components/headers/H4"
 import P from "../../components/headers/P"
 import SubjectCard from "../../components/Cards/SubjectCard"
 import BorderButton from "../../components/Buttons/BorderButton"
-=======
-import { H3, H4, P } from "../components/headers"
-import SubjectCard from "../components/Cards/SubjectCard"
-import BorderButton from "../components/Buttons/BorderButton"
-import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
-import RadioLabel from "../components/RadioLabel"
+
+// import { H3, H4, P } from "../components/headers"
+// import SubjectCard from "../components/Cards/SubjectCard"
+// import BorderButton from "../components/Buttons/BorderButton"
+import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
+import RadioLabel from "../../components/RadioLabel"
 
 interface IStudyPlans {
   id: string
@@ -49,7 +49,7 @@ const COURSE_LIST = [
       "Fundamentals electric circuit. Ohm's law, Kirchhoff's law, Thevenin's and Norton's theorems, superposition, capacitor, Inductor. Semiconductor devices, device current-voltage and frequency characteristics, P-N junction, diode circuits, analysis, and design of BJT and MOS transistor circuits, operational amplifier, and its applications.",
   },
 ]
->>>>>>> 51d5bf065d59dbc39c499bdb3dfcc549e5a58e56
+
 
 const StudyPlans = () => {
   const [isChecked, setIsChecked] = useState(false)
