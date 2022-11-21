@@ -14,8 +14,8 @@ import NavItem from "./NavItems"
 
 const NAV_LIST = [
   { text: "About", href: "/about" },
-  { text: "Forum", href: "/forum" },
-  { text: "Blogs", href: "/blogs" },
+  // { text: "Forum", href: "/forum" },
+  // { text: "Blogs", href: "/blogs" },
   { text: "Program", href: "/program" },
   { text: "Admissions", href: "/admissions" },
 ]
