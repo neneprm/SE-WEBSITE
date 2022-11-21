@@ -6,3 +6,10 @@ class Admission(models.Model):
     title = models.CharField(max_length=255)
     link = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class Subject(models.Model):
+    subjectID = models.TextField()
+    subjectName = models.TextField()
+    prerequisite = models.TextField()
+    program = models.TextField()
+    description = models.TextField()

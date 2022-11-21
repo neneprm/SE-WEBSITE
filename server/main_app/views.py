@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
-from main_app.serializers import UserSerializer, GroupSerializer, AdmissionSerializer
-from main_app.models import Admission
+from main_app.serializers import UserSerializer, GroupSerializer, AdmissionSerializer, SubjectSerializer
+from main_app.models import Admission, Subject
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -27,4 +27,12 @@ class AdmissionViewSet(viewsets.ModelViewSet):
     """
     queryset = Admission.objects.all()
     serializer_class = AdmissionSerializer
+    permission_classes = [permissions.AllowAny]
+
+class SubjectViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
     permission_classes = [permissions.AllowAny]
