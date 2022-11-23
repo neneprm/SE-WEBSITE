@@ -19,6 +19,7 @@ import BorderButton from "../../components/Buttons/BorderButton"
 // import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
 import RadioLabel from "../../components/RadioLabel"
+import axios from "axios"
 
 interface IStudyPlans {
   id: string
@@ -51,7 +52,7 @@ const COURSE_LIST = [
 ]
 
 
-const StudyPlans = () => {
+const StudyPlans = ({ subjects }:any) => {
   const [isChecked, setIsChecked] = useState(false)
   const handleChange = () => {
     setIsChecked(!isChecked)
@@ -203,14 +204,14 @@ const StudyPlans = () => {
       </section>
 
       <section className="mb-8 space-y-4">
-        {COURSE_LIST.map((course) => (
+        {subjects.map((subject:{subject_id:string; subject_name:string; subject_credit:string; prerequisite:string; description:string; program:string }) => (
           <SubjectCard
-            id={course.id}
-            subject={course.subject}
-            prerequisite={course.prerequisite}
-            program={course.program}
-            credit={course.credit}
-            description={course.description}
+            id={subject.subject_id}
+            subject={subject.subject_name}
+            prerequisite={subject.prerequisite}
+            program={subject.program}
+            credit={subject.subject_credit}
+            description={subject.description}
           />
         ))}
       </section>
@@ -226,4 +227,14 @@ const StudyPlans = () => {
   )
 }
 
+export async function getServerSideProps() {
+  const { data } = await axios.get('http://127.0.0.1:8000/subjects')
+
+  return {
+    props: {
+      subjects: data.results
+    }
+  }
+
+}
 export default StudyPlans
