@@ -49,6 +49,17 @@ const COURSE_LIST = [
     description:
       "Fundamentals electric circuit. Ohm's law, Kirchhoff's law, Thevenin's and Norton's theorems, superposition, capacitor, Inductor. Semiconductor devices, device current-voltage and frequency characteristics, P-N junction, diode circuits, analysis, and design of BJT and MOS transistor circuits, operational amplifier, and its applications.",
   },
+  {
+    "subject_id" : "01286111",
+    "subject_name" : "Circuits and Electronics",
+    "subject_credit" : "4 (3-3-8)",
+    "prerequisite" : "None",
+    "program" : "KMITL",
+    "description" : "Fundamentals electric circuit. Ohm's law, Kirchhoff's law, Thevenin's and Norton's theorems, superposition, capacitor, Inductor. Semiconductor devices, device current-voltage and frequency characteristics, P-N junction, diode circuits, analysis, and design of BJT and MOS transistor circuits, operational amplifier, and its applications.",
+    "year" : "1",
+    "semester" : "1",
+    "track" : "None",
+  },
 ]
 
 
