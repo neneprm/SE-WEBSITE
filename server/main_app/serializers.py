@@ -21,6 +21,7 @@ class AdmissionSerializer(serializers.HyperlinkedModelSerializer):
 class SubjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Subject
+        ordering = ['-subject_name']
         fields = '__all__'
 
 class AboutSerializer(serializers.HyperlinkedModelSerializer):
