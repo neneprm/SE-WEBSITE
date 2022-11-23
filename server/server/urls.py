@@ -24,7 +24,8 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'admissions', views.AdmissionViewSet)
-router.register(r'subject', views.SubjectViewSet)
+router.register(r'subjects', views.SubjectViewSet)
+router.register(r'abouts',views.AboutViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from main_app.models import Admission
-from server.main_app.models import Subject
+from main_app.models import Admission, Subject, About
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -22,4 +21,9 @@ class AdmissionSerializer(serializers.HyperlinkedModelSerializer):
 class SubjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Subject
+        fields = '__all__'
+
+class AboutSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = About
         fields = '__all__'
