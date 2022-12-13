@@ -8,6 +8,9 @@ interface ISubjectCard {
   program: string
   credit: string
   description: string
+  year: string
+  semester: string
+  track: string
 }
 
 const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
@@ -17,6 +20,9 @@ const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
   program,
   credit,
   description,
+  year,
+  semester,
+  track
 }) => {
   return (
     <>
@@ -26,8 +32,10 @@ const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
           <H4 style="text-primary font-bold" text={`${id} : ${subject}`} />
         </div>
         <div className="collapse-content space-y-2">
+          <P text={`Year: ${year} Semester: ${semester}`}/>
           <P text={`Prerequisite : ${prerequisite}`} />
           <P text={`Program : ${program}`} />
+          <P text={`Track: ${track}`} />
           <P text={`Credit : ${credit}`} />
           <P text={`Description: ${description}`} style="mb-4" />
         </div>
