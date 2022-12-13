@@ -7,7 +7,6 @@ import { BiSearch } from "react-icons/bi"
 import { IoMdClose } from "react-icons/io"
 import { IoFilter } from "react-icons/io5"
 
-
 import H3 from "../../components/headers/H3"
 import H4 from "../../components/headers/H4"
 import P from "../../components/headers/P"
@@ -29,15 +28,15 @@ interface IStudyPlans {
   subject_credit: string
   description: string
   semester: string
-  tracK: string
+  track: string
   year: string
 }
 
-interface StudyPlanProps {
-  subjects: IStudyPlans[],
+interface ISubjects {
+  subjects: IStudyPlans[]
 }
 
-const COURSE_LIST = [
+const RADIO_LIST = [
   {
     id: "01006710",
     subject: "Introduction to Calculus",
@@ -47,48 +46,55 @@ const COURSE_LIST = [
     description:
       "Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions.",
   },
-  {
-    id: "01286111",
-    subject: "Circuits and Electronics",
-    prerequisite: "None",
-    program: "Software-Engineering-2022",
-    credit: "4 (3-3-8)",
-    description:
-      "Fundamentals electric circuit. Ohm's law, Kirchhoff's law, Thevenin's and Norton's theorems, superposition, capacitor, Inductor. Semiconductor devices, device current-voltage and frequency characteristics, P-N junction, diode circuits, analysis, and design of BJT and MOS transistor circuits, operational amplifier, and its applications.",
-  },
-  {
-    "subject_id" : "01286111",
-    "subject_name" : "Circuits and Electronics",
-    "subject_credit" : "4 (3-3-8)",
-    "prerequisite" : "None",
-    "program" : "KMITL",
-    "description" : "Fundamentals electric circuit. Ohm's law, Kirchhoff's law, Thevenin's and Norton's theorems, superposition, capacitor, Inductor. Semiconductor devices, device current-voltage and frequency characteristics, P-N junction, diode circuits, analysis, and design of BJT and MOS transistor circuits, operational amplifier, and its applications.",
-    "year" : "1",
-    "semester" : "1",
-    "track" : "None",
-  },
 ]
 
-const StudyPlans = ({ subjects }:any) => {
-  const [allSubject, setAllSubject] = useState<IStudyPlans[]>(subjects);
-  const [showSubject, setShowSubject] = useState<IStudyPlans[]>(allSubject);
-  const [isChecked, setIsChecked] = useState(false)
-  const handleChange = () => {
-    setIsChecked(!isChecked)
+const StudyPlans = ({ subjects }: ISubjects) => {
+  const [allSubject, setAllSubject] = useState<IStudyPlans[]>(subjects)
+  const [showSubject, setShowSubject] = useState<IStudyPlans[]>(allSubject)
+
+  const [filterIsChecked, setFilterIsChecked] = useState(false)
+  const handleFilterCheck = (e: any) => {
+    setFilterIsChecked(!filterIsChecked)
+  }
+
+  const [checkedRadio, setCheckedRadio] = useState<[]>([])
+  const handleRadioChange = (e: any) => {
+    setShowSubject(allSubject.filter((value) => {
+      const checkedItem = e.target.value.toLowerCase().replace(/ /g, '');
+      // console.log(checkedItem);
+      if (checkedItem === "Metaverse SE") return (value.track === "Metaverse")
+      // const trackMatch = value.track.toLowerCase().includes(checkedItem)
+      
+      // const semesterMatch = "semester" + value.semester.toLowerCase().includes(checkedItem)
+      // return (trackMatch || yearMatch || semesterMatch)
+    }))
   }
   
   const handleFilter = (e: any) => {
-    setShowSubject(allSubject.filter(value => {
-        const searchStr = e.target.value.toLowerCase();
-        const idMatch = value.subject_id.toLowerCase().includes(searchStr);
-        const subjectMatch = value.subject_name.toLowerCase().includes(searchStr);
-        const prerequisiteMatch = value.prerequisite.toLowerCase().includes(searchStr);
-        const programMatch = value.program.toLowerCase().includes(searchStr);
-        const creditMatch = value.subject_credit.toLowerCase().includes(searchStr);
-        const descriptionMatch = value.description.toLowerCase().includes(searchStr);
-        return idMatch || subjectMatch || prerequisiteMatch || programMatch || creditMatch || descriptionMatch;
-    }))  
+    setShowSubject(
+      allSubject.filter((value) => {
+        const searchStr = e.target.value.toLowerCase()
+        const idMatch = value.subject_id.toLowerCase().includes(searchStr)
+        const subjectMatch = value.subject_name
+          .toLowerCase()
+          .includes(searchStr)
+        const prerequisiteMatch = value.prerequisite
+          .toLowerCase()
+          .includes(searchStr)
+        const descriptionMatch = value.description
+          .toLowerCase()
+          .includes(searchStr)
+        return (
+          idMatch ||
+          subjectMatch ||
+          prerequisiteMatch ||
+          descriptionMatch
+        )
+      })
+    )
   }
+
+  // console.log(showSubject);
 
   return (
     <>
@@ -116,33 +122,16 @@ const StudyPlans = ({ subjects }:any) => {
           </div>
           {/* Filter */}
           <label className="btn btn-circle btn-accent btn-sm swap swap-rotate">
-            <input type="checkbox" onChange={handleChange} />
+            <input type="checkbox" onChange={handleFilterCheck} />
             <IoFilter className="swap-off text-base-100  text-lg" />
             <IoMdClose className="swap-on text-base-100 text-lg" />
           </label>
         </div>
 
         {/* Filter Card */}
-        {isChecked && (
+        {filterIsChecked && (
           <div className="card bg-base-100 card-bordered shadow-lg card-body mb-8">
             <div className="flex flex-col xl:flex-row xl:justify-between 2xl:justify-evenly">
-              {/* Program */}
-              <div className="form-control">
-                <H4 text="Program" style="ml-1 mb-2 font-bold text-accent" />
-                <RadioLabel
-                  idfor="kmitl-program"
-                  group="program"
-                  text="KMITL"
-                  check={true}
-                />
-                <RadioLabel
-                  idfor="glasgow-program"
-                  group="program"
-                  text="KMITL-Glasgow"
-                  check={false}
-                />
-              </div>
-
               {/* Specializations */}
               <div className="form-control">
                 <H4
@@ -153,19 +142,19 @@ const StudyPlans = ({ subjects }:any) => {
                   idfor="metaverse-se"
                   group="specializations"
                   text="Metaverse SE"
-                  check={true}
+                  handleChange={handleRadioChange}
                 />
                 <RadioLabel
                   idfor="industrial-iot"
                   group="specializations"
                   text="Industrial IoT"
-                  check={false}
+                  handleChange={handleRadioChange}
                 />
                 <RadioLabel
                   idfor="ai"
                   group="specializations"
                   text="AI"
-                  check={false}
+                  handleChange={handleRadioChange}
                 />
               </div>
 
@@ -176,25 +165,25 @@ const StudyPlans = ({ subjects }:any) => {
                   idfor="year1"
                   group="year"
                   text="Year 1"
-                  check={true}
+                  handleChange={handleRadioChange}
                 />
                 <RadioLabel
                   idfor="year2"
                   group="year"
                   text="Year 2"
-                  check={false}
+                  handleChange={handleRadioChange}
                 />
                 <RadioLabel
                   idfor="year3"
                   group="year"
                   text="Year 3"
-                  check={false}
+                  handleChange={handleRadioChange}
                 />
                 <RadioLabel
                   idfor="year4"
                   group="year"
                   text="Year 4"
-                  check={false}
+                  handleChange={handleRadioChange}
                 />
               </div>
 
@@ -205,30 +194,13 @@ const StudyPlans = ({ subjects }:any) => {
                   idfor="semester1"
                   group="semester"
                   text="Semester 1"
-                  check={true}
+                  handleChange={handleRadioChange}
                 />
                 <RadioLabel
                   idfor="semester2"
                   group="semester"
                   text="Semester 2"
-                  check={false}
-                />
-              </div>
-
-              {/* Elective */}
-              <div className="form-control">
-                <H4 text="Elective" style="ml-1 mb-2 font-bold text-accent" />
-                <RadioLabel
-                  idfor="major-elective"
-                  group="elective"
-                  text="Major Elective"
-                  check={true}
-                />
-                <RadioLabel
-                  idfor="free-elective"
-                  group="elective"
-                  text="Free Elective"
-                  check={false}
+                  handleChange={handleRadioChange}
                 />
               </div>
             </div>
@@ -237,18 +209,33 @@ const StudyPlans = ({ subjects }:any) => {
       </section>
 
       <section className="mb-8 space-y-4">
-        {showSubject.map((subject:{subject_id:string; subject_name:string; subject_credit:string; prerequisite:string; description:string; program:string }) => (
-          <div key={`${subject.subject_id}_${subject.subject_name}`}>
-            <SubjectCard
-            id={subject.subject_id}
-            subject={subject.subject_name}
-            prerequisite={subject.prerequisite}
-            program={subject.program}
-            credit={subject.subject_credit}
-            description={subject.description}
-          />
-          </div>
-        ))}
+        {showSubject.map(
+          (subject: {
+            subject_id: string
+            subject_name: string
+            subject_credit: string
+            prerequisite: string
+            description: string
+            program: string
+            year: string
+            semester: string
+            track: string
+          }) => (
+            <div key={`${subject.subject_id}_${subject.subject_name}`}>
+              <SubjectCard
+                id={subject.subject_id}
+                subject={subject.subject_name}
+                prerequisite={subject.prerequisite}
+                program={subject.program}
+                credit={subject.subject_credit}
+                description={subject.description}
+                year={subject.year}
+                semester={subject.semester}
+                track={subject.track}
+              />
+            </div>
+          )
+        )}
       </section>
 
       <section className="flex justify-center mb-8">
@@ -263,15 +250,12 @@ const StudyPlans = ({ subjects }:any) => {
 }
 
 export async function getServerSideProps() {
-  const { data } = await axios.get('http://127.0.0.1:8000/subjects')
-
+  const { data } = await axios.get("http://127.0.0.1:8000/subjects")
   return {
     props: {
-      subjects: data.results
-    }
+      subjects: data.results,
+    },
   }
-
 }
+
 export default StudyPlans
-
-
