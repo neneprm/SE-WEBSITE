@@ -1,23 +1,18 @@
-import { useState } from "react"
+import { ChangeEventHandler, useState } from "react"
 
 interface IRadioLabel {
   idfor: string
   group: string
   text: string
-  check: boolean
+  handleChange: ChangeEventHandler
 }
 
 const RadioLabel: React.FunctionComponent<IRadioLabel> = ({
   idfor,
   group,
   text,
-  check,
+  handleChange
 }) => {
-  const [isChecked, setIsChecked] = useState(check)
-  const handleChange = () => {
-    setIsChecked(!isChecked)
-  }
-
   return (
     <>
       <label className="label cursor-pointer justify-start">
@@ -25,8 +20,8 @@ const RadioLabel: React.FunctionComponent<IRadioLabel> = ({
           type="radio"
           id={idfor}
           name={group}
+          value={text}
           className="radio radio-sm checked:bg-primary mr-2"
-          checked={isChecked}
           onChange={handleChange}
         />
         <label
