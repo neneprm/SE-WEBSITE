@@ -1,6 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
-import { useState } from "react"
+import { ChangeEventHandler, useState } from "react"
 
 import { BsFillFilterCircleFill } from "react-icons/bs"
 import { BiSearch } from "react-icons/bi"
@@ -22,12 +22,19 @@ import RadioLabel from "../../components/RadioLabel"
 import axios from "axios"
 
 interface IStudyPlans {
-  id: string
-  subject: string
+  subject_id: string
+  subject_name: string
   prerequisite: string
   program: string
-  credit: string
+  subject_credit: string
   description: string
+  semester: string
+  tracK: string
+  year: string
+}
+
+interface StudyPlanProps {
+  subjects: IStudyPlans[],
 }
 
 const COURSE_LIST = [
@@ -62,11 +69,25 @@ const COURSE_LIST = [
   },
 ]
 
-
 const StudyPlans = ({ subjects }:any) => {
+  const [allSubject, setAllSubject] = useState<IStudyPlans[]>(subjects);
+  const [showSubject, setShowSubject] = useState<IStudyPlans[]>(allSubject);
   const [isChecked, setIsChecked] = useState(false)
   const handleChange = () => {
     setIsChecked(!isChecked)
+  }
+  
+  const handleFilter = (e: any) => {
+    setShowSubject(allSubject.filter(value => {
+        const searchStr = e.target.value.toLowerCase();
+        const idMatch = value.subject_id.toLowerCase().includes(searchStr);
+        const subjectMatch = value.subject_name.toLowerCase().includes(searchStr);
+        const prerequisiteMatch = value.prerequisite.toLowerCase().includes(searchStr);
+        const programMatch = value.program.toLowerCase().includes(searchStr);
+        const creditMatch = value.subject_credit.toLowerCase().includes(searchStr);
+        const descriptionMatch = value.description.toLowerCase().includes(searchStr);
+        return idMatch || subjectMatch || prerequisiteMatch || programMatch || creditMatch || descriptionMatch;
+    }))  
   }
 
   return (
@@ -90,6 +111,7 @@ const StudyPlans = ({ subjects }:any) => {
               type="search"
               placeholder="Search..."
               className="input input-bordered input-accent input-sm lg:input-md lg:w-72 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
+              onChange={handleFilter}
             />
           </div>
           {/* Filter */}
@@ -215,8 +237,9 @@ const StudyPlans = ({ subjects }:any) => {
       </section>
 
       <section className="mb-8 space-y-4">
-        {subjects.map((subject:{subject_id:string; subject_name:string; subject_credit:string; prerequisite:string; description:string; program:string }) => (
-          <SubjectCard
+        {showSubject.map((subject:{subject_id:string; subject_name:string; subject_credit:string; prerequisite:string; description:string; program:string }) => (
+          <div key={`${subject.subject_id}_${subject.subject_name}`}>
+            <SubjectCard
             id={subject.subject_id}
             subject={subject.subject_name}
             prerequisite={subject.prerequisite}
@@ -224,6 +247,7 @@ const StudyPlans = ({ subjects }:any) => {
             credit={subject.subject_credit}
             description={subject.description}
           />
+          </div>
         ))}
       </section>
 
@@ -249,3 +273,5 @@ export async function getServerSideProps() {
 
 }
 export default StudyPlans
+
+
