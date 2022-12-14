@@ -1,9 +1,11 @@
 import Head from "next/head"
 import Link from "next/link"
 
-import { H3, H4, P } from "../../components/headers"
-import BorderButton from "../../components/Buttons/BorderButton"
-import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
+import H3 from "../../../components/headers/H3"
+import H4 from "../../../components/headers/H4"
+import P from "../../../components/headers/P"
+import BorderButton from "../../../components/Buttons/BorderButton"
+import FloatingScrollButton from "../../../components/Buttons/FloatingScrollButton"
 
 const UkVisaGuidance = () => {
   return (

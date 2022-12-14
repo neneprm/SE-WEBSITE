@@ -5,8 +5,9 @@ import { FiLogIn } from "react-icons/fi"
 import HeroArt from "./assets/hero.svg"
 import logo from "./assets/logo.svg"
 
-import { H1, P } from "./components/headers"
-import SolidButton from "./components/Buttons/SolidButton"
+import H1 from "../components/headers/H1"
+import P from "../components/headers/P"
+import SolidButton from "../components/Buttons/SolidButton"
 
 const Login = () => {
   return (

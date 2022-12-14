@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# python django
+/server/server/__pycache__
+/server/main_app/__pycache__

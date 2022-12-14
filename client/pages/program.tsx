@@ -14,10 +14,10 @@ import ExchangeStudyCover from "../pages/assets/program/exchange-study-cover.jpg
 import InternshipsCover from "../pages/assets/program/internships-cover.jpg"
 import LecturersCover from "../pages/assets/program/lecturers-cover.jpg"
 
-import { H3 } from "./components/headers"
-import ReadMoreCard from "./components/Cards/ReadMoreCard"
-import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
-import BorderButton from "./components/Buttons/BorderButton"
+import H3 from "../components/headers/H3"
+import ReadMoreCard from "../components/Cards/ReadMoreCard"
+import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
+import BorderButton from "../components/Buttons/BorderButton"
 
 const Program = () => {
   return (

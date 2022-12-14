@@ -1,8 +1,8 @@
 import Head from "next/head"
 
-import { H3 } from "./components/headers"
-import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
-import BorderButton from "./components/Buttons/BorderButton"
+import H3 from "../components/headers/H3"
+import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
+import BorderButton from "../components/Buttons/BorderButton"
 
 const Forum = () => {
   return (

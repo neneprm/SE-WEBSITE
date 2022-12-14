@@ -16,12 +16,15 @@ import CurriculumCover from "../pages/assets/program/curriculum-cover.jpg"
 import GlasgowCover from "../pages/assets/program/glasgow-cover.jpg"
 import ExchangeStudyCover from "../pages/assets/program/exchange-study-cover.jpg"
 
-import { H1, H3, H4, P } from "./components/headers"
-import ReadMoreCard from "./components/Cards/ReadMoreCard"
-import OneLineCard from "./components/Cards/OneLineCard"
-import SolidButton from "./components/Buttons/SolidButton"
-import BorderButton from "./components/Buttons/BorderButton"
-import FloatingScrollButton from "./components/Buttons/FloatingScrollButton"
+import H1 from "../components/headers/H1"
+import H3 from "../components/headers/H3"
+import H4 from "../components/headers/H4"
+import P from "../components/headers/P"
+import ReadMoreCard from "../components/Cards/ReadMoreCard"
+import OneLineCard from "../components/Cards/OneLineCard"
+import SolidButton from "../components/Buttons/SolidButton"
+import BorderButton from "../components/Buttons/BorderButton"
+import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 
 const Home: NextPage = () => {
   return (

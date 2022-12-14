@@ -2,10 +2,12 @@ import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
 
-import { H3, H4, P } from "../components/headers"
-import BorderButton from "../components/Buttons/BorderButton"
-import SolidButton from "../components/Buttons/SolidButton"
-import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
+import H3 from "../../components/headers/H3"
+import H4 from "../../components/headers/H4"
+import P from "../../components/headers/P"
+import BorderButton from "../../components/Buttons/BorderButton"
+import SolidButton from "../../components/Buttons/SolidButton"
+import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
 
 import UoGLogo from "../assets/UoG-logo.png"
 

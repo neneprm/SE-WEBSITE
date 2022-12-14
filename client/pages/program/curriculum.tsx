@@ -4,9 +4,11 @@ import Image from "next/image"
 
 import CurriculumTable from "../assets/curriculum-table.png"
 
-import { H3, H4, P } from "../components/headers"
-import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
-import BorderButton from "../components/Buttons/BorderButton"
+import H3 from "../../components/headers/H3"
+import H4 from "../../components/headers/H4"
+import P from "../../components/headers/P"
+import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
+import BorderButton from "../../components/Buttons/BorderButton"
 
 const Curriculum = () => {
   return (
