@@ -40,7 +40,9 @@ const RADIO_LIST = [
       "Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions.",
   },
 ]
-var checkedYear = "", checkedSemester = "", checkedTrack = "";
+var checkedYear = "",
+  checkedSemester = "",
+  checkedTrack = ""
 
 const StudyPlans = ({ subjects }: ISubjects) => {
   const [allSubject, setAllSubject] = useState<IStudyPlans[]>(subjects)
@@ -51,34 +53,37 @@ const StudyPlans = ({ subjects }: ISubjects) => {
     setFilterIsChecked(!filterIsChecked)
     if (filterIsChecked) {
       setShowSubject(allSubject)
-      checkedYear = "", checkedSemester = "", checkedTrack = "";
+      ;(checkedYear = ""), (checkedSemester = ""), (checkedTrack = "")
     }
   }
 
   const [checkedRadio, setCheckedRadio] = useState<[]>([])
   const handleRadioChange = (e: any) => {
-    setShowSubject(allSubject.filter((value) => {
-      const checkedItem = e.target.id.toLowerCase();
-      
-      const year = ["year1", "year2", "year3", "year4"];
-      const semester = ["semester1" , "semester2"];
-      const track = ["metaverse" , "iot" , "ai"];
+    setShowSubject(
+      allSubject.filter((value) => {
+        const checkedItem = e.target.id.toLowerCase()
 
-      if (year.includes(checkedItem))
-        checkedYear = checkedItem;
-      else if (semester.includes(checkedItem))
-        checkedSemester = checkedItem;
-      else if (track.includes(checkedItem))
-        checkedTrack = checkedItem;
+        const year = ["year1", "year2", "year3", "year4"]
+        const semester = ["semester1", "semester2"]
+        const track = ["metaverse", "iot", "ai"]
 
-      const yearMatch = ("year" + value.year.toLowerCase()).includes(checkedYear);
-      const semesterMatch = ("semester" + value.semester.toLowerCase()).includes(checkedSemester);
-      const trackMatch = value.track.toLowerCase().includes(checkedTrack);
-      
-      return (trackMatch && yearMatch && semesterMatch)
-    }))
+        if (year.includes(checkedItem)) checkedYear = checkedItem
+        else if (semester.includes(checkedItem)) checkedSemester = checkedItem
+        else if (track.includes(checkedItem)) checkedTrack = checkedItem
+
+        const yearMatch = ("year" + value.year.toLowerCase()).includes(
+          checkedYear
+        )
+        const semesterMatch = (
+          "semester" + value.semester.toLowerCase()
+        ).includes(checkedSemester)
+        const trackMatch = value.track.toLowerCase().includes(checkedTrack)
+
+        return trackMatch && yearMatch && semesterMatch
+      })
+    )
   }
-  
+
   const handleFilter = (e: any) => {
     setShowSubject(
       allSubject.filter((value) => {
@@ -93,12 +98,7 @@ const StudyPlans = ({ subjects }: ISubjects) => {
         const descriptionMatch = value.description
           .toLowerCase()
           .includes(searchStr)
-        return (
-          idMatch ||
-          subjectMatch ||
-          prerequisiteMatch ||
-          descriptionMatch
-        )
+        return idMatch || subjectMatch || prerequisiteMatch || descriptionMatch
       })
     )
   }
@@ -228,7 +228,9 @@ const StudyPlans = ({ subjects }: ISubjects) => {
             semester: string
             track: string
           }) => (
-            <div key={`${subject.subject_id}_${subject.year}_${subject.semester}`}>
+            <div
+              key={`${subject.subject_id}_${subject.year}_${subject.semester}`}
+            >
               <SubjectCard
                 id={subject.subject_id}
                 subject={subject.subject_name}
