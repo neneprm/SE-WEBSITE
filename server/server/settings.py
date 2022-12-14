@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import psycopg2.extensions
+
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIRS = os.path.join(BASE_DIR,"client\.next\server\pages")
@@ -26,7 +31,7 @@ SECRET_KEY = 'django-insecure-+nhm*z!u)zo$aslybh7(5k9h5b_fhkc-4xi=elj^jk6)7dbv(k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -87,15 +92,14 @@ WSGI_APPLICATION = 'server.wsgi.application'
 DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': BASE_DIR / 'se-website-db',
-        'NAME': 'se-website',
-        'USER': 'beam',
-        'PASSWORD': 'beam',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env("DB_PORT"),
         'OPTIONS': {
-        'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
+            'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
         },
     }
 }
