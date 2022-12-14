@@ -11,7 +11,7 @@ const RadioLabel: React.FunctionComponent<IRadioLabel> = ({
   idfor,
   group,
   text,
-  handleChange
+  handleChange,
 }) => {
   return (
     <>

@@ -40,6 +40,7 @@ const RADIO_LIST = [
       "Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions.",
   },
 ]
+var checkedYear = "", checkedSemester = "", checkedTrack = "";
 
 const StudyPlans = ({ subjects }: ISubjects) => {
   const [allSubject, setAllSubject] = useState<IStudyPlans[]>(subjects)
@@ -48,18 +49,33 @@ const StudyPlans = ({ subjects }: ISubjects) => {
   const [filterIsChecked, setFilterIsChecked] = useState(false)
   const handleFilterCheck = (e: any) => {
     setFilterIsChecked(!filterIsChecked)
+    if (filterIsChecked) {
+      setShowSubject(allSubject)
+      checkedYear = "", checkedSemester = "", checkedTrack = "";
+    }
   }
 
   const [checkedRadio, setCheckedRadio] = useState<[]>([])
   const handleRadioChange = (e: any) => {
     setShowSubject(allSubject.filter((value) => {
-      const checkedItem = e.target.value.toLowerCase().replace(/ /g, '');
-      // console.log(checkedItem);
-      if (checkedItem === "Metaverse SE") return (value.track === "Metaverse")
-      // const trackMatch = value.track.toLowerCase().includes(checkedItem)
+      const checkedItem = e.target.id.toLowerCase();
       
-      // const semesterMatch = "semester" + value.semester.toLowerCase().includes(checkedItem)
-      // return (trackMatch || yearMatch || semesterMatch)
+      const year = ["year1", "year2", "year3", "year4"];
+      const semester = ["semester1" , "semester2"];
+      const track = ["metaverse" , "iot" , "ai"];
+
+      if (year.includes(checkedItem))
+        checkedYear = checkedItem;
+      else if (semester.includes(checkedItem))
+        checkedSemester = checkedItem;
+      else if (track.includes(checkedItem))
+        checkedTrack = checkedItem;
+
+      const yearMatch = ("year" + value.year.toLowerCase()).includes(checkedYear);
+      const semesterMatch = ("semester" + value.semester.toLowerCase()).includes(checkedSemester);
+      const trackMatch = value.track.toLowerCase().includes(checkedTrack);
+      
+      return (trackMatch && yearMatch && semesterMatch)
     }))
   }
   
@@ -86,8 +102,6 @@ const StudyPlans = ({ subjects }: ISubjects) => {
       })
     )
   }
-
-  // console.log(showSubject);
 
   return (
     <>
@@ -132,13 +146,13 @@ const StudyPlans = ({ subjects }: ISubjects) => {
                   style="ml-1 mb-2 font-bold text-accent"
                 />
                 <RadioLabel
-                  idfor="metaverse-se"
+                  idfor="metaverse"
                   group="specializations"
-                  text="Metaverse SE"
+                  text="Metaverse"
                   handleChange={handleRadioChange}
                 />
                 <RadioLabel
-                  idfor="industrial-iot"
+                  idfor="iot"
                   group="specializations"
                   text="Industrial IoT"
                   handleChange={handleRadioChange}
@@ -155,25 +169,25 @@ const StudyPlans = ({ subjects }: ISubjects) => {
               <div className="form-control">
                 <H4 text="Year" style="ml-1 mb-2 font-bold text-accent" />
                 <RadioLabel
-                  idfor="year1"
+                  idfor="Year1"
                   group="year"
                   text="Year 1"
                   handleChange={handleRadioChange}
                 />
                 <RadioLabel
-                  idfor="year2"
+                  idfor="Year2"
                   group="year"
                   text="Year 2"
                   handleChange={handleRadioChange}
                 />
                 <RadioLabel
-                  idfor="year3"
+                  idfor="Year3"
                   group="year"
                   text="Year 3"
                   handleChange={handleRadioChange}
                 />
                 <RadioLabel
-                  idfor="year4"
+                  idfor="Year4"
                   group="year"
                   text="Year 4"
                   handleChange={handleRadioChange}
@@ -184,13 +198,13 @@ const StudyPlans = ({ subjects }: ISubjects) => {
               <div className="form-control">
                 <H4 text="Semester" style="ml-1 mb-2 font-bold text-accent" />
                 <RadioLabel
-                  idfor="semester1"
+                  idfor="Semester1"
                   group="semester"
                   text="Semester 1"
                   handleChange={handleRadioChange}
                 />
                 <RadioLabel
-                  idfor="semester2"
+                  idfor="Semester2"
                   group="semester"
                   text="Semester 2"
                   handleChange={handleRadioChange}
@@ -214,7 +228,7 @@ const StudyPlans = ({ subjects }: ISubjects) => {
             semester: string
             track: string
           }) => (
-            <div key={`${subject.subject_id}_${subject.subject_name}`}>
+            <div key={`${subject.subject_id}_${subject.year}_${subject.semester}`}>
               <SubjectCard
                 id={subject.subject_id}
                 subject={subject.subject_name}
