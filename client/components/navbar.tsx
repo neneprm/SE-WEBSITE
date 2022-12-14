@@ -84,21 +84,21 @@ const NavBar = () => {
                   </a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/forum">
                   <a>
                     <HiChatAlt2 className="text-accent" /> Forum
                   </a>
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="/blogs">
                   <a>
                     <HiNewspaper className="text-accent" />
                     Blogs
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/program">
                   <a>
