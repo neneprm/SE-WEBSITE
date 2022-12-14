@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import psycopg2.extensions
+# import psycopg2.extensions
 
 import environ
 env = environ.Env()
@@ -91,16 +91,17 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
-        'OPTIONS': {
-            'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': env("DB_NAME"),
+        # 'USER': env("DB_USER"),
+        # 'PASSWORD': env("DB_PASSWORD"),
+        # 'HOST': env("DB_HOST"),
+        # 'PORT': env("DB_PORT"),
+        # 'OPTIONS': {
+        #     'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
+        # },
     }
 }
 
