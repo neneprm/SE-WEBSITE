@@ -12,30 +12,22 @@ datasource db {
 }
 
 model Subject {
-  id           String  @id
+  id           String  @id @default(cuid())
+  subjectId    String
+  year         Int
+  semester     Int
   name         String
+  prerequisite String?
+  description  String  @db.Text
   credit       Int
   lectureHour  Int?
   labHour      Int?
   studyHour    Int?
-  prerequisite String?
   program      Program @default(KMITL)
-  description  String  @db.Text
   track        Track?
 
-  Course   Course? @relation(fields: [courseId], references: [id])
-  courseId String?
-
-  @@index([courseId])
-}
-
-model Course {
-  id       String    @id @default(cuid())
-  year     Int
-  semester Int
-  subjects Subject[]
-
-  @@unique([year, semester])
+  @@unique([subjectId, year, semester])
+  @@index([subjectId, year, semester])
 }
 
 enum Track {

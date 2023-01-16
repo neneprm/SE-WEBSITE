@@ -7,8 +7,7 @@ async function studyPlanHandler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   try {
-    const subjects = await studyPlanService.getSubjects()
-    res.status(200).send({ res: subjects })
+    res.status(200).send({ res: await studyPlanService.getSubjectProps() })
   } catch (err) {
     res.status(500).send({ res: "internal server error" })
   }

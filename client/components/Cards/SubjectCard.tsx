@@ -4,13 +4,16 @@ import P from "../headers/P"
 interface ISubjectCard {
   id: string
   subject: string
-  prerequisite: string
+  prerequisite: string | null
   program: string
-  credit: string
+  credit: number
+  lectureHour: number | null
+  labHour: number | null
+  studyHour: number | null
   description: string
   year: string
   semester: string
-  track: string
+  track: string | null
 }
 
 const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
@@ -19,6 +22,9 @@ const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
   prerequisite,
   program,
   credit,
+  lectureHour,
+  labHour,
+  studyHour,
   description,
   year,
   semester,
@@ -26,17 +32,17 @@ const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
 }) => {
   return (
     <>
-      <div className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+      <div className="border collapse collapse-arrow border-base-300 bg-base-100 rounded-box">
         <input type="checkbox" className="peer" />
         <div className="collapse-title">
           <H4 style="text-primary font-bold" text={`${id} : ${subject}`} />
         </div>
-        <div className="collapse-content space-y-2">
+        <div className="space-y-2 collapse-content">
           <P text={`Year: ${year} Semester: ${semester}`}/>
-          <P text={`Prerequisite : ${prerequisite}`} />
+          <P text={`Prerequisite : ${prerequisite ? prerequisite : 'None'}`} />
           <P text={`Program : ${program}`} />
-          <P text={`Track: ${track}`} />
-          <P text={`Credit : ${credit}`} />
+          <P text={`Track: ${track ? track: 'None'}`} />
+          <P text={`Credit : ${credit} (${lectureHour}-${labHour}-${studyHour})`} />
           <P text={`Description: ${description}`} style="mb-4" />
         </div>
       </div>
