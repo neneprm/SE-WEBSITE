@@ -11,22 +11,10 @@ import SubjectCard from "../../components/Cards/SubjectCard"
 import BorderButton from "../../components/Buttons/BorderButton"
 import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
 import RadioLabel from "../../components/RadioLabel"
-import axios from "axios"
-
-interface IStudyPlans {
-  subject_id: string
-  subject_name: string
-  prerequisite: string
-  program: string
-  subject_credit: string
-  description: string
-  semester: string
-  track: string
-  year: string
-}
+import { ISubjectProp } from "../../src/service/studyPlanService"
 
 interface ISubjects {
-  subjects: IStudyPlans[]
+  subjects: ISubjectProp[]
 }
 
 const RADIO_LIST = [
@@ -44,9 +32,19 @@ var checkedYear = "",
   checkedSemester = "",
   checkedTrack = ""
 
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/study_plan`)
+  const data = await res.json()
+  return {
+    props: {
+      subjects: data.res,
+    },
+  }
+}
+
 const StudyPlans = ({ subjects }: ISubjects) => {
-  const [allSubject, setAllSubject] = useState<IStudyPlans[]>(subjects)
-  const [showSubject, setShowSubject] = useState<IStudyPlans[]>(allSubject)
+  const [allSubject, setAllSubject] = useState<Subject[]>(subjects)
+  const [showSubject, setShowSubject] = useState<Subject[]>(allSubject)
 
   const [filterIsChecked, setFilterIsChecked] = useState(false)
   const handleFilterCheck = (e: any) => {
@@ -88,11 +86,11 @@ const StudyPlans = ({ subjects }: ISubjects) => {
     setShowSubject(
       allSubject.filter((value) => {
         const searchStr = e.target.value.toLowerCase()
-        const idMatch = value.subject_id.toLowerCase().includes(searchStr)
-        const subjectMatch = value.subject_name
+        const idMatch = value.id.toLowerCase().includes(searchStr)
+        const subjectMatch = value.name
           .toLowerCase()
           .includes(searchStr)
-        const prerequisiteMatch = value.prerequisite
+        const prerequisiteMatch = value.prerequisite? value.prerequisite: "None"
           .toLowerCase()
           .includes(searchStr)
         const descriptionMatch = value.description
@@ -117,27 +115,27 @@ const StudyPlans = ({ subjects }: ISubjects) => {
       </section>
 
       <section className="">
-        <div className="flex justify-between md:justify-end space-x-4 mb-4 items-center">
+        <div className="flex items-center justify-between mb-4 space-x-4 md:justify-end">
           {/* Search bar */}
-          <div className="input p-0 ml-2 flex items-center">
+          <div className="flex items-center p-0 ml-2 input">
             <input
               type="search"
               placeholder="Search..."
-              className="input input-bordered input-accent input-sm lg:input-md lg:w-72 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
+              className="text-sm input input-bordered input-accent input-sm lg:input-md lg:w-72 sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
               onChange={handleFilter}
             />
           </div>
           {/* Filter */}
           <label className="btn btn-circle btn-accent btn-sm swap swap-rotate">
             <input type="checkbox" onChange={handleFilterCheck} />
-            <IoFilter className="swap-off text-base-100  text-lg" />
-            <IoMdClose className="swap-on text-base-100 text-lg" />
+            <IoFilter className="text-lg swap-off text-base-100" />
+            <IoMdClose className="text-lg swap-on text-base-100" />
           </label>
         </div>
 
         {/* Filter Card */}
         {filterIsChecked && (
-          <div className="card bg-base-100 card-bordered shadow-lg card-body mb-8">
+          <div className="mb-8 shadow-lg card bg-base-100 card-bordered card-body">
             <div className="flex flex-col xl:flex-row xl:justify-between 2xl:justify-evenly">
               {/* Specializations */}
               <div className="form-control">
@@ -214,34 +212,26 @@ const StudyPlans = ({ subjects }: ISubjects) => {
           </div>
         )}
       </section>
-
+      
       <section className="mb-8 space-y-4">
-        {showSubject.map(
-          (subject: {
-            subject_id: string
-            subject_name: string
-            subject_credit: string
-            prerequisite: string
-            description: string
-            program: string
-            year: string
-            semester: string
-            track: string
-          }) => (
+        {subjects.map(
+          (subject) => (
             <div
-              key={`${subject.subject_id}_${subject.year}_${subject.semester}`}
+              key={`${subject.id}`}
             >
               <SubjectCard
-                id={subject.subject_id}
-                subject={subject.subject_name}
+                id={subject.id}
+                subject={subject.subject}
                 prerequisite={subject.prerequisite}
                 program={subject.program}
-                credit={subject.subject_credit}
+                credit={subject.credit}
+                lectureHour={subject.lectureHour}
+                labHour={subject.labHour}
+                studyHour={subject.studyHour}
                 description={subject.description}
                 year={subject.year}
                 semester={subject.semester}
-                track={subject.track}
-              />
+                track={subject.track}               />
             </div>
           )
         )}
@@ -258,13 +248,6 @@ const StudyPlans = ({ subjects }: ISubjects) => {
   )
 }
 
-export async function getServerSideProps() {
-  const { data } = await axios.get("http://127.0.0.1:8000/subjects")
-  return {
-    props: {
-      subjects: data.results,
-    },
-  }
-}
+
 
 export default StudyPlans
