@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { useState } from "react"
+import { ChangeEvent, useState } from "react"
 
 import { IoMdClose } from "react-icons/io"
 import { IoFilter } from "react-icons/io5"
@@ -11,7 +11,8 @@ import SubjectCard from "../../components/Cards/SubjectCard"
 import BorderButton from "../../components/Buttons/BorderButton"
 import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
 import RadioLabel from "../../components/RadioLabel"
-import { ISubjectProp } from "../../src/service/studyPlanService"
+
+import type { ISubjectProp } from "../../src/service/studyPlanService"
 
 interface ISubjects {
   subjects: ISubjectProp[]
@@ -28,9 +29,6 @@ const RADIO_LIST = [
       "Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions.",
   },
 ]
-var checkedYear = "",
-  checkedSemester = "",
-  checkedTrack = ""
 
 export async function getServerSideProps() {
   const res = await fetch(`http://localhost:3000/api/study_plan`)
@@ -43,62 +41,58 @@ export async function getServerSideProps() {
 }
 
 const StudyPlans = ({ subjects }: ISubjects) => {
-  const [allSubject, setAllSubject] = useState<Subject[]>(subjects)
-  const [showSubject, setShowSubject] = useState<Subject[]>(allSubject)
+  const [allSubjects, _setAllSubjects] = useState<ISubjectProp[]>(subjects)
+  const [showSubjects, setShowSubjects] = useState<ISubjectProp[]>(allSubjects)
 
-  const [filterIsChecked, setFilterIsChecked] = useState(false)
-  const handleFilterCheck = (e: any) => {
-    setFilterIsChecked(!filterIsChecked)
-    if (filterIsChecked) {
-      setShowSubject(allSubject)
-      ;(checkedYear = ""), (checkedSemester = ""), (checkedTrack = "")
+  const [isFilter, setIsFilter] = useState<boolean>(false)
+  const [selectedYear, setSelectedYear] = useState<string>("")
+  const [selectedSemester, setSelectedSemester] = useState<string>("")
+  const [selectedTrack, setSelectedTrack] = useState<string>("")
+
+  const searchHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    setShowSubjects(
+      allSubjects.filter((subject) => {
+        const searchStr = e.target.value.toString()
+        const idMatch = subject.id.toLowerCase().includes(searchStr)
+        const nameMatch = subject.subject.toLowerCase().includes(searchStr)
+        return idMatch || nameMatch
+      })
+    )
+  }
+
+  const filterToggle = (e: ChangeEvent<Element>) => {
+    setIsFilter(!isFilter)
+    if (isFilter) {
+      setShowSubjects(allSubjects)
+      setSelectedYear("")
+      setSelectedSemester("")
+      setSelectedTrack("")
     }
   }
 
-  const [checkedRadio, setCheckedRadio] = useState<[]>([])
-  const handleRadioChange = (e: any) => {
-    setShowSubject(
-      allSubject.filter((value) => {
-        const checkedItem = e.target.id.toLowerCase()
-
-        const year = ["year1", "year2", "year3", "year4"]
-        const semester = ["semester1", "semester2"]
-        const track = ["metaverse", "iot", "ai"]
-
-        if (year.includes(checkedItem)) checkedYear = checkedItem
-        else if (semester.includes(checkedItem)) checkedSemester = checkedItem
-        else if (track.includes(checkedItem)) checkedTrack = checkedItem
-
-        const yearMatch = ("year" + value.year.toLowerCase()).includes(
-          checkedYear
-        )
-        const semesterMatch = (
-          "semester" + value.semester.toLowerCase()
-        ).includes(checkedSemester)
-        const trackMatch = value.track.toLowerCase().includes(checkedTrack)
-
-        return trackMatch && yearMatch && semesterMatch
+  const filterHandler = () => {
+    setShowSubjects(
+      allSubjects.filter((subject) => {
+        const yearMatch = subject.year.match(selectedYear)
+        const semesterMatch = subject.semester.match(selectedSemester)
+        const trackMatch = (subject.track ? subject.track : "None")
+          .toLowerCase()
+          .match(selectedTrack.toLowerCase())
+        return yearMatch && semesterMatch && trackMatch
       })
     )
   }
 
-  const handleFilter = (e: any) => {
-    setShowSubject(
-      allSubject.filter((value) => {
-        const searchStr = e.target.value.toLowerCase()
-        const idMatch = value.id.toLowerCase().includes(searchStr)
-        const subjectMatch = value.name
-          .toLowerCase()
-          .includes(searchStr)
-        const prerequisiteMatch = value.prerequisite? value.prerequisite: "None"
-          .toLowerCase()
-          .includes(searchStr)
-        const descriptionMatch = value.description
-          .toLowerCase()
-          .includes(searchStr)
-        return idMatch || subjectMatch || prerequisiteMatch || descriptionMatch
-      })
-    )
+  const selectYearHandler = (e: ChangeEvent<Element>) => {
+    setSelectedYear(e.target.id.toLowerCase())
+  }
+
+  const selectSemesterHandler = (e: ChangeEvent<Element>) => {
+    setSelectedSemester(e.target.id.toLowerCase())
+  }
+
+  const selectTrackHandler = (e: ChangeEvent<Element>) => {
+    setSelectedTrack(e.target.id.toLowerCase())
   }
 
   return (
@@ -122,19 +116,19 @@ const StudyPlans = ({ subjects }: ISubjects) => {
               type="search"
               placeholder="Search..."
               className="text-sm input input-bordered input-accent input-sm lg:input-md lg:w-72 sm:text-base md:text-lg lg:text-xl 2xl:text-2xl"
-              onChange={handleFilter}
+              onChange={searchHandler}
             />
           </div>
           {/* Filter */}
           <label className="btn btn-circle btn-accent btn-sm swap swap-rotate">
-            <input type="checkbox" onChange={handleFilterCheck} />
+            <input type="checkbox" onChange={filterToggle} />
             <IoFilter className="text-lg swap-off text-base-100" />
             <IoMdClose className="text-lg swap-on text-base-100" />
           </label>
         </div>
 
         {/* Filter Card */}
-        {filterIsChecked && (
+        {isFilter && (
           <div className="mb-8 shadow-lg card bg-base-100 card-bordered card-body">
             <div className="flex flex-col xl:flex-row xl:justify-between 2xl:justify-evenly">
               {/* Specializations */}
@@ -147,19 +141,28 @@ const StudyPlans = ({ subjects }: ISubjects) => {
                   idfor="metaverse"
                   group="specializations"
                   text="Metaverse"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectTrackHandler(e)
+                    filterHandler()
+                  }}
                 />
                 <RadioLabel
                   idfor="iot"
                   group="specializations"
                   text="Industrial IoT"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectTrackHandler(e)
+                    filterHandler()
+                  }}
                 />
                 <RadioLabel
                   idfor="ai"
                   group="specializations"
                   text="AI"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectTrackHandler(e)
+                    filterHandler()
+                  }}
                 />
               </div>
 
@@ -167,28 +170,40 @@ const StudyPlans = ({ subjects }: ISubjects) => {
               <div className="form-control">
                 <H4 text="Year" style="ml-1 mb-2 font-bold text-accent" />
                 <RadioLabel
-                  idfor="Year1"
+                  idfor="1"
                   group="year"
                   text="Year 1"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectYearHandler(e)
+                    filterHandler()
+                  }}
                 />
                 <RadioLabel
-                  idfor="Year2"
+                  idfor="2"
                   group="year"
                   text="Year 2"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectYearHandler(e)
+                    filterHandler()
+                  }}
                 />
                 <RadioLabel
-                  idfor="Year3"
+                  idfor="3"
                   group="year"
                   text="Year 3"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectYearHandler(e)
+                    filterHandler()
+                  }}
                 />
                 <RadioLabel
-                  idfor="Year4"
+                  idfor="4"
                   group="year"
                   text="Year 4"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectYearHandler(e)
+                    filterHandler()
+                  }}
                 />
               </div>
 
@@ -196,45 +211,48 @@ const StudyPlans = ({ subjects }: ISubjects) => {
               <div className="form-control">
                 <H4 text="Semester" style="ml-1 mb-2 font-bold text-accent" />
                 <RadioLabel
-                  idfor="Semester1"
+                  idfor="1"
                   group="semester"
                   text="Semester 1"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectSemesterHandler(e)
+                    filterHandler()
+                  }}
                 />
                 <RadioLabel
-                  idfor="Semester2"
+                  idfor="2"
                   group="semester"
                   text="Semester 2"
-                  handleChange={handleRadioChange}
+                  handleChange={(e) => {
+                    selectSemesterHandler(e)
+                    filterHandler()
+                  }}
                 />
               </div>
             </div>
           </div>
         )}
       </section>
-      
+
       <section className="mb-8 space-y-4">
-        {subjects.map(
-          (subject) => (
-            <div
-              key={`${subject.id}`}
-            >
-              <SubjectCard
-                id={subject.id}
-                subject={subject.subject}
-                prerequisite={subject.prerequisite}
-                program={subject.program}
-                credit={subject.credit}
-                lectureHour={subject.lectureHour}
-                labHour={subject.labHour}
-                studyHour={subject.studyHour}
-                description={subject.description}
-                year={subject.year}
-                semester={subject.semester}
-                track={subject.track}               />
-            </div>
-          )
-        )}
+        {showSubjects.map((subject) => (
+          <div key={`${subject.id}_${subject.semester}`}>
+            <SubjectCard
+              id={subject.id}
+              subject={subject.subject}
+              prerequisite={subject.prerequisite}
+              program={subject.program}
+              credit={subject.credit}
+              lectureHour={subject.lectureHour}
+              labHour={subject.labHour}
+              studyHour={subject.studyHour}
+              description={subject.description}
+              year={subject.year}
+              semester={subject.semester}
+              track={subject.track}
+            />
+          </div>
+        ))}
       </section>
 
       <section className="flex justify-center mb-8">
@@ -247,7 +265,5 @@ const StudyPlans = ({ subjects }: ISubjects) => {
     </>
   )
 }
-
-
 
 export default StudyPlans
