@@ -18,7 +18,7 @@ model Subject {
   semester     Int
   name         String
   prerequisite String?
-  description  String  @db.Text
+  description  String?  @db.Text
   credit       Int
   lectureHour  Int?
   labHour      Int?
