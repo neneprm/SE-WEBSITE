@@ -10,7 +10,7 @@ interface ISubjectCard {
   lectureHour: number | null
   labHour: number | null
   studyHour: number | null
-  description: string
+  description: string | null
   year: string
   semester: string
   track: string | null
@@ -43,7 +43,7 @@ const SubjectCard: React.FunctionComponent<ISubjectCard> = ({
           <P text={`Program : ${program}`} />
           <P text={`Track: ${track ? track: 'None'}`} />
           <P text={`Credit : ${credit} (${lectureHour}-${labHour}-${studyHour})`} />
-          <P text={`Description: ${description}`} style="mb-4" />
+          <P text={`Description: ${description ? description : '-'}`} style="mb-4" />
         </div>
       </div>
     </>

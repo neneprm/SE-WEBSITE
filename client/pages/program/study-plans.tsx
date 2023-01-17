@@ -131,41 +131,6 @@ const StudyPlans = ({ subjects }: ISubjects) => {
         {isFilter && (
           <div className="mb-8 shadow-lg card bg-base-100 card-bordered card-body">
             <div className="flex flex-col xl:flex-row xl:justify-between 2xl:justify-evenly">
-              {/* Specializations */}
-              <div className="form-control">
-                <H4
-                  text="Specializations"
-                  style="ml-1 mb-2 font-bold text-accent"
-                />
-                <RadioLabel
-                  idfor="metaverse"
-                  group="specializations"
-                  text="Metaverse"
-                  handleChange={(e) => {
-                    selectTrackHandler(e)
-                    filterHandler()
-                  }}
-                />
-                <RadioLabel
-                  idfor="iot"
-                  group="specializations"
-                  text="Industrial IoT"
-                  handleChange={(e) => {
-                    selectTrackHandler(e)
-                    filterHandler()
-                  }}
-                />
-                <RadioLabel
-                  idfor="ai"
-                  group="specializations"
-                  text="AI"
-                  handleChange={(e) => {
-                    selectTrackHandler(e)
-                    filterHandler()
-                  }}
-                />
-              </div>
-
               {/* Year */}
               <div className="form-control">
                 <H4 text="Year" style="ml-1 mb-2 font-bold text-accent" />
@@ -206,7 +171,6 @@ const StudyPlans = ({ subjects }: ISubjects) => {
                   }}
                 />
               </div>
-
               {/* Semester */}
               <div className="form-control">
                 <H4 text="Semester" style="ml-1 mb-2 font-bold text-accent" />
@@ -225,6 +189,40 @@ const StudyPlans = ({ subjects }: ISubjects) => {
                   text="Semester 2"
                   handleChange={(e) => {
                     selectSemesterHandler(e)
+                    filterHandler()
+                  }}
+                />
+              </div>
+              {/* Specializations */}
+              <div className="form-control">
+                <H4
+                  text="Specializations"
+                  style="ml-1 mb-2 font-bold text-accent"
+                />
+                <RadioLabel
+                  idfor="metaverse"
+                  group="specializations"
+                  text="Metaverse"
+                  handleChange={(e) => {
+                    selectTrackHandler(e)
+                    filterHandler()
+                  }}
+                />
+                <RadioLabel
+                  idfor="iot"
+                  group="specializations"
+                  text="Industrial IoT"
+                  handleChange={(e) => {
+                    selectTrackHandler(e)
+                    filterHandler()
+                  }}
+                />
+                <RadioLabel
+                  idfor="ai"
+                  group="specializations"
+                  text="AI"
+                  handleChange={(e) => {
+                    selectTrackHandler(e)
                     filterHandler()
                   }}
                 />

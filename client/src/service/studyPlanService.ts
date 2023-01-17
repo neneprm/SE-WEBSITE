@@ -16,7 +16,7 @@ export interface ISubjectProp {
   lectureHour: number | null
   labHour: number | null
   studyHour: number | null
-  description: string
+  description: string | null
   year: string
   semester: string
   track: string | null
