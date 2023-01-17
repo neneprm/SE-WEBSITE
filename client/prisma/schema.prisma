@@ -40,3 +40,8 @@ enum Program {
   KMITL
   Glasgow
 }
+
+model Announcement {
+  title String @id
+  link String
+}
