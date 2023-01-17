@@ -1,4 +1,4 @@
-import H1 from "../components/headers/H1"
+import H1 from "./headers/H1"
 import Image from "next/image"
 import KmitlLogo from "../pages/assets/kmitl-logo.png"
 

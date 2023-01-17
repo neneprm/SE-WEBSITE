@@ -8,7 +8,7 @@ import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 import SolidButton from "../components/Buttons/SolidButton"
 
-import type { IAnnouncementProp } from "../src/service/admissionService"
+import type { IAnnouncementProp } from "../service/admissionService"
 
 interface IAnouncements {
   announcements: IAnnouncementProp[]

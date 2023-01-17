@@ -21,11 +21,7 @@ const Blogs = () => {
       <section>{/* Content */}</section>
 
       <section className="flex justify-center mb-8">
-        <BorderButton
-          text="← Back to Home"
-          link="/"
-          style="btn-secondary"
-        />
+        <BorderButton text="← Back to Home" link="/" style="btn-secondary" />
       </section>
     </>
   )

@@ -12,7 +12,7 @@ import BorderButton from "../../components/Buttons/BorderButton"
 import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
 import RadioLabel from "../../components/RadioLabel"
 
-import type { ISubjectProp } from "../../src/service/studyPlanService"
+import type { ISubjectProp } from "../../service/studyPlanService"
 
 interface ISubjects {
   subjects: ISubjectProp[]

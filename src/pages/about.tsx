@@ -1,6 +1,5 @@
 import Head from "next/head"
 
-
 import H3 from "../components/headers/H3"
 import H4 from "../components/headers/H4"
 import P from "../components/headers/P"
@@ -71,11 +70,7 @@ const About = () => {
       </section>
 
       <section className="flex justify-center mb-8">
-        <BorderButton
-          text="← Back to Home"
-          link="/"
-          style="btn-secondary"
-        />
+        <BorderButton text="← Back to Home" link="/" style="btn-secondary" />
       </section>
     </>
   )

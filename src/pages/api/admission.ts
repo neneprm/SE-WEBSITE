@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import admissionService from "../../src/service/admissionService"
+import admissionService from "../../service/admissionService"
 
 async function admissionHandler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
