@@ -9,25 +9,14 @@ import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 import SolidButton from "../components/Buttons/SolidButton"
 
 import type { IAnnouncementProp } from "../service/admissionService"
+import { env } from "../env/client.mjs"
 
 interface IAnouncements {
   announcements: IAnnouncementProp[]
 }
 
-const ADMISSION_LIST = [
-  {
-    title: "Announcement Direct Admissions 1-1 (Early Round) AY 2023",
-    link: "https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf",
-  },
-  {
-    title:
-      "Announcement Direct Admissions 1-1 (Early Round) for International Students (non-holders of Thai passport) AY 2023",
-    link: "https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2398_2022_10_30-20-17-02_9bb7a.pdf",
-  },
-]
-
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/admission`)
+  const res = await fetch(`${env.DOMAIN}/api/admission`)
   const data = await res.json()
   return {
     props: {

@@ -26,7 +26,6 @@ for (let key of Object.keys(_clientEnv.data)) {
         console.warn(
             `Invalid public environment variable name: ${key}. It must begin with 'NEXT_PUBLIC_'`
         )
-        throw new Error('Invalid public environment variable name')
     }
 }
 

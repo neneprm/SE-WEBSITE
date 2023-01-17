@@ -27,13 +27,14 @@ import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 
 import { IAnnouncementProp } from "../service/admissionService"
+import { env } from "../env/client.mjs"
 
 interface IAnnouncements {
   announcements: IAnnouncementProp[]
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/admission`)
+  const res = await fetch(`${env.DOMAIN}/api/admission`)
   const data = await res.json()
   return {
     props: {

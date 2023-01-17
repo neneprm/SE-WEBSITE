@@ -13,25 +13,14 @@ import FloatingScrollButton from "../../components/Buttons/FloatingScrollButton"
 import RadioLabel from "../../components/RadioLabel"
 
 import type { ISubjectProp } from "../../service/studyPlanService"
+import { env } from "../../env/client.mjs"
 
 interface ISubjects {
   subjects: ISubjectProp[]
 }
 
-const RADIO_LIST = [
-  {
-    id: "01006710",
-    subject: "Introduction to Calculus",
-    prerequisite: "None",
-    program: "Software-Engineering-2022",
-    credit: "3 (3-0-6)",
-    description:
-      "Functions, limits, continuity and their applications, Mathematical induction, Introduction to derivative, Differentiation, Applications of derivative, Definite integrals, Antiderivative integration, Application of definite integral, Indeterminate forms, Improper integrals, Numerical integration, Sequences and series of numbers, Taylor series expansions of elementary functions.",
-  },
-]
-
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:3000/api/study_plan`)
+  const res = await fetch(`${env.DOMAIN}/api/study_plan`)
   const data = await res.json()
   return {
     props: {
