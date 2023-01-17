@@ -7,13 +7,11 @@ import OneLineCard from "../components/Cards/OneLineCard"
 import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 import SolidButton from "../components/Buttons/SolidButton"
-import axios from "axios"
-import React from "react"
 
-interface IAdmission {
-  admissions:{
-  title: string
-  link: string}
+import type { IAnnouncementProp } from "../src/service/admissionService"
+
+interface IAnouncements {
+  announcements: IAnnouncementProp[]
 }
 
 const ADMISSION_LIST = [
@@ -28,7 +26,17 @@ const ADMISSION_LIST = [
   },
 ]
 
-const Admissions=({ admissions }:any) => {
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/admission`)
+  const data = await res.json()
+  return {
+    props: {
+      announcements: data.res,
+    },
+  }
+}
+
+const Admissions = ({ announcements }: IAnouncements) => {
   return (
     <>
       <Head>
@@ -42,8 +50,8 @@ const Admissions=({ admissions }:any) => {
         <H3 style="text-gradient font-bold text-center" text="ADMISSIONS" />
       </section>
 
-      <section className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 md:space-y-0 mb-8">
-          {/* { admissions.map((admission: { title: any; link: any }) =>(
+      <section className="flex flex-col justify-center mb-8 space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+        {/* { admissions.map((admission: { title: any; link: any }) =>(
             <SolidButton
             text={`${admission.title}`}
             link={`${admission.link}`}
@@ -63,12 +71,12 @@ const Admissions=({ admissions }:any) => {
       </section>
 
       <section className="mb-8">
-        {admissions.map((admission: { title: string; link: any }) => (
-          <div key={admission.link}>
+        {announcements.map((announcement) => (
+          <div key={announcement.title}>
             <OneLineCard
               icon={<FaBullhorn className="text-primary" />}
-              title={admission.title}
-              link={admission.link}
+              title={announcement.title}
+              link={announcement.link}
             />
           </div>
         ))}
@@ -81,16 +89,4 @@ const Admissions=({ admissions }:any) => {
   )
 }
 
-export async function getServerSideProps() {
-  const { data } = await axios.get('http://127.0.0.1:8000/admissions')
-
-  return {
-    props: {
-      admissions: data.results
-    }
-  }
-
-}
-
 export default Admissions
-

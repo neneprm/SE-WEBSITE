@@ -26,7 +26,23 @@ import SolidButton from "../components/Buttons/SolidButton"
 import BorderButton from "../components/Buttons/BorderButton"
 import FloatingScrollButton from "../components/Buttons/FloatingScrollButton"
 
-const Home: NextPage = () => {
+import { IAnnouncementProp } from "../src/service/admissionService"
+
+interface IAnnouncements {
+  announcements: IAnnouncementProp[]
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/admission`)
+  const data = await res.json()
+  return {
+    props: {
+      announcements: data.res,
+    },
+  }
+}
+
+const Home = ({ announcements }: IAnnouncements) => {
   return (
     <>
       <Head>
@@ -37,13 +53,13 @@ const Home: NextPage = () => {
       <FloatingScrollButton />
 
       {/* Hero */}
-      <section className="hero bg-base-100 min-h-screen 2xl:min-h-max 2xl:py-40">
-        <div className="hero-content flex-col lg:flex-row justify-evenly 2xl:justify-center 2xl:space-x-24 min-w-full">
+      <section className="min-h-screen hero bg-base-100 2xl:min-h-max 2xl:py-40">
+        <div className="flex-col min-w-full hero-content lg:flex-row justify-evenly 2xl:justify-center 2xl:space-x-24">
           <div className="max-w-xs lg:max-w-md">
             <Image src={HeroArt} alt="Hero Art" />
           </div>
-          <span className="mt-8 md:mt-4 text-center lg:text-right">
-            <div className="w-20 md:w-32 mx-auto lg:mx-0 lg:ml-auto mb-2 md:mb-4">
+          <span className="mt-8 text-center md:mt-4 lg:text-right">
+            <div className="w-20 mx-auto mb-2 md:w-32 lg:mx-0 lg:ml-auto md:mb-4">
               <Image src={SeLogo} alt="SE Logo" />
             </div>
             <H1 style="font-bold text-gradient" text="SOFTWARE" />
@@ -62,13 +78,13 @@ const Home: NextPage = () => {
           text="What is Software Engineering?"
         />
         <div className={`card bg-base-100 card-bordered shadow-lg max-w-fit`}>
-          <div className="card-body items-center text-center">
-            <FaLaptopCode className="text-secondary text-4xl " />
+          <div className="items-center text-center card-body">
+            <FaLaptopCode className="text-4xl text-secondary " />
             <P
               text="Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources."
               style="p-2"
             />
-            <div className="card-actions justify-center md:justify-end">
+            <div className="justify-center card-actions md:justify-end">
               <Link href="/about">
                 <a className="btn btn-link text-accent md:btn-accent md:text-base-100 md:no-underline md:hover:no-underline">
                   Read more →
@@ -84,9 +100,9 @@ const Home: NextPage = () => {
 
       {/* Programs */}
       {/* Desktop */}
-      <section className="hidden xl:block mb-8">
+      <section className="hidden mb-8 xl:block">
         <H4 style="font-bold text-gradient mb-4" text="Program" />
-        <div className="card bg-base-100 card-bordered card-body shadow-lg w-full lg:p-12">
+        <div className="w-full shadow-lg card bg-base-100 card-bordered card-body lg:p-12">
           <div className="flex flex-row justify-center space-x-4">
             <ReadMoreCard
               image={CurriculumCover}
@@ -113,7 +129,7 @@ const Home: NextPage = () => {
               link="/program/exchange-study"
             />
           </div>
-          <div className="card-actions justify-center mt-4 lg:mt-8">
+          <div className="justify-center mt-4 card-actions lg:mt-8">
             <BorderButton
               text="More program →"
               link="/program"
@@ -146,7 +162,7 @@ const Home: NextPage = () => {
             icon={<FaPlane className="text-secondary" />}
           />
         </div>
-        <div className="card-actions justify-center mt-4 lg:mt-8">
+        <div className="justify-center mt-4 card-actions lg:mt-8">
           <BorderButton
             text="More program →"
             link="/program"
@@ -156,23 +172,17 @@ const Home: NextPage = () => {
       </section>
 
       {/* Admissions */}
-      <section className="mb-8 flex flex-col">
+      <section className="flex flex-col mb-8">
         <H4 style="font-bold text-gradient mb-4" text="Admissions" />
-        <OneLineCard
-          icon={<FaBullhorn className="text-primary" />}
-          title="Announcement Direct Admissions 1-1 (Early Round)"
-          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
-        />
-        <OneLineCard
-          icon={<FaBullhorn className="text-primary" />}
-          title="Announcement Direct Admissions 1-1 (Early Round)"
-          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
-        />
-        <OneLineCard
-          icon={<FaBullhorn className="text-primary" />}
-          title="Announcement Direct Admissions 1-1 (Early Round)"
-          link="https://reg.kmitl.ac.th/TCAS_old/news/files/2566_1_news1_2397_2022_10_30-20-17-48_c7831.pdf"
-        />
+        {announcements.map((announcement) => (
+          <div key={announcement.title}>
+            <OneLineCard
+              icon={<FaBullhorn className="text-primary" />}
+              title={announcement.title}
+              link={announcement.link}
+            />
+          </div>
+        ))}
         <BorderButton
           text="More announcement →"
           link="/admissions"
